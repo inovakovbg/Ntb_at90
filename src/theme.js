@@ -61,7 +61,7 @@ const theme = createTheme({
     MuiFilledInput: {
       styleOverrides: {
         root: {
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "#0C0C14",
         },
       },
     },
