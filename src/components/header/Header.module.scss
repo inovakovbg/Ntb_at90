@@ -1,0 +1,17 @@
+@use "../../styles/colors";
+
+
+.container {
+  background: colors.$background_paper  ;
+  color: colors.$text_primary;
+}
+
+.button {
+  color: colors.$text_primary;
+}
+
+.search {
+  background: colors.$background_default  ;
+  color: colors.$text_primary;
+}
+

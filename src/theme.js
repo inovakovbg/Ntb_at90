@@ -42,6 +42,7 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
+          color: "#FFFFFF",
           paddingTop: 12,
           paddingBottom: 12,
           paddingLeft: 35,
@@ -60,7 +61,7 @@ const theme = createTheme({
     MuiFilledInput: {
       styleOverrides: {
         root: {
-          backgroundColor: "#0C0C14",
+          backgroundColor: "#FFFFFF",
         },
       },
     },
