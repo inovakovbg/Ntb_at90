@@ -8,7 +8,7 @@ export default function Index() {
   return (
   //  <Example />,
   //  <Header />
-  //  <Avatar />
-  <User name="Ivan Nov" info="13200pt" verified="false"/>
+  //  <Avatar url="/images/avatar.png" size='180px' verified=''/>
+  <User size='150px' name="Ivan Nov" info="13200pt" verified="false"/>
   )
 }

@@ -2,26 +2,29 @@
 
 
 .user {
-  display: flex;
+  display:flex;
   align-items: center;
-  box-sizing: border-box;
+  
+  
 
   
 }
 
 .name {
+  padding: 10px;
   color: colors.$text_primary;
   font-style: normal;
   font-weight: 900;
   font-size: 1rem;
+  
  
 }
 
 .info {
+  font-family: 'Montserrat';
   color: colors.$info_main;
   font-style: normal;
   font-weight: 700;
   font-size: 0.8rem;
- 
-}
+ }
 
