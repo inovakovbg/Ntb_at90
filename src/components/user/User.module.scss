@@ -1,0 +1,28 @@
+@use "../../styles/colors";
+
+
+.user {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  
+}
+
+.name {
+  color: colors.$text_primary;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 20px;
+}
+
+.info {
+  color: colors.$info_main;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 17px;
+  
+}
+
