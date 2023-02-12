@@ -3,7 +3,9 @@ import Example from "../src/components/example/Example";
 import Header from "../src/components/header/Header";
 import Avatar from "../src/components/avatar/Avatar";
 import User from "../src/components/user/User";
-import {MyCard as Card} from "../src/components/card/Card";
+import Card from "../src/components/card/Card";
+import React from "react";
+import { avatarClasses } from "@mui/material";
 
 export default function Index() {
   return (
@@ -11,6 +13,6 @@ export default function Index() {
   //  <Header />
   //  <Avatar url="/images/avatar.png" size='180px' verified=''/>
   // <User size='150px' name="Ivan Nov" info="13200pt" verified="false"/>
-  <Card/>
+  <Card name="Clock" mediaUrl="/images/nft.jpg" price="a1300"/> 
   )
 }
