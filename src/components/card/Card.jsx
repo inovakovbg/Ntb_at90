@@ -12,7 +12,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import millify from "millify"
 
 
-export default function Card({name, likes='0', mediaUrl, user={avatar:{verified:true}} , price, currency}) {
+export default function Card({name, likes=0, mediaUrl, user={avatar:{verified:true}} , price, currency}) {
   return (
 
     <MUICard className={styles.card} sx={{ maxWidth: 339 }}>
