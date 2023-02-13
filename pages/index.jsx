@@ -10,15 +10,8 @@ import Trending from "../src/components/trending/Trending";
 
 export default function Index() {
   return (
-    <div>
-  {/* <Example /> */}
-  {/* <Header /> */}
-    {/* <Avatar url="/images/avatar.png" size='180px' verified=''/> */}
-  {/* <User size='150px' name="Ivan Nov" info="13200pt" verified="true"/> */}
-  {/* <Card name="Clock" likes={560}  mediaUrl="/images/nft.jpg" 
-   user={{avatar:{url:"/images/avatar.png",verified:true}}} price="1300" currency='ETH' /> 
-  <br></br> */}
-  
+
+
   <Trending cards={[
   {
     "name":"Ivy",
@@ -67,7 +60,6 @@ export default function Index() {
   ]}/>
 
 
-  
-  </div>
+
   )
 }
