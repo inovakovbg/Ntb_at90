@@ -1,0 +1,31 @@
+@use "../../styles/colors";
+
+
+.container {
+  background: colors.$background_default ;
+
+
+}
+
+.grid {
+  padding: 20px;
+}
+
+
+.search {
+  background: colors.$background_default  ;
+  color: colors.$text_primary;
+}
+
+.select{
+  position:absolute;
+  width: 150px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  top:0%;
+  right:0%;
+  
+}
+
