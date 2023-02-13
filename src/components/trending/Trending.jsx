@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../logo/Logo';
 import styles from "./Trending.module.scss";
 import classNames from "classnames";
+
 import { Grid,Select,MenuItem,Container } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import Card from '../card/Card';
@@ -10,7 +11,7 @@ import Card from '../card/Card';
 export default function Trending({ cards = [] }) {
 
     return (
-        <Container maxWidth="false">
+        <Container>
             <Typography variant='h2'>Trending</Typography>
             
             <Select className={classNames(styles.select)}
