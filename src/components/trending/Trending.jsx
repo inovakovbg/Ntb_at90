@@ -10,7 +10,7 @@ import Card from '../card/Card';
 export default function Trending({ cards = [] }) {
 
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="false">
             <Typography variant='h2'>Trending</Typography>
             
             <Select className={classNames(styles.select)}
