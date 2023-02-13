@@ -1,7 +1,11 @@
 @use "../../styles/colors";
 
-
+.heading{
+ 
+  padding:30px;
+}
 .container {
+  position: relative;
   background: colors.$background_default ;
 
 
@@ -26,6 +30,6 @@
   line-height: 17px;
   top:0%;
   right:0%;
-  
+ 
 }
 
