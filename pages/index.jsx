@@ -9,10 +9,13 @@ import { avatarClasses } from "@mui/material";
 
 export default function Index() {
   return (
-  //  <Example />,
-  //  <Header />
-  //  <Avatar url="/images/avatar.png" size='180px' verified=''/>
-  // <User size='150px' name="Ivan Nov" info="13200pt" verified="false"/>
-  <Card name="Clock" mediaUrl="/images/nft.jpg" price="a1300"/> 
+    <div>
+  {/* <Example />
+  <Header /> */}
+    {/* <Avatar url="/images/avatar.png" size='180px' verified=''/> */}
+  <User size='150px' name="Ivan Nov" info="13200pt" verified="false"/>
+  <Card name="Clock" likes='5000' mediaUrl="/images/nft.jpg" 
+   user={{avatar:{url:"/images/avatar.png",verified:true}}} price="1300" currency='ETH' /> 
+  </div>
   )
 }

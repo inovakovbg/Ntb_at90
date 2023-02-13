@@ -1,5 +1,4 @@
 import React from 'react';
-import { styled } from '@mui/material/styles';
 import styles from "./Card.module.scss";
 import MUICard from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -8,15 +7,19 @@ import Avatar from '../avatar/Avatar';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
+import  Chip  from '@mui/material/Chip';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import millify from "millify"
 
-export default function Card({ name, mediaUrl, price }) {
+
+export default function Card({name, likes, mediaUrl, user, price, currency}) {
   return (
 
     <MUICard className={styles.card} sx={{ maxWidth: 339 }}>
 
       <CardHeader
         avatar={
-          <Avatar url="/images/avatar.png" size='33px' verified='true' />
+          <Avatar url={user.avatar.url} size='33px' verified={user.avatar.verified} />
 
         }
       />
@@ -34,9 +37,11 @@ export default function Card({ name, mediaUrl, price }) {
           <Typography className={styles.title}
           >{name}</Typography>
           <Typography className={styles.price}
-          >{price}</Typography>
-  
- 
+          >{price+' '+currency}</Typography>
+
+          <Chip className={styles.likes} color="secondary" icon={<FavoriteIcon  />} label={millify(likes)} variant="outlined" />
+
+
         </CardActions>
       </CardContent>
 
