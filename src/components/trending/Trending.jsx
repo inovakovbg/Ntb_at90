@@ -3,15 +3,16 @@ import Logo from '../logo/Logo';
 import styles from "./Trending.module.scss";
 import classNames from "classnames";
 
-import { Grid,Select,MenuItem} from "@mui/material";
+import { Container,Grid,Select,MenuItem} from "@mui/material";
 import Typography from '@mui/material/Typography';
 import Card from '../card/Card';
-import Container from '@mui/material/Container'
+
 
 
 export default function Trending({ cards = [] }) {
 
-    return (<Container  maxWidth="xl">
+    return (
+            <Container  maxWidth="xl">
             <Typography variant='h2'>Trending</Typography>
             
             <Select className={classNames(styles.select)}
