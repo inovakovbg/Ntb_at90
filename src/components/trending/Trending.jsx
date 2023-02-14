@@ -12,7 +12,8 @@ import Card from '../card/Card';
 export default function Trending({ cards = [] }) {
 
     return (
-        <Container className={classNames(styles.container)} 
+        <div className={classNames(styles.wrapper)}>
+        <Container 
               maxWidth='xl'>
               {/* <Box sx={{display: 'flex', alignItems: 'center' }}> */}
                 
@@ -46,6 +47,7 @@ export default function Trending({ cards = [] }) {
             </Grid>
 
         </Container>
+        </div>
 
 
     )
