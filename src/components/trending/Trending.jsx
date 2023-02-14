@@ -3,7 +3,7 @@ import Logo from '../logo/Logo';
 import styles from "./Trending.module.scss";
 import classNames from "classnames";
 
-import { Container, Grid, Select, MenuItem, Box } from "@mui/material";
+import {Container , Grid, Select, MenuItem, Box } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import Card from '../card/Card';
 
@@ -12,8 +12,9 @@ import Card from '../card/Card';
 export default function Trending({ cards = [] }) {
 
     return (
-        <Container maxWidth='xl'>
-              <Box sx={{display: 'flex', alignItems: 'center' }}>
+        <Container 
+              maxWidth='xl'>
+              {/* <Box sx={{display: 'flex', alignItems: 'center' }}> */}
                 
                      <Typography className={classNames(styles.heading)} variant='h2'>Trending</Typography>
 
@@ -23,7 +24,7 @@ export default function Trending({ cards = [] }) {
                 <MenuItem value="This week">This week</MenuItem>
             </Select>
 
-            </Box>
+            {/* </Box> */}
             <Grid className={classNames(styles.grid)}
                 container spacing={1}
                 justifyContent='space-between'
