@@ -5,8 +5,11 @@
   padding:30px;
 }
 .container {
-  position: relative;
+  
   background: colors.$background_default ;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 
 
 }
