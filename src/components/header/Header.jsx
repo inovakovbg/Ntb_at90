@@ -10,9 +10,9 @@ export default function Header() {
 
     return (
         <div>
-            <Container className={classNames(styles.container)} maxWidth="false">
+            <Container className={classNames(styles.container)} maxWidth="xl">
                 <Grid container spacing={3}
-                    justifyContent='space-between'
+                    // justifyContent='space-between'
                     alignItems='center'
                 >
 
@@ -34,7 +34,7 @@ export default function Header() {
                                         position="start"
                                     >
                                         <SearchIcon
-                                            className={styles.search} />
+                                           className={classNames(styles.search)} />
                                     </InputAdornment>
                                 )
                             }}

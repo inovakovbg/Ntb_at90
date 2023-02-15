@@ -9,12 +9,15 @@ import { avatarClasses } from "@mui/material";
 import Trending from "../src/components/trending/Trending";
 import Countdown from "../src/components/countdown/Countdown";
 import Auctions from "../src/components/auctions/Auctions";
+import Footer from "../src/components/footer/Footer";
 
 export default function Index() {
   return (
     <div>
   {/* <Example /> */}
-  {/* <Header /> */}
+
+  {/* <Header></Header> */}
+  
     {/* <Avatar url="/images/avatar.png" size='180px' verified=''/> */}
   {/* <User size='150px' name="Ivan Nov" info="13200pt" verified="true"/> */}
 {/* 
@@ -77,6 +80,7 @@ export default function Index() {
   ]}/>
 
 
+<Footer></Footer>
   
   </div>
   )
