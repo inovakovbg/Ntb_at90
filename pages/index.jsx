@@ -7,6 +7,7 @@ import Card from "../src/components/card/Card";
 import React from "react";
 import { avatarClasses } from "@mui/material";
 import Trending from "../src/components/trending/Trending";
+import Countdown from "../src/components/countdown/Countdown";
 
 export default function Index() {
   return (
@@ -15,11 +16,15 @@ export default function Index() {
   {/* <Header /> */}
     {/* <Avatar url="/images/avatar.png" size='180px' verified=''/> */}
   {/* <User size='150px' name="Ivan Nov" info="13200pt" verified="true"/> */}
+
   <Card name="Clock" likes={560}  mediaUrl="/images/nft.jpg" 
    user={{avatar:{url:"/images/avatar.png",verified:true}}} price="1300" currency='ETH' /> 
   <br></br>
+
+  {/* <Countdown/> */}
   
-  <Trending cards={[
+  
+  {/* <Trending cards={[
   {
     "name":"Ivy",
     "user":{"avatar":{"url":"images/avatar.png"},"verified":true },
@@ -64,7 +69,7 @@ export default function Index() {
     "currency":"ETH"
  }
 
-  ]}/>
+  ]}/> */}
 
 
   

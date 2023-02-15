@@ -15,7 +15,7 @@ export default function Trending({ cards = [] }) {
         <div className={classNames(styles.wrapper)}>
         <Container 
               maxWidth='xl'>
-              {/* <Box sx={{display: 'flex', alignItems: 'center' }}> */}
+              <Box sx={{display: 'flex', alignItems: 'center' }}>
                 
                      <Typography className={classNames(styles.heading)} variant='h2'>Trending</Typography>
 
@@ -25,7 +25,7 @@ export default function Trending({ cards = [] }) {
                 <MenuItem value="This week">This week</MenuItem>
             </Select>
 
-            {/* </Box> */}
+            </Box>
             <Grid className={classNames(styles.grid)}
                 container spacing={1}
                 justifyContent='space-between'

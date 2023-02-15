@@ -3,13 +3,17 @@
 
 .card {
   padding: 1rem;
-  
+  background-color: colors.$background_paper
 }
 
 .media{
-  // object-fit: contain;
+  object-fit: contain;
   border-radius: 15px;
- 
+  position:relative;
+}
+
+.box{
+ position:relative;
 }
 
 .title{
@@ -33,5 +37,17 @@
 
 .likes {
   color: colors.$secondary_main;
+  float:right;
 }
 
+.badge{
+  position: absolute;
+  height: 10% !important;
+  top: 10px;
+  left: 10px;
+  color: colors.$background_paper !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color:colors.$secondary_main ;
+}
