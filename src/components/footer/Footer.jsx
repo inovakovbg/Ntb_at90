@@ -12,11 +12,11 @@ export default function Header() {
         <div>
             <Container className={classNames(styles.container)} maxWidth="xl">
                 <Grid container spacing={3}
-                    // justifyContent='space-between'
+                    justifyContent='space-between'
                     alignItems='center'
                 >
 
-                    <Grid item xs={'auto'}>
+                    <Grid item xs={'1'}>
                         <Logo type="muted" />
                     </Grid>
 
@@ -26,7 +26,7 @@ export default function Header() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={'auto'}>
+                    <Grid item xs={'4'}>
                         <Button variant="text">Privacy Policy</Button>
                         <Button variant="text">Coockie Policy</Button>
 
