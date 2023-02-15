@@ -10,27 +10,29 @@ export default function Header() {
 
     return (
         <div>
-            <Container className={classNames(styles.container)} maxWidth="xl">
-                <Grid container spacing={3}
+            <Container className={styles.container} maxWidth="xl">
+                <Grid 
+                    container spacing={3}
                     justifyContent='space-between'
                     alignItems='center'
                 >
 
-                    <Grid item xs={'1'}>
+                    <Grid item 
+                        xs={'1'}>
                         <Logo type="muted" />
                     </Grid>
 
-                    <Grid item xs={'auto'}>
-                        <Typography className={styles.paragraph}>
+                    <Grid item
+                         xs={'auto'} className={styles.paragraph}>
+                        <Typography>
                             Bum All Rights Reserved 2023
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={'4'}>
-                        <Button variant="text">Privacy Policy</Button>
+                    <Grid item
+                         xs={'4'} className={styles.button}>
+                        <Button size="small" variant="text">Privacy Policy</Button>
                         <Button variant="text">Coockie Policy</Button>
-
-
                     </Grid>
 
                 </Grid>

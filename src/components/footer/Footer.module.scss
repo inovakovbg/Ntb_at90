@@ -11,13 +11,14 @@
 }
 
 .paragraph{
+  color: colors.$text_secondary !important;
   position:center;
   align-items: center;
   padding:30px
 }
 
 .button {
-  color: colors.$text_primary;
+  color: colors.$text_secondary;
   padding: 20px;
 }
 
