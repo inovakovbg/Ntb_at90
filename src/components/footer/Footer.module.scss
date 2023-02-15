@@ -2,9 +2,17 @@
 
 
 .container {
-  height:98px;
+ 
   background: colors.$background_paper  ;
   color: colors.$text_primary;
+  align-items: center !important;
+  
+}
+
+.paragraph{
+  position:center;
+  align-items: center;
+  padding:30px
 }
 
 .button {

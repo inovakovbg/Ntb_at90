@@ -9,7 +9,7 @@ import { Grid, Button, TextField, InputAdornment } from "@mui/material";
 export default function Header() {
 
     return (
-        <div>
+      
             <Container className={classNames(styles.container)} maxWidth="xl">
                 <Grid container spacing={3}
                     // justifyContent='space-between'
@@ -21,7 +21,7 @@ export default function Header() {
                     </Grid>
 
                     <Grid item xs={'7'}>
-                        <p>Bum All Rights Reserved 2023</p>
+                        <p className={styles.paragraph} >Bum All Rights Reserved 2023</p>
                     </Grid>
 
                     <Grid item xs={'4'}>
@@ -34,7 +34,7 @@ export default function Header() {
                 </Grid>
 
             </Container>
-        </div>
+        
 
     )
 }
