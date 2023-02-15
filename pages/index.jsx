@@ -28,7 +28,7 @@ export default function Index() {
   {/* <Countdown/> */}
   
   
-  <Auctions cards={[
+  {/* <Auctions cards={[
   {
     "name":"Ivy",
     "user":{"avatar":{"url":"images/avatar.png"},"verified":true },
@@ -77,7 +77,7 @@ export default function Index() {
     "timeLeft":10000
  }
 
-  ]}/>
+  ]}/> */}
 
 
 <Footer></Footer>
