@@ -15,7 +15,7 @@ import millify from "millify"
 import Countdown from "/src/components/countdown/Countdown";
 
 
-export default function Card({ name, likes = 0, mediaUrl, user = { avatar: { verified: true } }, price, currency, timeLeft=10000 }) {
+export default function Card({ name, likes = 0, mediaUrl, user = { avatar: { verified: true } }, price, currency, timeLeft=0 }) {
   
   // const [Live, setLive] = useState(true)
 

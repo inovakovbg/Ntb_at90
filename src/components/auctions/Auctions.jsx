@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../logo/Logo';
-import styles from "./Trending.module.scss";
+import styles from "./Auctions.module.scss";
 import classNames from "classnames";
 
 import {Container , Grid, Select, MenuItem, Box } from "@mui/material";
@@ -9,7 +9,7 @@ import Card from '../card/Card';
 
 
 
-export default function Trending({ cards = [] }) {
+export default function Auctions({ cards = [] }) {
 
     return (
         <div className={classNames(styles.wrapper)}>
@@ -17,7 +17,7 @@ export default function Trending({ cards = [] }) {
               maxWidth='xl'>
               <Box className={classNames(styles.box)}>
                 
-                     <Typography className={classNames(styles.heading)} variant='h2'>Trending</Typography>
+                     <Typography className={classNames(styles.heading)} variant='h2'>Live Auctions</Typography>
 
             <Select className={classNames(styles.select)}
                 value='This week'
@@ -41,6 +41,7 @@ export default function Trending({ cards = [] }) {
                                 mediaUrl={card.mediaUrl}
                                 price={card.price}
                                 currency={card.currency}
+                                timeLeft={card.timeLeft}
                             />
                         </Grid>)
                 })}
