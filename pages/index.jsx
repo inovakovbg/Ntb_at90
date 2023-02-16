@@ -80,7 +80,7 @@ export default function Index() {
   ]}/> */}
 
 
-<Footer></Footer>
+<Footer />
   
   </div>
   )

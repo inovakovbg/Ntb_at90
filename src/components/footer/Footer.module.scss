@@ -7,12 +7,13 @@
   place-content: center !important;
   vertical-align: center !important;
   align-items: center !important;
+ 
 }
 
 .paragraph {
   color: colors.$text_disabled !important;
   text-align: center;
-  padding: 20px;
+
   text-transform: unset !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -23,7 +24,7 @@
 
 .button {
   color: colors.$text_secondary !important;
-  padding: 20px;
+
   font-style: normal !important;
   font-weight: 600 !important;
   font-size: 14px !important;
