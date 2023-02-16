@@ -10,9 +10,11 @@ import Trending from "../src/components/trending/Trending";
 import Countdown from "../src/components/countdown/Countdown";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
+import Step from "../src/components/how/Step";
 
 export default function Index() {
   return (
+
     <div>
   {/* <Example /> */}
 
@@ -80,8 +82,10 @@ export default function Index() {
   ]}/> */}
 
 
-<Footer />
-  
+{/* <Footer /> */}
+
+<Step number={1} title="DIGITAL CURRENCY" description='You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange'/>;
+  <Example/>
   </div>
   )
 }
