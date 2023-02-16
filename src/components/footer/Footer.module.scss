@@ -4,26 +4,16 @@
 .container {
  
   background: colors.$background_paper  ;
-  color: colors.$text_primary;
-  align-items: center !important;
-  justify-content:"space-around"
-  
 }
 
 .paragraph{
   color: colors.$text_secondary !important;
-  position:center;
-  align-items: center;
-  padding:30px
+  text-align: center;
+  padding:20px
 }
 
 .button {
-  color: colors.$text_secondary;
+  color:colors.$text_secondary !important;
   padding: 20px;
-}
-
-.search {
-  background: colors.$background_default !important ;
-  color: colors.$text_primary;
 }
 

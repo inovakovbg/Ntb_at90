@@ -30,9 +30,9 @@ export default function Header() {
                     </Grid>
 
                     <Grid item
-                         xs={'4'} className={styles.button}>
-                        <Button size="small" variant="text">Privacy Policy</Button>
-                        <Button variant="text">Coockie Policy</Button>
+                         xs={'4'} >
+                        <Button className={styles.button} variant="text">Privacy Policy</Button>
+                        <Button className={styles.button} variant="text">Coockie Policy</Button>
                     </Grid>
 
                 </Grid>
