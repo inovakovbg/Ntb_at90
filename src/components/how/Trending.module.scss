@@ -1,0 +1,48 @@
+@use "../../styles/colors";
+
+.heading{
+ 
+  padding:30px;
+
+  
+}
+
+.wrapper {
+  padding: 100px;
+  background-color: colors.$background_default;
+}
+.container {
+  
+  background: colors.$background_default ;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+}
+.box {
+  position:relative;
+}
+
+
+.grid {
+  padding: 20px;
+}
+
+
+.search {
+  background: colors.$background_default  ;
+  color: colors.$text_primary;
+}
+
+.select{
+  position:absolute;
+  width: 150px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  top:0%;
+  right:0%;
+ 
+}
+

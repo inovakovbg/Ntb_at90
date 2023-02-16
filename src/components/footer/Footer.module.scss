@@ -13,6 +13,13 @@
   align-items: center !important;
   display: flex !important;
 }
+
+
+.wrapper {
+ 
+  background-color: colors.$background_default;
+}
+
 .logo{
   height: 65% !important;
   // flex-basis: 7%  !important;

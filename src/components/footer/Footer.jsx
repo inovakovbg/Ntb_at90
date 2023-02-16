@@ -11,8 +11,8 @@ import { Button, TextField, InputAdornment, Typography } from "@mui/material";
 export default function Header() {
 
     return (
-        <div>
-            <Container maxWidth='xl' className={styles.container}>
+        <div className={classNames(styles.wrapper)}>
+            <Container maxWidth='false' className={styles.container}>
                 <Grid  container spacing={1}>
 
 
@@ -21,7 +21,7 @@ export default function Header() {
                     </Grid>
 
                     <Grid item xs={'8'}>
-                        <Typography variant="body2" className={styles.paragraph}>
+                        <Typography  className={styles.paragraph}>
                             Bum All Rights Reserved 2023
                         </Typography>
                     </Grid>
