@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <div>
-            <Container maxWidth='false'>
+            <Container maxWidth='xl'>
                 <Grid className={styles.container} container rowSpacing={1}>
 
 
@@ -20,13 +20,13 @@ export default function Header() {
                         <Logo type="muted" />
                     </Grid>
 
-                    <Grid item xs={'7'}>
+                    <Grid item xs={'8'}>
                         <Typography variant="body2" className={styles.paragraph}>
                             Bum All Rights Reserved 2023
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={'auto'} >
+                    <Grid item xs={'3'} >
                         <Button className={styles.button} variant="text">Privacy Policy</Button>
                         <Button className={styles.button} variant="text">Coockie Policy</Button>
                     </Grid>
