@@ -10,7 +10,7 @@
 }
 
 .paragraph {
-  color: colors.$text_secondary !important;
+  color: colors.$text_disabled !important;
   text-align: center;
   padding: 20px;
   text-transform: unset !important;
@@ -29,4 +29,9 @@
   font-size: 14px !important;
   line-height: 17px !important;
   text-transform: unset !important;
-}
+  }
+
+  .wrapper {
+    padding: 100px;
+    background-color: colors.$primary_main;
+  }

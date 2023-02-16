@@ -11,7 +11,7 @@ import { Button, TextField, InputAdornment, Typography } from "@mui/material";
 export default function Header() {
 
     return (
-        <footer>
+        <div>
             <Container maxWidth='false'>
                 <Grid className={styles.container} container justifyContent="space-around">
 
@@ -34,7 +34,7 @@ export default function Header() {
                 </Grid>
 
             </Container>
-        </footer>
+        </div>
 
 
     )
