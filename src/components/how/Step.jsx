@@ -13,16 +13,16 @@ export default function Step ({number,title,description}) {
 
     <div>
       <Container className={styles.container}>
-        <Grid container      
-            rowSpacing={1} 
+        <Grid container m={0}
+            
             className={styles.grid}
         >
 
-          <Grid item xs={4}  className={styles.num}   >
+          <Grid item xs={3}  className={styles.num}   >
           <Typography align="center" className={styles.textNum}> {number}</Typography>
           </Grid>
 
-          <Grid item xs={8} className={styles.gridtext}>
+          <Grid item xs={9} className={styles.gridtext}>
             <Typography align="center" className={styles.textName}>{title}</Typography>
             <Typography align="center" className={styles.text}  >{description}</Typography>
 

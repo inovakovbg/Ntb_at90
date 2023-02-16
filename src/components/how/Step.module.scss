@@ -2,54 +2,55 @@
 
 
 .container {
-  // padding: 1rem;
-  height: 215px !important;
-  width: 580px !important;
+//  padding: 1rem !important;
+  // height: 215px !important;
+  // width: 580px !important;
   background-color: colors.$background_paper !important;
   border-radius: 30px;
-  position: relative;
+  // position: relative;
 
-  // align-items: "center" !important;
-  // justify-content:"center" !important;
+  overflow: hidden;
 
 }
 
 .grid {
-
-  bottom: 0 !important;
-  left: 0 !important;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  // place-content: center !important;
+  direction:"row";
+  // bottom: 0 !important;
+  // left: 0 !important;
+  // height: 100%;
+  // width: 100%;
+  // position: absolute;
+  place-content: center !important;
+  align-content: center !important;
 }
 
 
 .num {
   background-color: colors.$primary_main !important;
-  height: 100%;
-  width: 100%;
-  left: 0 !important;
-  bottom: 0 !important;
-  position: absolute;
+  // height: 100%;
+  // width: 100%;
+  // left: 0 !important;
+  // bottom: 0 !important;
+  // position: absolute;
   border-radius: 30px 0px 0px 30px;
   place-content: center !important;
   color:rgba(255, 255, 255, 0.9);
+  align-content: center !important;
 
 }
 
  .gridtext{
-  right: 0 !important;
+  // right: 0 !important;
 
-  // background-color: green !important;
+  // // background-color: green !important;
 
-  height: 100%;
-  width: 100%;
-  bottom: 0 !important;
-  position: absolute !important;
-  place-content: center !important;
+  // height: 100%;
+  // width: 100%;
+  // bottom: 0 !important;
+  // position: absolute !important;
+ 
   border-radius: 0px 30px 30px 0px;
-  place-content: center !important;
+  
  } 
 
   
@@ -75,7 +76,7 @@
   font-style: normal !important;
   font-size: 16px !important;
 
-  width: 0.9;
+  // width: 0.9;
   padding: 0% 10%;
   text-align: left !important;
   

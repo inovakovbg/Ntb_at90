@@ -1,52 +1,54 @@
 import React from 'react';
-import Logo from '../logo/Logo';
-import styles from "./Trending.module.scss";
+
+import styles from "./How.module.scss";
 import classNames from "classnames";
 
-import {Container , Grid, Select, MenuItem, Box } from "@mui/material";
+import { Container, Grid, Select, MenuItem, Box } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import Card from '../card/Card';
+import Step from './Step';
 
 
 
-export default function Trending({ cards = [] }) {
+export default function How({ items = [] }) {
 
     return (
         <div className={classNames(styles.wrapper)}>
-        <Container 
-              maxWidth='xl'>
-              <Box className={classNames(styles.box)}>
-                
-                     <Typography className={classNames(styles.heading)} variant='h2'>Trending</Typography>
+            <Container className={styles.container}
+                maxWidth='xl'>
 
-            <Select className={classNames(styles.select)}
-                value='This week'
-                label='This week'>
-                <MenuItem value="This week">This week</MenuItem>
-            </Select>
+                <Grid container direction="row"
+                    className={classNames(styles.grid)}
+                    alignItems="center"
+                    justifyContent='center'
+                >
 
-            </Box>
-            <Grid className={classNames(styles.grid)}
-                container spacing={1}
-                justifyContent='space-between'
-                alignItems='center'>
+                    <Grid item xs={7} container justifyContent="flex-start" 
+                          className={styles.num}   >
+                        <Typography align="center" className={styles.textNum}> Text</Typography>
+                    </Grid>
 
-                {cards.map((card) => {
+                    <Grid item container
+                        rowSpacing={2} xs={5}
+                        justifyContent="flex-end" >
 
-                    return (
-                        <Grid Grid item xs={3}>
-                            <Card name={card.name}
-                                user={card.user}
-                                likes={card.likes}
-                                mediaUrl={card.mediaUrl}
-                                price={card.price}
-                                currency={card.currency}
-                            />
-                        </Grid>)
-                })}
-            </Grid>
+                        {items.map((card, index) => {
 
-        </Container>
+                            return (
+                                <Grid item>
+                                    <Step number={index + 1}
+                                        title={card.title}
+                                        description={card.description}
+
+                                    />
+                                </Grid>)
+                        })}
+
+                    </Grid>
+
+                </Grid>
+
+            </Container>
         </div>
 
 

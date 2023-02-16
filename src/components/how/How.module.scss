@@ -8,41 +8,38 @@
 }
 
 .wrapper {
-  padding: 100px;
-  background-color: colors.$background_default;
+
+  background-color: colors.$primary_main;
+ 
+  align-items: center;
+  justify-content: center;
+  
+
+
 }
 .container {
   
-  background: colors.$background_default ;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+ padding: 0px !important;
+  // align-items: center;
+
+  
+  
+
+ 
+  
+  background: green ;
+ 
 
 }
-.box {
-  position:relative;
-}
+
 
 
 .grid {
-  padding: 20px;
+  // padding: 20px;
+  right:0;
+  position: relative;
 }
 
 
-.search {
-  background: colors.$background_default  ;
-  color: colors.$text_primary;
-}
 
-.select{
-  position:absolute;
-  width: 150px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  top:0%;
-  right:0%;
- 
-}
 
