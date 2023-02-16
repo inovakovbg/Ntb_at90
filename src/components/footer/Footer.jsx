@@ -1,20 +1,20 @@
 import React from 'react';
 import Logo from '../logo/Logo';
+import Grid  from "@mui/material/Grid";
 import styles from "./Footer.module.scss";
 import classNames from "classnames";
 import Container from "@mui/material/Container";
-import { Grid, Button, TextField, InputAdornment, Typography } from "@mui/material";
+import { Button, TextField, InputAdornment, Typography } from "@mui/material";
+
 
 
 export default function Header() {
 
     return (
         <div>
-            <Container className={styles.container} maxWidth="xl">
-                <Grid 
-                    container spacing={3}
-                    justifyContent='space-between'
-                    alignItems='center'
+            <Container className={styles.container} maxWidth={false}>
+                <Grid container justifyContent="space-around"
+                                alignItems='center'
                 >
 
                     <Grid item 
