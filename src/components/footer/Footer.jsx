@@ -16,8 +16,8 @@ export default function Header() {
                 <Grid className={styles.container} container rowSpacing={1}>
 
 
-                    <Grid item xs={'1'}>
-                        <Logo type="muted" />
+                    <Grid item className={styles.logo} xs={'1'}>
+                        <Logo  type="muted" />
                     </Grid>
 
                     <Grid item xs={'8'}>

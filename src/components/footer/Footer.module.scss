@@ -4,9 +4,19 @@
 .container {
   background: colors.$background_paper ;
   height:98px;
-  place-content: center !important;
-  vertical-align: center !important;
+  // place-content: center !important;
+  // vertical-align: center !important;
+  // align-items: center !important;
+
+  flex-direction: row !important;
+  justify-content: flex-start !important;
   align-items: center !important;
+  display: flex !important;
+}
+.logo{
+  height: 65% !important;
+  // flex-basis: 7%  !important;
+  padding-left: 30px !important;
 }
 
 .paragraph {
