@@ -12,16 +12,15 @@ export default function Header() {
 
     return (
         <div>
-            <Container maxWidth='xl'>
-                <Grid container rowSpacing={1}
-                      className={styles.container} >
+            <Container maxWidth='false'>
+                <Grid className={styles.container} container rowSpacing={1}>
 
 
-                    <Grid item xs={'auto'}>
+                    <Grid item xs={'1'}>
                         <Logo type="muted" />
                     </Grid>
 
-                    <Grid item xs={'auto'}>
+                    <Grid item xs={'7'}>
                         <Typography variant="body2" className={styles.paragraph}>
                             Bum All Rights Reserved 2023
                         </Typography>
