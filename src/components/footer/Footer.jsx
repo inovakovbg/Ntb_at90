@@ -12,11 +12,11 @@ export default function Header() {
 
     return (
         <div>
-            <Container maxWidth='xl'>
-                <Grid className={styles.container} container rowSpacing={1}>
+            <Container maxWidth='xl' className={styles.container}>
+                <Grid  container spacing={1}>
 
 
-                    <Grid item className={styles.logo} xs={'1'}>
+                    <Grid item xs={'1'}>
                         <Logo  type="muted" />
                     </Grid>
 
