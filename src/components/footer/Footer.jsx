@@ -12,24 +12,21 @@ export default function Header() {
 
     return (
         <footer>
-            <Container maxWidth='xl'>
+            <Container maxWidth='false'>
                 <Grid className={styles.container} container justifyContent="space-around">
 
 
-                    <Grid item
-                        xs={'1'}>
+                    <Grid item xs={'1'}>
                         <Logo type="muted" />
                     </Grid>
 
-                    <Grid item
-                        xs={'7'}>
-                        <Typography className={styles.paragraph}>
+                    <Grid item xs={'7'}>
+                        <Typography variant="body2" className={styles.paragraph}>
                             Bum All Rights Reserved 2023
                         </Typography>
                     </Grid>
 
-                    <Grid item
-                        xs={'auto'} >
+                    <Grid item xs={'auto'} >
                         <Button className={styles.button} variant="text">Privacy Policy</Button>
                         <Button className={styles.button} variant="text">Coockie Policy</Button>
                     </Grid>
