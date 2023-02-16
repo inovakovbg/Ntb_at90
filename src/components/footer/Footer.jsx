@@ -12,8 +12,10 @@ export default function Header() {
 
     return (
         <div>
-            <Container maxWidth='false'>
-                <Grid className={styles.container} container justifyContent="space-around">
+            
+                <Grid container rowSpacing={1}
+                      className={styles.container} 
+                      maxWidth='xl'>
 
 
                     <Grid item xs={'1'}>
@@ -33,7 +35,7 @@ export default function Header() {
 
                 </Grid>
 
-            </Container>
+      
         </div>
 
 
