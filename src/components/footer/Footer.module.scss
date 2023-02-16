@@ -2,18 +2,31 @@
 
 
 .container {
- 
-  background: colors.$background_paper  ;
+  background: colors.$background_paper ;
+  height:98px;
+  place-content: center !important;
+  vertical-align: center !important;
+  align-items: center !important;
 }
 
-.paragraph{
+.paragraph {
   color: colors.$text_secondary !important;
   text-align: center;
-  padding:20px
+  padding: 20px;
+  text-transform: unset !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  
 }
 
 .button {
-  color:colors.$text_secondary !important;
+  color: colors.$text_secondary !important;
   padding: 20px;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  text-transform: unset !important;
 }
-
