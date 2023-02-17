@@ -18,7 +18,7 @@ export default function How({ items = [] }) {
                 maxWidth='xl'>
 
                 <Grid container direction="row"
-                    className={classNames(styles.grid)}
+                    className={classNames(styles.container)}
                     alignItems="center"
                     justifyContent='center'
                 >
@@ -28,14 +28,14 @@ export default function How({ items = [] }) {
                         <Typography align="center" className={styles.textNum}> Text</Typography>
                     </Grid>
 
-                    <Grid item container
-                        rowSpacing={2} xs={5}
-                        justifyContent="flex-end" >
+                    <Grid item container className={styles.gridLeft}
+                        rowSpacing={2} xs={4}
+                        >
 
                         {items.map((card, index) => {
 
                             return (
-                                <Grid item>
+                                <Grid item className={styles.gridLeft}>
                                     <Step number={index + 1}
                                         title={card.title}
                                         description={card.description}
