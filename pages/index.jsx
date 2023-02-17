@@ -85,9 +85,12 @@ export default function Index() {
 
 {/* <Footer /> */}
 
-< Step number={1} title="DIGITAL CURRENCY" description='You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange'/>
-  
-  <How items={[
+{/* < Step number={1} title="DIGITAL CURRENCY" description='You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange'/> */}
+  <br></br> <br></br>
+  <How title='HOW IT WORKS'
+       description="Discover, collect, and sell extraordinary NFTs
+       on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
+       items={[
   {
     "title":"DIGITAL CURRENCY",
     "description":'You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange',
