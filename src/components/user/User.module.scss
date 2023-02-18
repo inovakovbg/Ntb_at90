@@ -3,28 +3,41 @@
 
 .user {
   display:flex;
-  align-items: center;
-  
-  
-
-  
+  align-items: center !important;
 }
 
+.text{
+  display:grid !important;
+  justify-content: left !important;
+  align-items: center !important;
+  // background-color: green;
+  box-sizing: border-box !important;
+  
+} 
+
+  
+
+
 .name {
-  padding: 10px;
+  margin: 0;
+  padding-left: 10px;
   color: colors.$text_primary;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 900 !important;
   font-size: 1rem;
+  
   
  
 }
 
 .info {
-  font-family: 'Montserrat';
+  margin: 0;
+  padding-left: 10px;
   color: colors.$info_main;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 0.8rem;
+  
  }
+
 

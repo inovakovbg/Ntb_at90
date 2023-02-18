@@ -13,6 +13,7 @@ import Footer from "../src/components/footer/Footer";
 import Step from "../src/components/how/Step";
 import How from "../src/components/how/How";
 import Featured from "../src/components/featured/Featured";
+import Collector from "../src/components/colectors/Collector";
 
 
 export default function Index() {
@@ -25,7 +26,7 @@ export default function Index() {
 
          {/* <Avatar url="/images/avatar.png" size='180px' verified=''/> */}
 
-         {/* <User size='150px' name="Ivan Nov" info="13200pt" verified="true"/> */}
+         <User size='50px' name="Ivan Nov" info="13200pt" verified="true"/>
          
          {/* 
   <Card name="Clock" likes={560}  mediaUrl="/images/nft.jpg" 
@@ -110,6 +111,9 @@ export default function Index() {
       "description":"Let'connect your wallet to BUM,edit your profile,and begin interacting in the space.",
      }
   ]}/>  */}
+
+
+  <Collector number={1}/>
 
          <Featured items={[
             {
