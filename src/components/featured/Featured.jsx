@@ -5,8 +5,8 @@ import classNames from "classnames";
 
 import { Button, Container, ImageList, ImageListItem, Grid, Select, MenuItem, Box } from "@mui/material";
 import Typography from '@mui/material/Typography';
-import Card from '../card/Card';
-import Step from './Step';
+import { useRouter } from 'next/router'
+
 
 
 
@@ -17,16 +17,24 @@ export default function Featured({ items = [] }) {
             <Container className={styles.container} disableGutters maxWidth='xl'>
 
 
-                <ImageList  cols={4} >
-                    {items.map((item) => (
-                        <ImageListItem key={item.img}    >
+                <ImageList cols={6} >
+                    {items.map((item) => {
+
+                        const handleClick = (e) => {
+                            e.preventDefault()
+                            router.push(item.href)
+                        }
+
+
+                        return (<ImageListItem key={item.image} cols={item.cols} rows={item.rows}  >
                             <img className={styles.image}
                                 src={item.image}
                                 alt={item.title}
-                                
+                                onClick={handleClick}
+
                             />
                         </ImageListItem>
-                    ))}
+                    )})}
                 </ImageList>
 
 
