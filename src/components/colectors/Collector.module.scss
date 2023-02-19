@@ -1,63 +1,56 @@
 @use "../../styles/colors";
 
-.container{
-  display:flex;
-  align-items: center;
-  min-height: 100px;
-  padding: 0px !important;
-  margin: 0 !important;
-  
+.container {
+ 
+  background-color: rgba(colors.$primary_main, 0.05) !important;
+  // border-radius: 15px 15px 15px 15px
+
 }
+
 .grid {
-  
-  background-color: colors.$background_paper !important;
-  border-radius: 30px;
-  direction:"row";
-  
-  flex: 1 ;
-  
-
-
-
- 
-
-
-  // overflow: hidden;
-}
-
-
-
-
-.num{
- height:100%;
-  background-color: rgba(colors.$primary_main,0.1) !important;
-  border-radius: 30px 0px 0px 30px;
-  color:colors.$text_primary;
-
- 
-
-
-
-
-}
-
- .gridUser{
-  color:colors.$text_primary;
-  background-color: green;
-  // justify-content: right !important;
-  // align-items: bottom !important;
-  // background-color: aqua;
+  min-height: 70px;
    
-  // border-radius: 0px 30px 30px 0px;
+}
+.darkerNum {
+  display: flex !important;
+  align-items: center;
+  place-content: center;
   
- } 
-
-  
-
-
-.textNum {
+  background-color: rgba(colors.$primary_main, 0.2) !important;
+  // border-radius: 15px 0px 0px 15px;
   font-style: normal;
   font-weight: 700;
   font-size: 20px !important;
+}
 
+.lighterNum {
+  display: flex !important;
+  align-items: center;
+  place-content: center;
+  
+  background-color: rgba(colors.$primary_main, 0.3) !important;
+  // border-radius: 15px 0px 0px 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px !important;
+}
+
+.darkerUser {
+  display: flex !important;
+  align-items: center;
+  place-content: left;
+  padding-left: 16px;  
+  background-color: rgba(colors.$primary_main, 0.1) ;
+  // border-radius: 0px 15px 15px 0px;
+ 
+}
+
+.lighterUser {
+  display: flex !important;
+  align-items: center;
+  place-content: left;
+  padding-left: 16px;  
+  background-color: rgba(colors.$primary_main, 0.2) ;
+  // border-radius: 0px 15px 15px 0px;
+  
 }

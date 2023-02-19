@@ -14,6 +14,7 @@ import Step from "../src/components/how/Step";
 import How from "../src/components/how/How";
 import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/colectors/Collector";
+import CollectorsColumn from "../src/components/colectors/CollectorsColumn";
 
 
 export default function Index() {
@@ -26,8 +27,8 @@ export default function Index() {
 
          {/* <Avatar url="/images/avatar.png" size='180px' verified=''/> */}
 
-         <User size='50px' name="Ivan Nov" info="13200pt" verified="true"/>
-         
+         <User size='50px' name="Ivan Nov" info="13200pt" verified="true" />
+
          {/* 
   <Card name="Clock" likes={560}  mediaUrl="/images/nft.jpg" 
    user={{avatar:{url:"/images/avatar.png",verified:true}}} price="1300" currency='ETH' timeLeft={10000}/> 
@@ -113,7 +114,7 @@ export default function Index() {
   ]}/>  */}
 
 
-  <Collector number={1}/>
+         <Collector number={1} type='lighter'/>
 
          <Featured items={[
             {
@@ -163,6 +164,32 @@ export default function Index() {
 
 
          ]} />
+
+
+
+         <CollectorsColumn
+            items={[
+               {
+                  "name": "terika77",
+                  "nftsCount": 134,
+                  "avatar": "images/avatar.png",
+                  "verified": true
+                  
+               },
+               {
+                  "name": "brendan_1",
+                  "nftsCount": 98,
+                  "avatar": "images/avatar.png",
+                  "verified": false
+               },
+               {
+                  "name": "damiann",
+                  "nftsCount": 97,
+                  "avatar": "images/avatar.png",
+                  "verified": false
+               },
+
+            ]} />
 
 
       </div>

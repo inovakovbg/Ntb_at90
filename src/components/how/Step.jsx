@@ -13,13 +13,13 @@ export default function Step ({number,title,description}) {
   return (
 
     <div>
-      <Container >
+      <Container className={styles.container}>
         <Grid container
             
             className={styles.grid}
         >
 
-          <Grid item xs={4}  className={styles.num}   >
+          <Grid item xs={4}    >
           <Typography align="center" className={styles.textNum}> {number}</Typography>
           </Grid>
 

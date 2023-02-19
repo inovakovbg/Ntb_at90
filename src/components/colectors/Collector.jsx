@@ -13,30 +13,31 @@ export default function Collector({ number, name, nftsCount, avatar, verified, t
 
   return (
 
-    <div>
-      <Container >
-        <Grid containerc className={styles.container} 
+    
+      <Container container className={styles.container} disableGutters>
+        <Grid container className={styles.grid} 
 
           
         >
 
-          <Grid item xs={4} className={styles.num}   >
-            <Typography align="center" className={styles.textNum}> {number}</Typography>
+          <Grid item xs={3} className={styles[type+'Num']}  >
+            <Typography >{number}</Typography>
+           
           </Grid>
 
-          <Grid item xs={8} className={styles.gridUser}>
+          <Grid item xs={9} className={styles[type+'User']} 
+          
+          
+              >
 
-            <User size='53px' name="Ivan Nov" info="13200pt" verified="true" />
+            <User size='53px' name={name} info={nftsCount+' Items'} verified={verified} />
 
-
-            {/* <Typography align="center" className={styles.textName}>{name}</Typography>
-            <Typography align="center" className={styles.text}  >{description}</Typography> */}
 
           </Grid>
         </Grid>
 
       </Container>
-    </div>
+  
 
   )
 }
