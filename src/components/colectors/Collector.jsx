@@ -30,7 +30,7 @@ export default function Collector({ number, name, nftsCount, avatar, verified, t
           
               >
 
-            <User size='53px' name={name} info={nftsCount+' Items'} verified={verified} />
+            <User size='53px' name={name} info={nftsCount+' Items'} verified={verified} avatar={avatar}/>
 
 
           </Grid>

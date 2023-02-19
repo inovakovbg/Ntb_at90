@@ -15,9 +15,24 @@ import How from "../src/components/how/How";
 import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/colectors/Collector";
 import CollectorsColumn from "../src/components/colectors/CollectorsColumn";
+import { useState ,useEffect} from "react";
+
+
+import dataUsers from "../data/users.json"
+
+
 
 
 export default function Index() {
+
+   const [collectors, setCollectors] = useState([]);
+
+  
+   useEffect(() => {
+      setCollectors(dataUsers);
+   }, []);
+
+
    return (
 
       <div>
@@ -114,7 +129,7 @@ export default function Index() {
   ]}/>  */}
 
 
-         <Collector number={1} type='lighter'/>
+         <Collector number={1} type='lighter' />
 
          <Featured items={[
             {
@@ -167,29 +182,31 @@ export default function Index() {
 
 
 
-         <CollectorsColumn
-            items={[
-               {
-                  "name": "terika77",
-                  "nftsCount": 134,
-                  "avatar": "images/avatar.png",
-                  "verified": true
-                  
-               },
-               {
-                  "name": "brendan_1",
-                  "nftsCount": 98,
-                  "avatar": "images/avatar.png",
-                  "verified": false
-               },
-               {
-                  "name": "damiann",
-                  "nftsCount": 97,
-                  "avatar": "images/avatar.png",
-                  "verified": false
-               },
+      <CollectorsColumn
+         items={[
+            {
+               "name": "terika77",
+               "nftsCount": 134,
+               "avatar": "images/avatar.png",
+               "verified": true
 
-            ]} />
+            },
+            {
+               "name": "brendan_1",
+               "nftsCount": 98,
+               "avatar": "images/avatar.png",
+               "verified": false
+            },
+            {
+               "name": "damiann",
+               "nftsCount": 97,
+               "avatar": "images/avatar.png",
+               "verified": false
+            },
+
+         ]} /> 
+
+         {/* <CollectorsColumn items={collectors}/> */}
 
 
       </div>
