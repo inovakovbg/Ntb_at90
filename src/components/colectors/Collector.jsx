@@ -7,7 +7,7 @@ import classNames from "classnames";
 
 
 
-export default function Collector({ number, name, nftsCount, avatar, verified, type }) {
+export default function Collector({ id, name, nftsCount, avatar, verified, type }) {
 
 
 
@@ -21,7 +21,7 @@ export default function Collector({ number, name, nftsCount, avatar, verified, t
         >
 
           <Grid item xs={3} className={styles[type+'Num']}  >
-            <Typography >{number}</Typography>
+            <Typography >{id}</Typography>
            
           </Grid>
 

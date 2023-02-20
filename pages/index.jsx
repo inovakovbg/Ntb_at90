@@ -15,6 +15,7 @@ import How from "../src/components/how/How";
 import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/colectors/Collector";
 import CollectorsColumn from "../src/components/colectors/CollectorsColumn";
+import TopCollectors from "../src/components/colectors/TopCollectors";
 import { useState ,useEffect} from "react";
 
 
@@ -42,7 +43,7 @@ export default function Index() {
 
          {/* <Avatar url="/images/avatar.png" size='180px' verified=''/> */}
 
-         <User size='50px' name="Ivan Nov" info="13200pt" verified="true" />
+         {/* <User size='50px' name="Ivan Nov" info="13200pt" verified="true" /> */}
 
          {/* 
   <Card name="Clock" likes={560}  mediaUrl="/images/nft.jpg" 
@@ -207,6 +208,93 @@ export default function Index() {
          ]} /> 
 
          {/* <CollectorsColumn items={collectors}/> */}
+
+         
+      <TopCollectors
+         items={[
+            {
+               "name": "terika77",
+               "nftsCount": 134,
+               "avatar": "images/avatar.png",
+               "verified": true
+             
+
+            },
+            {
+               "name": "brendan_1",
+               "nftsCount": 98,
+               "avatar": "images/avatar.png",
+               "verified": false
+            },
+            {
+               "name": "damiann",
+               "nftsCount": 97,
+               "avatar": "images/avatar.png",
+               "verified": false
+            },
+            {
+               "name": "terika78",
+               "nftsCount": 134,
+               "avatar": "images/avatar.png",
+               "verified": true
+
+            },
+            {
+               "name": "brendan_1",
+               "nftsCount": 98,
+               "avatar": "images/avatar.png",
+               "verified": false
+            },
+            {
+               "name": "damiann",
+               "nftsCount": 97,
+               "avatar": "images/avatar.png",
+               "verified": false
+            },
+            {
+               "name": "terika77",
+               "nftsCount": 134,
+               "avatar": "images/avatar.png",
+               "verified": true
+
+            },
+            {
+               "name": "brendan_1",
+               "nftsCount": 98,
+               "avatar": "images/avatar.png",
+               "verified": false
+            },
+            {
+               "name": "damiann",
+               "nftsCount": 97,
+               "avatar": "images/avatar.png",
+               "verified": false
+            }
+            ,
+            {
+               "name": "damiann",
+               "nftsCount": 97,
+               "avatar": "images/avatar.png",
+               "verified": false
+            }
+            ,
+            {
+               "name": "damiann",
+               "nftsCount": 97,
+               "avatar": "images/avatar.png",
+               "verified": false
+            }
+            ,
+            {
+               "name": "damiann",
+               "nftsCount": 97,
+               "avatar": "images/avatar.png",
+               "verified": false
+            }
+            
+
+         ]} /> 
+        
 
 
       </div>

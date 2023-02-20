@@ -35,6 +35,8 @@ export default function CollectorsColumn({ items = [] }) {
                                         nftsCount={item.nftsCount}
                                         verified={item.verified}
                                         avatar={item.avatar.url}
+                                        
+                                        id={item.id}
 
 
                                     />
