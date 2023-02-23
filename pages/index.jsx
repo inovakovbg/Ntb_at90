@@ -111,7 +111,7 @@ export default function Index() {
          <br></br> <br></br>
 
 
-         {/* <How title='HOW IT WORKS'
+         <How title='HOW IT WORKS'
        description="Discover, collect, and sell extraordinary NFTs
        on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
        items={[
@@ -127,7 +127,7 @@ export default function Index() {
        "title":'BUM.',
       "description":"Let'connect your wallet to BUM,edit your profile,and begin interacting in the space.",
      }
-  ]}/>  */}
+  ]}/> 
 
 
          <Collector number={1} type='lighter' />
