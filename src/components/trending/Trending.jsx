@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Logo from '../logo/Logo';
 import styles from "./Trending.module.scss";
 import classNames from "classnames";
@@ -10,6 +10,8 @@ import Card from '../card/Card';
 
 
 export default function Trending({ cards = [] }) {
+
+
 
     return (
         <div className={classNames(styles.wrapper)}>

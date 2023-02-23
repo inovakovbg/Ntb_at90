@@ -16,10 +16,13 @@ import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/collectors/Collector";
 import CollectorsColumn from "../src/components/collectors/CollectorColumn";
 import TopCollectors from "../src/components/collectors/TopCollectors";
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 
 
-import dataUsers from "../data/users.json"
+import dataUsers from "../data/users.json";
+import dataFeatured from "../data/featured.json";
+import dataTrending from "../data/trending.json";
+import dataNfts from "../data/nfts.json";
 
 
 
@@ -27,16 +30,23 @@ import dataUsers from "../data/users.json"
 export default function Index() {
 
    const [collectors, setCollectors] = useState([]);
+   const [FeatureCards,setFeauterdCards] = useState([]);
+   const [TrendingCards,setTrending]=useState([]);
+ 
 
-  
+
    useEffect(() => {
       setCollectors(dataUsers);
+      setFeauterdCards(dataFeatured);
+      setTrending(dataTrending);
    }, []);
 
 
    return (
 
       <div>
+
+
          {/* <Example /> */}
 
          {/* <Header></Header> */}
@@ -105,12 +115,11 @@ export default function Index() {
   ]}/> */}
 
 
-         <Footer />
 
          {/* < Step number={1} title="DIGITAL CURRENCY" description='You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange'/> */}
          <br></br> <br></br>
 
-
+         {/* 
          <How title='HOW IT WORKS'
        description="Discover, collect, and sell extraordinary NFTs
        on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
@@ -127,12 +136,12 @@ export default function Index() {
        "title":'BUM.',
       "description":"Let'connect your wallet to BUM,edit your profile,and begin interacting in the space.",
      }
-  ]}/> 
+  ]}/>  */}
 
+         {/* 
+         <Collector number={1} type='lighter' /> */}
 
-         <Collector number={1} type='lighter' />
-
-         <Featured items={[
+         {/* <Featured items={[
             {
                image:
                   "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=500",
@@ -179,10 +188,10 @@ export default function Index() {
             },
 
 
-         ]} />
+         ]} /> */}
 
 
-
+         {/* 
       <CollectorsColumn
          items={[
             {
@@ -205,12 +214,12 @@ export default function Index() {
                "verified": false
             },
 
-         ]} /> 
+         ]} />  */}
 
          {/* <CollectorsColumn items={collectors}/> */}
 
-         
-      <TopCollectors
+
+         {/* <TopCollectors
          collectors={[
             {
                "name": "terika77",
@@ -293,8 +302,88 @@ export default function Index() {
             }
             
 
-         ]} /> 
-        
+         ]} />  */}
+
+
+
+         <Header />
+         <Featured items = {FeatureCards} />
+         <Trending cards = {TrendingCards} />
+         <TopCollectors collectors={collectors}/>
+
+         <How title='HOW IT WORKS'
+       description="Discover, collect, and sell extraordinary NFTs
+       on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
+       items={[
+  {
+    "title":"DIGITAL CURRENCY",
+    "description":'You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange',
+   },
+   {
+      "title":'CRYPTO WALLET',
+      "description":'A crypto wallet, such as Metamask, stores your ETH and processes transactions on the Ethereum blockchain.',
+     },
+     {
+       "title":'BUM.',
+      "description":"Let'connect your wallet to BUM,edit your profile,and begin interacting in the space.",
+     }
+  ]}/>
+
+<Auctions cards={[
+  {
+    "name":"Ivy",
+    "user":{"avatar":{"url":"images/avatar.png"},"verified":true },
+    "mediaUrl":"images/nft.jpg",
+    "price":1,
+    "currency":"ETH",
+    "timeLeft":10000
+ },
+ {
+    "name":"Judie",
+    "user":{
+       "avatar":{
+          "url":"images/avatar.png"
+       },
+       "verified":true
+    },
+    "mediaUrl":"images/nft.jpg",
+    "price":2.3,
+    "currency":"ETH",
+    "timeLeft":20000
+ },
+ {
+    "name":"Juniper",
+    "user":{
+       "avatar":{
+          "url":"images/avatar.png"
+       },
+       "verified":true
+    },
+    "mediaUrl":"images/nft.jpg",
+    "price":5,
+    "currency":"ETH",
+    "timeLeft":10000
+ },
+ {
+    "name":"Maple",
+    "user":{
+       "avatar":{
+          "url":"images/avatar.png"
+       },
+       "verified":true
+    },
+    "mediaUrl":"images/nft.jpg",
+    "price":10,
+    "currency":"ETH",
+    "timeLeft":10000
+ }
+
+  ]}/> 
+
+
+
+         <Footer />
+
 
 
       </div>

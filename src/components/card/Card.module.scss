@@ -3,7 +3,8 @@
 
 .card {
   padding: 1rem;
-  // background-color: colors.$background_paper;
+  background-color: colors.$background_paper!important
+;
   border-radius: 15px;
 }
 
@@ -14,6 +15,7 @@
 }
 
 .box{
+  
  position:relative;
 }
 
