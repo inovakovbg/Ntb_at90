@@ -20,6 +20,8 @@ export default function Featured({ items = [] }) {
                 <ImageList cols={6} >
                     {items.map((item) => {
 
+                        const router = useRouter()
+
                         const handleClick = (e) => {
                             e.preventDefault()
                             router.push(item.href)
@@ -34,7 +36,8 @@ export default function Featured({ items = [] }) {
 
                             />
                         </ImageListItem>
-                    )})}
+                        )
+                    })}
                 </ImageList>
 
 
