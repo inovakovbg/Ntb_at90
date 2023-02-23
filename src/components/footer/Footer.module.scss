@@ -2,18 +2,28 @@
 
 
 .container {
-  background: colors.$background_paper ;
-   }
+  background: colors.$background_paper  ;
+  display: flex!important;
+  justify-content: center!important;
+  min-height: 98px;
+}
 
 .grid{
-  place-content:space-between ;
+  display: flex !important;
+  // background: green  ;
   align-items: center !important;
+  justify-content: space-between !important;
 }
 
-.wrapper {
- background-color: colors.$background_default;
+.logo {
+  
+  display: flex!important;
+  justify-content: center!important;
+  // background-color: antiquewhite;
+  justify-content: left !important;
+  align-items: center!important;
+  height: 100%;
 }
-
 
 .paragraph {
  
@@ -22,10 +32,22 @@
   font-style: normal !important;
   font-weight: 400 !important;
   font-size: 14px !important;
+  
  
 }
 
+.buttons{
+  display: flex !important;;
+  justify-content: right!important;
+
+  // background-color: antiquewhite;
+
+}
+
 .button {
+ 
+  padding-left: 0px !important;
+  padding-right: 20px !important;
   color: colors.$text_secondary ;
   font-style: normal !important;
   font-weight: 600 !important;

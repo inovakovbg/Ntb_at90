@@ -12,11 +12,11 @@ export default function Footer() {
 
     return (
        
-            <Container maxWidth='xl' className={styles.container}>
-                <Grid  container  direction="row" spacing={1} className={styles.grid}>
+            <Container maxWidth='false'  disableGutters className={styles.container}>
+                <Grid  container  direction="row" maxWidth='xl' className={styles.grid}>
 
 
-                    <Grid item xs={'1'}>
+                    <Grid item xs={'1'} className={styles.logo}>
                         <Logo  type="muted" />
                     </Grid>
 
@@ -26,7 +26,7 @@ export default function Footer() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={'3'} >
+                    <Grid item xs={'3'} className={styles.buttons} >
                         <Button className={styles.button} variant="text">Privacy Policy</Button>
                         <Button className={styles.button} variant="text">Coockie Policy</Button>
                     </Grid>

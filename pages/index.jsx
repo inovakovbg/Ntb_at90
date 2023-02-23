@@ -309,12 +309,16 @@ export default function Index() {
          ]} />  */}
 
 
-<br></br>
+
          <Header />
          <br></br>
-         <Footer />
+       
          
          <ProductImage url="/images/nft.jpg" />
+
+
+         <br></br>
+         <Footer />
 
          {/* <Featured items={FeatureCards} />
          <Trending cards={TrendingCards} />
