@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from "./CollectorsColumn.module.scss";
+import styles from "./CollectorColumn.module.scss";
 import classNames from "classnames";
 
 import { Button, Container, Grid, Select, MenuItem, Box } from "@mui/material";
@@ -11,7 +11,7 @@ import { useState } from 'react';
 
 
 
-export default function CollectorsColumn({ items = [] }) {
+export default function CollectorColumn({ items = [] }) {
 
     
     return (

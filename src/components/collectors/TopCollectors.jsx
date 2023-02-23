@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 import { Container, Grid, Select, MenuItem, Box } from "@mui/material";
 import Typography from '@mui/material/Typography';
-import CollectorsColumn from './CollectorsColumn';
+import CollectorColumn from './CollectorColumn';
 import lodash from 'lodash';
 
 
@@ -51,7 +51,7 @@ export default function TopCollectors({ items = [] }) {
                         .map((item) => {
                             return (
                                 <Grid item xs={3}>
-                                    <CollectorsColumn items={item} />
+                                    <CollectorColumn items={item} />
                                 </Grid>)
                         })}
 
