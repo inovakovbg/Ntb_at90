@@ -11,7 +11,7 @@ import lodash from 'lodash';
 
 
 
-export default function TopCollectors({ items = [] }) {
+export default function TopCollectors({collectors = [] }) {
 
     return (
         <div className={classNames(styles.wrapper)}>
@@ -36,7 +36,7 @@ export default function TopCollectors({ items = [] }) {
 
 
                     {/* 
-                    {items.map((abv, index) =>{ ({ ...abv, 'id':index+1})}
+                    {collectors.map((abv, index) =>{ ({ ...abv, 'id':index+1})}
                      
 
                     )}  */}
@@ -46,7 +46,7 @@ export default function TopCollectors({ items = [] }) {
 
                     {lodash.chunk(
 
-                        items.map((abv, index) => ({ ...abv, 'id': index + 1 })), 3)
+                        collectors.map((abv, index) => ({ ...abv, 'id': index + 1 })), 3)
 
                         .map((item) => {
                             return (

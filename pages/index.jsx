@@ -211,7 +211,7 @@ export default function Index() {
 
          
       <TopCollectors
-         items={[
+         collectors={[
             {
                "name": "terika77",
                "nftsCount": 134,
