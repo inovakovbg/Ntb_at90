@@ -9,19 +9,18 @@ import SearchIcon from "@mui/icons-material/Search";
 export default function Header() {
 
     return (
-        <div>
-            <Container className={classNames(styles.container)} maxWidth="xl">
-                <Grid container spacing={3}
-                    // justifyContent='space-between'
-                    alignItems='center'
+        
+            <Container maxWidth="false" disableGutters className={styles.container}> 
+                <Grid container direction="row"  maxWidth='xl' className={styles.grid}              
+                  
                 >
 
-                    <Grid item xs={'1'}>
+                    <Grid item xs={'1'} className={styles.logo}> 
                         <Logo type="default" />
                     </Grid>
 
-                    <Grid item xs={'8'}>
-                        <TextField
+                    <Grid item xs={'6'}  >
+                        <TextField variant='outlined'  className={styles.input} 
 
 
                             placeholder="Find items,users and activities"
@@ -29,19 +28,17 @@ export default function Header() {
                             InputProps={{
 
                                 startAdornment: (
-                                    <InputAdornment
-                                            className={styles.search}
+                                    <InputAdornment 
                                         position="start"
                                     >
-                                        <SearchIcon
-                                           className={classNames(styles.search)} />
+                                        <SearchIcon className={styles.icon}  />
                                     </InputAdornment>
                                 )
                             }}
                         />
                     </Grid>
 
-                    <Grid item xs={'3'}>
+                    <Grid item xs={'3'} className={styles.buttons} >
                         <Button variant="text">Text</Button>
                         <Button variant="text">Activity</Button>
                         <Button variant="contained">Explore</Button>
@@ -51,7 +48,7 @@ export default function Header() {
                 </Grid>
 
             </Container>
-        </div>
+       
 
     )
 }

@@ -2,17 +2,55 @@
 
 
 .container {
-  background: colors.$background_paper  ;
-  color: colors.$text_primary;
+
+
+background: colors.$background_paper  ;
+display: flex!important;
+justify-content: center!important;
+min-height: 98px;
+
+
+
 }
 
-.button {
-  color: colors.$text_primary;
-  padding: 20px;
+.logo {
+  
+  display: flex!important;
+  justify-content: center!important;
+  // background-color: antiquewhite;
+  justify-content: left !important;
+  align-items: center!important;
+  height: 100%;
 }
 
-.search {
-  background: colors.$background_default !important ;
-  color: colors.$text_primary;
+.grid{
+  display: flex !important;
+  // background: green  ;
+  align-items: center !important;
+  justify-content: space-between !important;
+ 
+  padding: 0px !important;
+ 
+
+.input{
+  
+  background-color: colors.$background_default;
+  width: 100%;
+  justify-content: left !important;
+  height:90%;
+  border-radius: 30px;
+  
+}
+  
+  
+}
+
+.buttons{
+  display: flex !important;;
+  justify-content: space-between !important;
+}
+
+.icon{
+  color:colors.$text_primary;
 }
 
