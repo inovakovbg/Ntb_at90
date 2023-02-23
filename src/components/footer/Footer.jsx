@@ -8,7 +8,7 @@ import { Button,Typography } from "@mui/material";
 
 
 
-export default function Header() {
+export default function Footer() {
 
     return (
        
