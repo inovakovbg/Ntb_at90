@@ -13,9 +13,9 @@ import Footer from "../src/components/footer/Footer";
 import Step from "../src/components/how/Step";
 import How from "../src/components/how/How";
 import Featured from "../src/components/featured/Featured";
-import Collector from "../src/components/colectors/Collector";
-import CollectorsColumn from "../src/components/colectors/CollectorsColumn";
-import TopCollectors from "../src/components/colectors/TopCollectors";
+import Collector from "../src/components/collectors/Collector";
+import CollectorsColumn from "../src/components/collectors/CollectorsColumn";
+import TopCollectors from "../src/components/collectors/TopCollectors";
 import { useState ,useEffect} from "react";
 
 
