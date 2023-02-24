@@ -30,6 +30,7 @@ import ProductInfoPrice from "../src/components/product/ProductInfoPrice";
 import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
 import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
+import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 
 
 
@@ -358,6 +359,7 @@ export default function Index() {
          <ProductInfoStatus/>
          <ProductInfoLikes amount={5400}/>
          <ProductInfoCreator name='toadnft' avatar='images/avatar.png' />
+         <ProductInfoTimer timeEnd={10000} />
 
          <br></br>
          <Footer />

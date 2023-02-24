@@ -1,0 +1,32 @@
+@use "../../styles/colors";
+
+.product-info-timer{
+  
+  background-color: colors.$background_paper;
+  max-width: 600px;
+  border-radius: 15px !important;
+  overflow: hidden;
+  color: colors.$text_hint !important;
+}
+
+.title{
+  display: flex !important;
+  background-color: rgba(colors.$primary_main, 0.1) !important;
+  padding:10px 0px 5px 0px;
+  font-size: 12px !important;
+  justify-content: center !important;
+
+}
+
+
+.timer{
+  display: flex !important;
+  // background-color: rgba(colors.$primary_main, 0.05) !important;
+  // border-radius: 15px 15px 15px 15px
+ 
+  font-size: 30px !important;
+  justify-content: center !important;
+  min-height: 99px;
+  align-items: center!important;
+
+}
