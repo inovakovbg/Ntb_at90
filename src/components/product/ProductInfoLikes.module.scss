@@ -1,0 +1,14 @@
+@use "../../styles/colors";
+
+
+.product-info-likes {
+  display: flex;
+  max-width: 800px;
+}
+
+.likes {
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 14px;
+
+}
