@@ -1,0 +1,15 @@
+@use "../../styles/colors";
+
+
+.product-info-status {
+  display: flex;
+  max-width: 800px;
+}
+
+.status {
+  padding: 2px !important;
+  text-transform: uppercase;
+  color: colors.$background_paper !important;
+  border-radius: 7px !important;
+  background-color: colors.$secondary_main !important;
+}
