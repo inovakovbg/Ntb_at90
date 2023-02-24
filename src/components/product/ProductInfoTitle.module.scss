@@ -1,0 +1,11 @@
+@use "../../styles/colors";
+
+
+.product-info-title {
+  display: flex;
+  max-width: 800px;
+}
+
+.title{
+  color: colors.$text_primary
+}

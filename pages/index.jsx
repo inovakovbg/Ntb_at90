@@ -25,6 +25,7 @@ import dataTrending from "../data/trending.json";
 import dataNfts from "../data/nfts.json";
 
 import ProductImage from "../src/components/product/ProductImage";
+import ProductInfoTitle from "../src/components/product/ProductInfoTitle";
 
 
 
@@ -312,13 +313,9 @@ export default function Index() {
 
          <Header />
          <br></br>
-       
-         
-         <ProductImage url="/images/nft.jpg" />
 
 
-         <br></br>
-         <Footer />
+
 
          {/* <Featured items={FeatureCards} />
          <Trending cards={TrendingCards} />
@@ -347,6 +344,13 @@ export default function Index() {
 
 
          <Footer /> */}
+
+         <ProductImage url="/images/nft.jpg" />
+         <ProductInfoTitle text="Shallow Son"/>
+
+
+         <br></br> 
+         <Footer />
 
 
 
