@@ -16,7 +16,8 @@ export default function ProducInfoCreator({name, avatar, verified='false'}) {
   return (
     <Paper className={styles["product-info-creator"]}>
       <Typography className={styles.title}>CREATOR</Typography>
-      <Container container className={styles.container} disableGutters>
+
+      <Container container className={styles["user-container"]} disableGutters>
      
           
          
