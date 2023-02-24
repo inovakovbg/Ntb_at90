@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./ProductInfoLikes.module.scss";
 import { Chip } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import millify from "millify";
 

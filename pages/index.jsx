@@ -29,6 +29,7 @@ import ProductInfoTitle from "../src/components/product/ProductInfoTitle";
 import ProductInfoPrice from "../src/components/product/ProductInfoPrice";
 import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
+import ProducInfoCreator from "../src/components/product/ProductInfoCreator";
 
 
 
@@ -356,6 +357,7 @@ export default function Index() {
          <ProductInfoPrice amount={3} currency="ETH"/>
          <ProductInfoStatus/>
          <ProductInfoLikes amount={5400}/>
+         <ProducInfoCreator name='toadnft' avatar='images/avatar.png' verified='true'/>
 
          <br></br>
          <Footer />
