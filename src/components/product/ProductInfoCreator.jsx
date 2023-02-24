@@ -9,7 +9,7 @@ import { Paper } from "@mui/material";
 
 
 
-export default function ProducInfoCreator({name, avatar, verified='false'}) {
+export default function ProductInfoCreator({name, avatar, verified='false'}) {
 
 
 
