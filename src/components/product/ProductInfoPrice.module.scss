@@ -1,0 +1,15 @@
+@use "../../styles/colors";
+
+
+.product-info-price {
+  display: flex;
+  max-width: 800px;
+}
+
+.price {
+  color: colors.$text_secondary;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 14px;
+
+}

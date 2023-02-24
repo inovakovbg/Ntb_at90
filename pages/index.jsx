@@ -26,6 +26,7 @@ import dataNfts from "../data/nfts.json";
 
 import ProductImage from "../src/components/product/ProductImage";
 import ProductInfoTitle from "../src/components/product/ProductInfoTitle";
+import ProductInfoPrice from "../src/components/product/ProductInfoPrice";
 
 
 
@@ -311,9 +312,6 @@ export default function Index() {
 
 
 
-         <Header />
-         <br></br>
-
 
 
 
@@ -345,11 +343,17 @@ export default function Index() {
 
          <Footer /> */}
 
+
+
+         <Header />
+         <br></br>
+
+
          <ProductImage url="/images/nft.jpg" />
-         <ProductInfoTitle text="Shallow Son"/>
+         <ProductInfoTitle text="Shallow Son" />
+         <ProductInfoPrice amount={3} currency="ETH"/>
 
-
-         <br></br> 
+         <br></br>
          <Footer />
 
 
