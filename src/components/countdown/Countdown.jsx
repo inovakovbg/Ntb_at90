@@ -7,7 +7,7 @@ export default function Countdown({timeLeft,onTimeEnd}){
 return(
 
    <div className={styles.countdown}>
-      <MyCountdown date={Date.now() + timeLeft} onComplete={onTimeEnd} ><p></p></MyCountdown>
+      <MyCountdown date={Date.now() + timeLeft} onComplete={onTimeEnd} />
    </div>
 )
    

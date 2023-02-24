@@ -9,20 +9,28 @@ import Countdown from "../countdown/Countdown";
 
 
 
+
+
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
 
+// const [HideCounter,SetHideCounter]=useState(true);
 
+// useEffect (() => {
+//  if  (timeEnd==false)  {SetHideCounter(false) } 
+// });
 
   return (
 
     <div className={styles["product-info-timer"]}>
     
-      <Typography className={styles.title}>ENDS IN</Typography>
+       <Typography className={styles.title}>ENDS IN</Typography>
    
 
  
       <Container container className={styles.timer}>
-        <Countdown timeLeft={timeEnd} onTimeEnd={onTimeEnd}/>
+        
+  
+      {timeEnd  && <Countdown timeLeft={timeEnd} onTimeEnd={onTimeEnd}/>}
       </Container>
 
     </div>
