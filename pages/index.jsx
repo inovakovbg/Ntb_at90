@@ -357,7 +357,7 @@ export default function Index() {
          <ProductInfoPrice amount={3} currency="ETH"/>
          <ProductInfoStatus/>
          <ProductInfoLikes amount={5400}/>
-         <ProductInfoCreator name='toadnft' avatar='images/avatar.png' verified='true'/>
+         <ProductInfoCreator name='toadnft' avatar='images/avatar.png' />
 
          <br></br>
          <Footer />
