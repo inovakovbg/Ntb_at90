@@ -23,23 +23,22 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
 
   return (
     <>
-      {isCountdownVisible && timeEnd > 0 && (
+      
         <div className={styles["product-info-timer"]}>
-          <Typography className={styles.title}>ENDS IN</Typography>
-          <Container
-            container
-            className={
-              isCountdownVisible ? styles.active : styles.timer
-            }
-          >
-            <Countdown
-              timeLeft={timeEnd}
-              onTimeEnd={onTimeEnd}
-              CountComplete={handleCountdownComplete}
-            />
-          </Container>
+          <>
+          {isCountdownVisible && timeEnd > 0 && (
+          <><Typography className={styles.title}>ENDS IN</Typography><Container
+              container
+              className={isCountdownVisible ? styles.active : styles.timer}
+            >
+              <Countdown
+                timeLeft={timeEnd}
+                onTimeEnd={onTimeEnd}
+                CountComplete={handleCountdownComplete} />
+            </Container></> )}
+          </>
         </div>
-      )}
+      
     </>
   );
 }
