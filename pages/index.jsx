@@ -359,7 +359,7 @@ export default function Index() {
          <ProductInfoStatus/>
          <ProductInfoLikes amount={5400}/>
          <ProductInfoCreator name='toadnft' avatar='images/avatar.png' />
-         <ProductInfoTimer timeEnd={10000} />
+         <ProductInfoTimer timeEnd={10000} onTimeEnd={15000}/>
 
          <br></br>
          <Footer />

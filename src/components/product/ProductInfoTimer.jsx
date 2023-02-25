@@ -32,17 +32,16 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
             <Grid item xs={12} className= {styles.grid}>
               <Typography  variant="h4" className={styles.title}>ENDS IN</Typography>
             </Grid>
-            <Container
-              container
-              // className={timeEnd > 0 ? styles.active : styles.timer}
-              className={styles[(timeEnd  ? 'timer' : 'timer')]}
+
+            <Grid item xs={12} 
+              className={timeEnd > 0 ? styles.active : styles.timer}
+   
             >
               <Countdown
-              
                 timeLeft={timeEnd}
                 onTimeEnd={onTimeEnd}
                 CountComplete={handleCountdownComplete} />
-            </Container>
+            </Grid>
           </Grid>
         )}
 
