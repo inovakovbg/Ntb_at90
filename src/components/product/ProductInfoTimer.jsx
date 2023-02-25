@@ -10,38 +10,29 @@ import Countdown from "../countdown/Countdown";
 
 
 
-
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
-
   const [isCountdownVisible, setIsCountdownVisible] = useState(true);
 
   const handleCountdownComplete = () => {
     setIsCountdownVisible(false);
   };
 
-
-
   return (
-    <>
+    <div className={styles["product-info-timer"]}>
+      
+          <Typography className={styles.title}>ENDS IN</Typography>
 
-      <div className={styles["product-info-timer"]}>
-      {isCountdownVisible && timeEnd > 0 && (
-
-        <><Typography className={styles.title}>ENDS IN</Typography>
-        
-        <div
-            className={isCountdownVisible && timeEnd > 0 ? styles.active : styles.timer}
-          >
-
-            {isCountdownVisible && timeEnd > 0 && (
-              <Countdown
-                timeLeft={timeEnd}
-                onTimeEnd={onTimeEnd}
-                CountComplete={handleCountdownComplete} />)}
-          </div></>
-        )}
-      </div>
-
-    </>
+          {timeEnd && isCountdownVisible && (
+        <>
+          <div className={isCountdownVisible ? styles.active : styles.timer}>
+            <Countdown
+              timeLeft={timeEnd}
+              onTimeEnd={onTimeEnd}
+              CountComplete={handleCountdownComplete}
+            />
+          </div>
+        </>
+      )}
+    </div>
   );
 }
