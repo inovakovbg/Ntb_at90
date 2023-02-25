@@ -2,11 +2,10 @@
 
 .product-info-timer{
   
-  // background-color: colors.$secondary_main !important;
+  background-color: colors.$secondary_main !important;
   max-width: 600px;
   border-radius: 15px !important;
   overflow: hidden;
-  color: colors.$text_hint !important;
 }
 
 
@@ -16,7 +15,7 @@
 }
 .title{
   
-  // background-color: rgba(colors.$background_default, 0.1) !important;
+  background-color: rgba(colors.$background_default, 0.1) !important;
   display: flex !important;
   padding:10px 0px 5px 0px;
   font-size: 12px !important;
@@ -34,7 +33,7 @@
   justify-content: center !important;
   min-height: 99px;
   align-items: center!important;
-  // background-color: colors.$background_paper;
+  background-color: colors.$background_paper;
   color:colors.$background_paper;
 
 }
@@ -44,8 +43,7 @@
   background-color: colors.$secondary_main !important;
 
   display: flex !important;
-  // background-color: rgba(colors.$primary_main, 0.05) !important;
-  // border-radius: 15px 15px 15px 15px
+
   font-size: 30px !important;
   justify-content: center !important;
   min-height: 99px;

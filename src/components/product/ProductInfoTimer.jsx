@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Container from "@mui/material/Container";
 import User from "../user/User";
 import classNames from "classnames";
-import { Paper, Grid } from "@mui/material";
+import { Paper } from "@mui/material";
 import Countdown from "../countdown/Countdown";
 
 
@@ -22,32 +22,27 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
 
 
   return (
-    <>
+    <div className={styles["product-info-timer"]}>
 
-      <div className={styles["product-info-timer"]}>
-
-        {isCountdownVisible && timeEnd > 0 && (
-
-          <Grid container>
-            <Grid item xs={12} className= {styles.grid}>
-              <Typography  variant="h4" className={styles.title}>ENDS IN</Typography>
-            </Grid>
-
-            <Grid item xs={12} 
-              className={timeEnd > 0 ? styles.active : styles.timer}
    
-            >
-              <Countdown
-                timeLeft={timeEnd}
-                onTimeEnd={onTimeEnd}
-                CountComplete={handleCountdownComplete} />
-            </Grid>
-          </Grid>
-        )}
+        <>
+
+          <Typography className={styles.title}>ENDS IN</Typography>
 
 
-      </div>
+          <Container
+            container
+            className={isCountdownVisible && timeEnd > 0 ? styles.active : styles.timer}
+          >
+             {isCountdownVisible && timeEnd > 0 && (
+            <Countdown
+              timeLeft={timeEnd}
+              onTimeEnd={onTimeEnd}
+              CountComplete={handleCountdownComplete} />)}
+          </Container>
+</>
+    </div>
 
-    </>
+
   );
 }
