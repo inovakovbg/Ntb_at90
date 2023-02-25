@@ -31,6 +31,7 @@ import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
 import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
+import ProductInfo from "../src/components/product/ProductInfo";
 
 
 
@@ -41,6 +42,23 @@ export default function Index() {
    const [FeatureCards, setFeauterdCards] = useState([]);
    const [TrendingCards, setTrending] = useState([]);
    const [AuctionsItems, setAuctions] = useState([]);
+
+   const product = {
+      title: 'Shallow Son',
+      creator: {
+        name: 'toadnft',
+        avatar: 'images/avatar.png',
+        verified: true
+      },
+      price: 3,
+      currency: 'ETH',
+      likes: 5400,
+      onTimeEnd: () => { console.log('Auction time is up!'); },
+      timeEnd: 10000,
+      isLive: true
+    };
+  
+ 
 
 
 
@@ -353,14 +371,17 @@ export default function Index() {
          <br></br>
 
 
-         <ProductImage url="/images/nft.jpg" />
+         {/* <ProductImage url="/images/nft.jpg" />
          <ProductInfoTitle text="Shallow Son" />
          <ProductInfoPrice amount={3} currency="ETH"/>
          <ProductInfoStatus/>
          <ProductInfoLikes amount={5400}/>
          <ProductInfoCreator name='toadnft' avatar='images/avatar.png' />
-         <ProductInfoTimer timeEnd={10000} onTimeEnd={15000}/>
+         <ProductInfoTimer timeEnd={10000} onTimeEnd={15000}/> */}
+   
+      <ProductInfo {...product} />
 
+        
          <br></br>
          <Footer />
 

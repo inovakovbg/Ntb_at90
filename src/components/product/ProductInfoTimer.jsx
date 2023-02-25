@@ -28,7 +28,7 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
           <div className={isCountdownVisible ? styles.active : styles.timer}>
             <Countdown
               timeLeft={timeEnd}
-              onTimeEnd={onTimeEnd}
+              onTimeEnd={handleCountdownComplete}
             />
           </div>
         </>

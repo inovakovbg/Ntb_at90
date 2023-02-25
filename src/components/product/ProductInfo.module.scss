@@ -1,0 +1,22 @@
+@use "../../styles/colors";
+
+.product-info{
+
+justify-content: space-between!important;
+  max-width: 600px;
+
+}
+
+.title{
+  background-color: rgba(colors.$primary_main, 0.1) !important;
+  padding:10px 0px 5px 27px;
+  font-size: 12px !important;
+}
+
+
+.user-container {
+  // background-color: rgba(colors.$primary_main, 0.05) !important;
+  // border-radius: 15px 15px 15px 15px
+  padding:23px 0px 23px 27px;
+
+}
