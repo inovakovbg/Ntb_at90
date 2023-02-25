@@ -34,9 +34,11 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
             </Grid>
             <Container
               container
-              className={timeEnd > 0 ? styles.active : styles.timer}
+              // className={timeEnd > 0 ? styles.active : styles.timer}
+              className={styles[(timeEnd  ? 'timer' : 'timer')]}
             >
               <Countdown
+              
                 timeLeft={timeEnd}
                 onTimeEnd={onTimeEnd}
                 CountComplete={handleCountdownComplete} />
