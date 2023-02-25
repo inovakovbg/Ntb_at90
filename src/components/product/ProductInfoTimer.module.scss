@@ -9,6 +9,17 @@
   color: colors.$text_hint !important;
 }
 
+.active{
+
+  background-color: colors.$secondary_main !important;
+  max-width: 600px;
+  border-radius: 15px !important;
+  overflow: hidden;
+  color: colors.$text_hint !important;
+}
+
+
+
 .title{
   display: flex !important;
   background-color: rgba(colors.$primary_main, 0.1) !important;
@@ -23,7 +34,6 @@
   display: flex !important;
   // background-color: rgba(colors.$primary_main, 0.05) !important;
   // border-radius: 15px 15px 15px 15px
- 
   font-size: 30px !important;
   justify-content: center !important;
   min-height: 99px;
