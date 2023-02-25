@@ -2,7 +2,7 @@
 
 .product-info-timer{
   
-  background-color: colors.$background_paper;
+  background-color: colors.$secondary_main !important;
   max-width: 600px;
   border-radius: 15px !important;
   overflow: hidden;
@@ -13,7 +13,7 @@
 
 .title{
   display: flex !important;
-  background-color: rgba(colors.$primary_main, 0.1) !important;
+  background-color: rgba(colors.$background_default, 0.1) !important;
   padding:10px 0px 5px 0px;
   font-size: 12px !important;
   justify-content: center !important;
