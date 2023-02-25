@@ -2,17 +2,14 @@
 
 .product-info-timer{
   
-  background-color: colors.$secondary_main !important;
+  background-color: colors.$secondary_main ;
   max-width: 600px;
   border-radius: 15px !important;
   overflow: hidden;
 }
 
 
-.grid{
-  background-color: rgba(colors.$secondary_main, 90%);
 
-}
 .title{
   
   background-color: rgba(colors.$background_default, 0.1) !important;
@@ -27,20 +24,18 @@
 
 .timer{
   display: flex !important;
-  // background-color: rgba(colors.$primary_main, 0.05) !important;
-  // border-radius: 15px 15px 15px 15px
   font-size: 30px !important;
   justify-content: center !important;
   min-height: 99px;
   align-items: center!important;
-  background-color: colors.$background_paper;
+  background-color: colors.$background_paper !important;
   color:colors.$background_paper;
 
 }
 
 
 .active{
-  background-color: colors.$secondary_main !important;
+  background-color: colors.$secondary_main;
 
   display: flex !important;
 
