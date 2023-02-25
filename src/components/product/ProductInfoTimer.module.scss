@@ -12,12 +12,12 @@
 
 
 .title{
-  display: flex !important;
+  
   background-color: rgba(colors.$background_default, 0.1) !important;
+  display: flex !important;
   padding:10px 0px 5px 0px;
   font-size: 12px !important;
   justify-content: center !important;
-
   color:colors.$background_default;
 
 }
@@ -31,7 +31,7 @@
   justify-content: center !important;
   min-height: 99px;
   align-items: center!important;
-
+  background-color: colors.$background_paper;
   color:colors.$background_paper;
 
 }
@@ -46,7 +46,6 @@
   justify-content: center !important;
   min-height: 99px;
   align-items: center!important;
-
   color:colors.$background_paper;
 
 }
