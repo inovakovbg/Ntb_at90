@@ -19,11 +19,12 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
 
   return (
     <div className={styles["product-info-timer"]}>
-
+      {timeEnd && (
+         <>
       <Typography className={styles.title}>ENDS IN</Typography>
 
-      {timeEnd && (
-        <>
+      
+       
           <div className={isCountdownVisible ? styles.active : styles.timer}>
             <Countdown
               timeLeft={timeEnd}
