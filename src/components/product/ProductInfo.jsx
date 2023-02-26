@@ -16,10 +16,10 @@ export default function ProductInfo({ title, creator, price, currency, likes, on
   return (
     <div className={styles['product-info']}>
       <ProductInfoTitle text={title} />
-      
+
       <div className={styles["title-line"]}></div>
 
-      <Stack direction="row" spacing={2} className={styles.bigstack}>
+      <Stack direction="row" spacing={2} className={styles.stats}>
 
         <Stack direction="row" spacing={2} className={styles.stats}>
           <ProductInfoPrice amount={price} currency={currency} />
