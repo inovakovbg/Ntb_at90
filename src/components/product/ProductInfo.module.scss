@@ -7,10 +7,30 @@ justify-content: space-between!important;
 
 }
 
-.title{
-  background-color: rgba(colors.$primary_main, 0.1) !important;
-  padding:10px 0px 5px 27px;
-  font-size: 12px !important;
+.title-line{
+  padding-top: 28px;
+  border-bottom: 3px solid colors.$primary_main;
+  // margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.bigstack{
+  display: flex !important;
+  justify-content: space-between !important;
+  padding-bottom: 24px;
+
+
+
+
+
+
+}
+
+.stats{
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between !important;
+
 }
 
 
