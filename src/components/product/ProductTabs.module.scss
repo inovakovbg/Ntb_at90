@@ -16,25 +16,18 @@
   margin-bottom: 0px;
 }
 
-.tab-list {
-  // display: flex !important;
-  // gap: 350px !important;
-  // width:100% !important;
-}
 
-.details {
+.tab-details {
   padding-top: 0px !important;
   padding-left: 0px !important;
   padding-right: 120px !important;
 }
 
-.bids {
+.tab-bids {
   padding-top: 0px !important;
   display: flex !important;
   // background-color: aqua;
   padding: 0px !important;
-
-
 }
 
 
@@ -54,6 +47,4 @@
 .table-cell-price {
   border-bottom: 0px !important;
   color: colors.$secondary_main !important;
-
-
 }

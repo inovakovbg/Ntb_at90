@@ -29,16 +29,17 @@ export default function ProductTabs({ text, bids }) {
   return (
     <div className={styles['product-tabs']} >
       <TabContext spacing={1} value={value} >
-        <Box className={styles['tabs-line']}>
+        
 
+        <Box className={styles['tabs-line']}>
           <TabList onChange={handleChange}>
             <Tab label="DETAILS" value="1" />
             <Tab label="BIDS" value="2" />
           </TabList>
         </Box>
 
-        <TabPanel className={styles['details']} value="1">{text}</TabPanel>
-        <TabPanel className={styles['bids']} value="2" >
+        <TabPanel className={styles['tab-details']} value="1">{text}</TabPanel>
+        <TabPanel className={styles['tab-bids']} value="2" >
 
           <Table >
 
