@@ -45,7 +45,7 @@ export default function ProductTabs({ text, bids }) {
 
             {bids.map((bid, index) => {
 
-              const i = index % 2 !== 0 ? 1 : 0;
+              const i = index % 2 !== 0 ? 0 : 1;
               {console.log({i})}
 
               return (

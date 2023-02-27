@@ -31,12 +31,13 @@
   // padding: 0px !important;
 }
 
-.table-row-1 {
+.table-row{
+  &-0{
   background-color: rgba(colors.$primary_main, 0.15) !important;
 }
-
-.table-row-0{
+  &-1{
   background-color: rgba(colors.$primary_main, 0.05) !important;
+}
 }
 
 .table-cell {
