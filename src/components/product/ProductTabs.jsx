@@ -31,10 +31,10 @@ export default function ProductTabs({ text, bids }) {
       <TabContext spacing={1} value={value} >
         
 
-        <Box >
+        <Box className={styles['tabs-line']}>
           <TabList onChange={handleChange}>
-            <Tab label="DETAILS" value="1" />
-            <Tab label="BIDS" value="2" />
+            <Tab label="DETAILS" value="1"  className={styles['tab-details']}/>
+            <Tab label="BIDS" value="2" className={styles['tab-bids']} />
           </TabList>
         </Box>
 
