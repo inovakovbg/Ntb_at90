@@ -45,12 +45,12 @@ export default function ProductTabs({ text, bids }) {
 
             {bids.map((bid, index) => {
 
-              const i = index % 2 !== 0 ? 1 : 0;
+              const i = index % 2 !== 0 ?  0 : 1;
               {console.log({i})}
 
               return (
 
-                <TableRow className={styles[`table-row`]}
+                <TableRow className={styles[`table-row-${i}`]}
                 >
                   <TableCell align="left" className={styles['table-cell']}>
                     <User size='53px' avatar={bid.user.avatar} name={bid.user.name} verified={bid.user.verified} />
