@@ -1,22 +1,76 @@
-
 import React from 'react';
-
-
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 import styles from './ProductTabs.module.scss';
-import { Stack, Grid } from '@mui/material';
+import User from '../user/User';
 
-export default function ProductTabs({ text,bids = [] }) {
-  
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import formatDistance from 'date-fns/formatDistance';
+import parseISO from 'date-fns/parseISO';
+
+
+
+
+export default function ProductTabs({ text, bids }) {
+  const [value, setValue] = React.useState('1');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
-    <div className={styles['product-tabs']}>
-      
+    <div className={styles['product-tabs']} >
+      <TabContext spacing={1} value={value} >
+        <Box className={styles['tabs-line']}>
 
+          <TabList onChange={handleChange}>
+            <Tab label="DETAILS" value="1" />
+            <Tab label="BIDS" value="2" />
+          </TabList>
+        </Box>
 
+        <TabPanel className={styles['tab-details']} value="1">{text}</TabPanel>
+        <TabPanel className={styles['tab-bids']} value="2" >
+
+          <Table >
+
+            {bids.map((bid, index) => {
+
+              const i = index % 2 !== 0 ? 'even' : 'odd';
+
+              return (
+
+                <TableRow className={styles[`table-row-${i}`]}
+                >
+                  <TableCell align="left" className={styles['table-cell']}>
+                    <User size='53px' avatar={bid.user.avatar} name={bid.user.name} verified={bid.user.verified} />
+                  </TableCell>
+
+                  <TableCell align="right" className={styles['table-cell-price']}> {bid.amount + ' ETH'}</TableCell>
+
+                  <TableCell align="right" className={styles['table-cell']}>
+                    {formatDistance(parseISO(bid.date), new Date())}
+                  </TableCell>
+
+                </TableRow>
+              )
+
+            })}
+
+          </Table>
+
+        </TabPanel>
+
+      </TabContext>
     </div>
+
   );
 }
-
-
-
-

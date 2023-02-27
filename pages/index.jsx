@@ -32,6 +32,7 @@ import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
 import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 import ProductInfo from "../src/components/product/ProductInfo";
+import ProductTabs from "../src/components/product/ProductTabs";
 
 
 
@@ -46,9 +47,9 @@ export default function Index() {
    const product = {
       title: 'Shallow Son',
       creator: {
-        name: 'toadnft',
-        avatar: 'images/avatar.png',
-        verified: true
+         name: 'toadnft',
+         avatar: 'images/avatar.png',
+         verified: true
       },
       price: 3,
       currency: 'ETH',
@@ -56,9 +57,9 @@ export default function Index() {
       onTimeEnd: () => { console.log('Auction time is up!'); },
       timeEnd: 10000,
       isLive: true
-    };
-  
- 
+   };
+
+
 
 
 
@@ -378,10 +379,63 @@ export default function Index() {
          <ProductInfoLikes amount={5400}/>
          <ProductInfoCreator name='toadnft' avatar='images/avatar.png' />
          <ProductInfoTimer timeEnd={10000} onTimeEnd={15000}/> */}
-   
-      <ProductInfo {...product} />
 
-        
+         <ProductInfo {...product} />
+         <ProductTabs text="Beaten back with a crack not knowing what was two and frow.
+The education system spews out to the TAB the broken promises.
+Unable to find a journey in a sea of dead bolted doors behind their salvation.
+"
+bids={[
+   {
+     user: {
+       avatar: "images/avatar.png'",
+       name: "Cupcat NFT",
+       verified: true,
+     },
+     amount: 1,
+     date: "2023-02-25",
+   },
+   {
+     user: {
+       avatar: "images/avatar.png'",
+       name: "Cupcat NFT",
+       verified: false,
+     },
+     amount: 1,
+     date: "2023-02-26",
+   },
+   {
+      user: {
+        avatar: "images/avatar.png'",
+        name: "Cupcat NFT",
+        verified: false,
+      },
+      amount: 1,
+      date: "2023-02-26",
+    },
+    {
+      user: {
+        avatar: "images/avatar.png'",
+        name: "Cupcat NFT",
+        verified: false,
+      },
+      amount: 1,
+      date: "2023-02-26",
+    },
+    {
+      user: {
+        avatar: "images/avatar.png'",
+        name: "Cupcat NFT",
+        verified: false,
+      },
+      amount: 1,
+      date: "2023-02-26",
+    },
+ ]}
+
+/>
+
+
          <br></br>
          <Footer />
 
