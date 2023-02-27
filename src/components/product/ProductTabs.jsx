@@ -43,11 +43,9 @@ export default function ProductTabs({ text, bids }) {
 
           <Table >
 
-            {bids.map((bid, index) => {
+            {bids.map((bid, i) => {
 
-              const i = index % 2 !== 0 ?  0 : 1;
-              {console.log({i})}
-
+           
               return (
 
                 <TableRow className={styles[`table-row-${i}`]}

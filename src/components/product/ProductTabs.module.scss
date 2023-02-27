@@ -31,12 +31,23 @@
   // padding: 0px !important;
 }
 
-.table-row-0,
+.table-row-0 {
+  background-color: rgba(colors.$primary_main, 0.05);
+}
+
 .table-row-1 {
   background-color: rgba(colors.$primary_main, 0.15);
 }
 
-.table-row-1 {
+.table-row-2 {
+  background-color: rgba(colors.$primary_main, 0.05);
+}
+
+.table-row-4 {
+  background-color: rgba(colors.$primary_main, 0.15);
+}
+
+.table-row-5 {
   background-color: rgba(colors.$primary_main, 0.05);
 }
 
