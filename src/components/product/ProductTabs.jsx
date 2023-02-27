@@ -37,14 +37,14 @@ export default function ProductTabs({ text, bids }) {
           </TabList>
         </Box>
 
-        <TabPanel className={styles['tab-details']} value="1">{text}</TabPanel>
-        <TabPanel className={styles['tab-bids']} value="2" >
+        <TabPanel className={styles['details']} value="1">{text}</TabPanel>
+        <TabPanel className={styles['bids']} value="2" >
 
           <Table >
 
             {bids.map((bid, index) => {
 
-              const i = index % 2 !== 0 ? 'even' : 'odd';
+              const i = index % 2 !== 0 ? 0 : 1;
 
               return (
 
