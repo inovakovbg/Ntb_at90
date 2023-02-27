@@ -19,6 +19,8 @@ import parseISO from 'date-fns/parseISO';
 
 
 
+
+
 export default function ProductTabs({ text, bids }) {
   const [value, setValue] = React.useState('1');
 
@@ -48,8 +50,8 @@ export default function ProductTabs({ text, bids }) {
            
               return (
 
-                <TableRow className={styles[`table-row-${i}`]}
-                >
+                <TableRow className={styles[`table-row-${i % 2 === 0 ? 1 : 0}`]} key={i}>
+                
                   <TableCell align="left" className={styles['table-cell']}>
                     <User size='53px' avatar={bid.user.avatar} name={bid.user.name} verified={bid.user.verified} />
                   </TableCell>
