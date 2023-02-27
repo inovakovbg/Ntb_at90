@@ -31,7 +31,7 @@ export default function ProductTabs({ text, bids }) {
       <TabContext spacing={1} value={value} >
         
 
-        <Box className={styles['tabs-line']}>
+        <Box >
           <TabList onChange={handleChange}>
             <Tab label="DETAILS" value="1" />
             <Tab label="BIDS" value="2" />
