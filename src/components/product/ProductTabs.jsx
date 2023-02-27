@@ -52,13 +52,13 @@ export default function ProductTabs({ text, bids }) {
 
                 <TableRow className={styles[`table-row-${i}`]}
                 >
-                  <TableCell align="left" className={styles['table-cell']}>
+                  <TableCell align="left" >
                     <User size='53px' avatar={bid.user.avatar} name={bid.user.name} verified={bid.user.verified} />
                   </TableCell>
 
-                  <TableCell align="right" className={styles['table-cell-price']}> {bid.amount + ' ETH'}</TableCell>
+                  <TableCell align="right" > {bid.amount + ' ETH'}</TableCell>
 
-                  <TableCell align="right" className={styles['table-cell']}>
+                  <TableCell align="right" >
                     {formatDistance(parseISO(bid.date), new Date())}
                   </TableCell>
 
