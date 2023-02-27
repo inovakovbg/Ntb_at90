@@ -50,7 +50,7 @@ export default function ProductTabs({ text, bids }) {
 
               return (
 
-                <TableRow className={styles[`table-row-${i}`]}
+                <TableRow className={styles[`table-row-i`]}
                 >
                   <TableCell align="left" className={styles['table-cell']}>
                     <User size='53px' avatar={bid.user.avatar} name={bid.user.name} verified={bid.user.verified} />
