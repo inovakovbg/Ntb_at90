@@ -20,20 +20,22 @@
 .tab-details {
   padding-top: 0px !important;
 
+
+  
 }
 
 .tab-bids {
   padding-top: 0px !important;
-
-}
-
-
-
-.table-row-0 {
-  background-color: rgba(colors.$primary_main, 0.15) !important;
+  // display: flex !important;
+  // // background-color: aqua;
+  // padding: 0px !important;
 }
 
 .table-row-1 {
+  background-color: rgba(colors.$primary_main, 0.15) !important;
+}
+
+.table-row-0{
   background-color: rgba(colors.$primary_main, 0.05) !important;
 }
 
