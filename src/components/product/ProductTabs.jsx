@@ -15,6 +15,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import formatDistance from 'date-fns/formatDistance';
 import parseISO from 'date-fns/parseISO';
+import { green } from '@mui/material/colors';
+
 
 
 
@@ -47,13 +49,10 @@ export default function ProductTabs({ text, bids }) {
 
             {bids.map((bid, i) => {
 
-
+              { console.log(`table-row-${i}`) }
               return (
 
-                <TableRow
-                  className={styles[`table-row-${i}`]}
-                 
-                >
+                <TableRow key={i} className={`table-row-${i}`} style={{backgroundColor: i % 2 === 0 ? 'rgba(78, 36, 242, 0.05)' : 'rgba(78, 36, 242, 0.15)' }}>
 
                   <TableCell align="left" className={styles['table-cell']}>
                     <User size='53px' avatar={bid.user.avatar} name={bid.user.name} verified={bid.user.verified} />
