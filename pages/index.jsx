@@ -34,6 +34,8 @@ import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 import ProductInfo from "../src/components/product/ProductInfo";
 import ProductTabs from "../src/components/product/ProductTabs";
 import ProductActions from "../src/components/product/ProductActions";
+import ProductContainer from "../src/components/product/ProductContainer";
+
 
 
 
@@ -45,19 +47,80 @@ export default function Index() {
    const [TrendingCards, setTrending] = useState([]);
    const [AuctionsItems, setAuctions] = useState([]);
 
-   const product = {
-      title: 'Shallow Son',
-      creator: {
-         name: 'toadnft',
+   const productCont = {
+      name: 'Shallow Son',
+      owner: {
+         username: 'toadnft',
          avatar: 'images/avatar.png',
-         verified: true
+         verified: false
       },
-      price: 3,
+      price: 5,
       currency: 'ETH',
       likes: 5400,
       onTimeEnd: () => { console.log('Auction time is up!'); },
-      timeEnd: 10000,
-      isLive: true
+      auction_end: 10000,
+      isLive: true,
+      details:"Beaten back with a crack not knowing what was two and frow."+
+      "The education system spews out to the TAB the broken promises."+
+      "Unable to find a journey in a sea of dead bolted doors behind their salvation.",
+
+      "source":{
+         "url": "/images/nft.jpg"
+      },
+
+      bids: [
+         {
+            user: {
+               info: 1,
+               avatar: "images/avatar.png'",
+               name: "Cupcat NFT",
+               verified: true,
+            },
+            amount: 1,
+            date: "2023-02-25",
+         },
+         {
+            user: {
+               info: 2,
+               avatar: "images/avatar.png'",
+               name: "Cupcat NFT",
+               verified: false,
+            },
+            amount: 1,
+            date: "2023-02-26",
+         },
+         {
+            user: {
+               info: 3,
+               avatar: "images/avatar.png'",
+               name: "Cupcat NFT",
+               verified: false,
+            },
+            amount: 1,
+            date: "2023-02-26",
+         },
+         {
+            user: {
+               info: 4,
+               avatar: "images/avatar.png'",
+               name: "Cupcat NFT",
+               verified: false,
+            },
+            amount: 1,
+            date: "2023-02-26",
+         },
+         {
+            user: {
+               info: 5,
+               avatar: "images/avatar.png'",
+               name: "Cupcat NFT",
+               verified: false,
+            },
+            amount: 1,
+            date: "2023-02-26",
+         },
+      ]
+
    };
 
 
@@ -381,62 +444,65 @@ export default function Index() {
          <ProductInfoCreator name='toadnft' avatar='images/avatar.png' />
          <ProductInfoTimer timeEnd={10000} onTimeEnd={15000}/> */}
 
-         <ProductInfo {...product} />
-         <ProductTabs text="Beaten back with a crack not knowing what was two and frow.
+         {/* <ProductInfo {...product} /> */}
+
+         {/* <ProductTabs text="Beaten back with a crack not knowing what was two and frow.
 The education system spews out to the TAB the broken promises.
 Unable to find a journey in a sea of dead bolted doors behind their salvation.
 "
-bids={[
-   {
-     user: {
-       avatar: "images/avatar.png'",
-       name: "Cupcat NFT",
-       verified: true,
-     },
-     amount: 1,
-     date: "2023-02-25",
-   },
-   {
-     user: {
-       avatar: "images/avatar.png'",
-       name: "Cupcat NFT",
-       verified: false,
-     },
-     amount: 1,
-     date: "2023-02-26",
-   },
-   {
-      user: {
-        avatar: "images/avatar.png'",
-        name: "Cupcat NFT",
-        verified: false,
-      },
-      amount: 1,
-      date: "2023-02-26",
-    },
-    {
-      user: {
-        avatar: "images/avatar.png'",
-        name: "Cupcat NFT",
-        verified: false,
-      },
-      amount: 1,
-      date: "2023-02-26",
-    },
-    {
-      user: {
-        avatar: "images/avatar.png'",
-        name: "Cupcat NFT",
-        verified: false,
-      },
-      amount: 1,
-      date: "2023-02-26",
-    },
- ]}
+            bids={[
+               {
+                  user: {
+                     avatar: "images/avatar.png'",
+                     name: "Cupcat NFT",
+                     verified: true,
+                  },
+                  amount: 1,
+                  date: "2023-02-25",
+               },
+               {
+                  user: {
+                     avatar: "images/avatar.png'",
+                     name: "Cupcat NFT",
+                     verified: false,
+                  },
+                  amount: 1,
+                  date: "2023-02-26",
+               },
+               {
+                  user: {
+                     avatar: "images/avatar.png'",
+                     name: "Cupcat NFT",
+                     verified: false,
+                  },
+                  amount: 1,
+                  date: "2023-02-26",
+               },
+               {
+                  user: {
+                     avatar: "images/avatar.png'",
+                     name: "Cupcat NFT",
+                     verified: false,
+                  },
+                  amount: 1,
+                  date: "2023-02-26",
+               },
+               {
+                  user: {
+                     avatar: "images/avatar.png'",
+                     name: "Cupcat NFT",
+                     verified: false,
+                  },
+                  amount: 1,
+                  date: "2023-02-26",
+               },
+            ]}
 
-/>
+         /> */}
 
-         <ProductActions isLive={true} currency='ETH' buyAmount={3} bidAmount={1}  />
+       
+
+         <ProductContainer {...productCont} />
 
 
          <br></br>
