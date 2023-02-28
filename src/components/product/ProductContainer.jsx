@@ -44,7 +44,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
 
           <ProductInfo {...product} />
           <ProductTabs {...activeBids} />
-          <ProductActions isLive={true} currency='ETH' buyAmount={3} bidAmount={1} />
+          <ProductActions isLive={true} currency={currency} buyAmount={price} bidAmount={1} />
 
         </Grid>
       </Grid>
