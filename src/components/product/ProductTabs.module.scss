@@ -31,13 +31,16 @@
   // padding: 0px !important;
 }
 
-.table-row-0 {
-  background-color: rgba(colors.$primary_main, 0.15);
+
+
+.table-row {
+  @for $i from 0 through 25 {
+    &-#{$i} {
+      background-color: if($i % 2 == 0, rgba(colors.$primary_main, 0.05), rgba(colors.$primary_main, 0.15));
+    }
+  }
 }
 
-.table-row-1 {
-  background-color: rgba(colors.$primary_main, 0.05);
-}
 
 .table-cell {
   border-bottom: 0px !important;
