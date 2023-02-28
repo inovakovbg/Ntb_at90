@@ -1,10 +1,11 @@
 import React from 'react';
-import { Grid, Button, Container } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import styles from './ProductContainer.module.scss';
 import ProductInfo from './ProductInfo';
 import ProductTabs from './ProductTabs';
 import ProductActions from './ProductActions';
 import ProductImage from './ProductImage';
+
 
 
 export default function ProductContainer({ name, owner, price, currency, likes, auction_end, details, source, bids }) {
@@ -34,7 +35,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
 
 
   return (
-    <Container className={styles['product-container']}>
+    <div className={styles['product-container']}>
       <Grid container spacing={2}  >
         <Grid item xs={6}  >
           <ProductImage url={source.url} />
@@ -48,6 +49,6 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
         </Grid>
       </Grid>
 
-    </Container>
+    </div>
   );
 };
