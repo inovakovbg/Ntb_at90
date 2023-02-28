@@ -23,7 +23,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
     onTimeEnd: () => { console.log('Auction time is up!'); },
     timeEnd: auction_end,
 
-    isLive: true
+    isLive: auction_end,
   };
 
   const activeBids = {

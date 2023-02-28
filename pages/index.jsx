@@ -58,8 +58,8 @@ export default function Index() {
       currency: 'ETH',
       likes: 5400,
       onTimeEnd: () => { console.log('Auction time is up!'); },
-      auction_end: 10000,
-      isLive: true,
+      auction_end: "2024-09-02T20:43:19.149Z",
+      isLive: false,
       details:"Beaten back with a crack not knowing what was two and frow."+
       "The education system spews out to the TAB the broken promises."+
       "Unable to find a journey in a sea of dead bolted doors behind their salvation.",
