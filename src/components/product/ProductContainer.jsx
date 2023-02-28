@@ -35,20 +35,19 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
 
   return (
     <div className={styles['product-container']}>
-      <Container maxWidth='xl' disableGutters>
-        <Grid container spacing={2}  >
-          <Grid item xs={6}  >
-            <ProductImage url={source.url}/>
-          </Grid>
-          <Grid item xs={5}>
-          
-            <ProductInfo {...product} />
-            <ProductTabs {...activeBids} />
-            <ProductActions isLive={true} currency='ETH' buyAmount={3} bidAmount={1} />
-
-          </Grid>
+      <Grid container spacing={2}  >
+        <Grid item xs={6}  >
+          <ProductImage url={source.url} />
         </Grid>
-      </Container>
+        <Grid item xs={5}>
+
+          <ProductInfo {...product} />
+          <ProductTabs {...activeBids} />
+          <ProductActions isLive={true} currency='ETH' buyAmount={3} bidAmount={1} />
+
+        </Grid>
+      </Grid>
+
     </div>
   );
 };
