@@ -29,7 +29,8 @@ export default function ProductActions({ isLive, currency, buyAmount, bidAmount,
             onClick={onBid}
             fullWidth
             className={styles.button}
-            style={{ color: '#24F25E', borderColor: '#24F25E' }}>
+            color="success"
+            style={{ color: '#24F25E'}}>
             Place Bid for {bidAmount} {currency}
           </Button>
         </Grid>
