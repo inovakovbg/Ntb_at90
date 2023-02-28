@@ -11,12 +11,13 @@ export default function ProductActions({ isLive, currency, buyAmount, bidAmount,
           <Button
 
             variant="contained"
-
-
             disabled={!isLive}
             onClick={onBuy}
             fullWidth
             className={styles.button}
+            style={{
+              borderWidth: '2px'
+            }}
           >
             Buy for {buyAmount} {currency}
           </Button>
@@ -24,13 +25,17 @@ export default function ProductActions({ isLive, currency, buyAmount, bidAmount,
         <Grid item xs={5}>
           <Button
             variant="outlined"
-
+            color="success"
             disabled={!isLive}
             onClick={onBid}
             fullWidth
             className={styles.button}
-            color="success"
-            style={{ color: '#24F25E'}}>
+            style={{
+              color: '#24F25E',
+              borderColor: '#24F25E',
+              borderWidth: '2px'
+            }}
+          >
             Place Bid for {bidAmount} {currency}
           </Button>
         </Grid>
