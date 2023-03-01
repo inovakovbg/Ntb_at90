@@ -36,7 +36,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
 
   return (
     <div className={styles['product-container']}>
-      <Grid container spacing={2}  >
+      <Grid container spacing={2}  xs={12}>
         <Grid item xs={6}  >
           <ProductImage url={source.url} />
         </Grid>
