@@ -11,26 +11,28 @@ import Countdown from "../countdown/Countdown";
 
 
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
-  const [isCountdownVisible, setIsCountdownVisible] = useState(true);
 
-  const handleCountdownComplete = () => {
-    setIsCountdownVisible(false);
-  };
+  console.log(timeEnd);
+  const isAuctionActive = Date.now() < new Date(timeEnd);
+  
+  // const [isCountdownVisible, setIsCountdownVisible] = useState(true);
+
+  // const onTimeEnd = () => {
+  //   setIsCountdownVisible(false);
+  // };
+
+
 
   return (
+  
     <div className={styles["product-info-timer"]}>
-      {timeEnd && (
+      {isAuctionActive && (
          <>
       <Typography className={styles.title}>ENDS IN</Typography>
-
-      
+    
        
-          <div className={isCountdownVisible ? styles.active : styles.timer}>
-            <Countdown
-              timeLeft={timeEnd}
-              // onTimeEnd={handleCountdownComplete}
-              onTimeEnd={onTimeEnd}
-            />
+          <div className={isAuctionActive ? styles.active : styles.timer}>
+          <Countdown timeLeft={new Date(timeEnd)} onTimeEnd={onTimeEnd} />
           </div>
         </>
       )}

@@ -42,6 +42,11 @@ import ProductContainer from "../src/components/product/ProductContainer";
 
 export default function Index() {
 
+   function handleTimeEnd() {
+  console.log('Auction time is up!');
+}
+
+
    const [collectors, setCollectors] = useState([]);
    const [FeatureCards, setFeauterdCards] = useState([]);
    const [TrendingCards, setTrending] = useState([]);
@@ -435,14 +440,14 @@ export default function Index() {
          <Header />
          <br></br>
 
-
-         {/* <ProductImage url="/images/nft.jpg" />
+{/* 
+         <ProductImage url="/images/nft.jpg" />
          <ProductInfoTitle text="Shallow Son" />
          <ProductInfoPrice amount={3} currency="ETH"/>
          <ProductInfoStatus/>
          <ProductInfoLikes amount={5400}/>
-         <ProductInfoCreator name='toadnft' avatar='images/avatar.png' />
-         <ProductInfoTimer timeEnd={10000} onTimeEnd={15000}/> */}
+         <ProductInfoCreator name='toadnft' avatar='images/avatar.png' /> */}
+         <ProductInfoTimer timeEnd="2023-03-07T20:30:23.382Z" onTimeEnd={handleTimeEnd}/> 
 
          {/* <ProductInfo {...product} /> */}
 
