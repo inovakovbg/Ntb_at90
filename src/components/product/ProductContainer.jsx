@@ -19,6 +19,10 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
   function onBid() {
     console.log('You Bid It');
   }
+
+  function onTimeEnd() {
+    console.log('Auction is End !!!');
+  }
   
 
   const isAuctionActive = Date.now() < new Date(auction_end);
@@ -34,7 +38,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
         </Grid>
         <Grid item xs={5}>
 
-          <ProductInfo title={name} creator={owner} price={price} currency={currency} likes={likes} timeEnd={auction_end} isLive={isAuctionActive}/>
+          <ProductInfo title={name} creator={owner} price={price} currency={currency} likes={likes} timeEnd={auction_end} onTimeEnd={onTimeEnd} isLive={isAuctionActive}/>
           <ProductTabs text={details} bids={bids} />
           <ProductActions isLive={isAuctionActive} currency={currency} buyAmount={price} onBuy={onBuy} onBid={onBid} bidAmount={1} />
 
