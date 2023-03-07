@@ -12,26 +12,36 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
 
 {
 
-  const product = {
-    title: name,
-    creator: {
-      name: owner.username,
-      avatar: owner.avatar,
-      verified: owner.verified,
-    },
-    price: price,
-    currency: currency,
-    likes: likes,
-    onTimeEnd: () => { console.log('Auction time is up!'); },
-    timeEnd: auction_end,
+  function onBuy() {
+    console.log('You Buy It');
+  }
 
-    isLive: auction_end,
-  };
+  function onBid() {
+    console.log('You Bid It');
+  }
+  
 
-  const activeBids = {
-    text: details,
-    bids: bids
-  };
+  const isAuctionActive = Date.now() < new Date(auction_end);
+  // const product = {
+  //   title: name,
+  //   creator: {
+  //     name: owner.username,
+  //     avatar: owner.avatar,
+  //     verified: owner.verified,
+  //   },
+  //   price: price,
+  //   currency: currency,
+  //   likes: likes,
+  //   onTimeEnd: () => { console.log('Auction time is up!'); },
+  //   timeEnd: auction_end,
+
+  //   isLive: auction_end,
+  // };
+
+  // const activeBids = {
+  //   text: details,
+  //   bids: bids
+  // };
 
 
 
@@ -44,9 +54,9 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
         </Grid>
         <Grid item xs={5}>
 
-          <ProductInfo title={name} creator={owner} price={price} currency={currency} likes={likes}/>
-          <ProductTabs {...activeBids} />
-          <ProductActions isLive={true} currency={currency} buyAmount={price} bidAmount={1} />
+          <ProductInfo title={name} creator={owner} price={price} currency={currency} likes={likes} timeEnd={auction_end} isLive={isAuctionActive}/>
+          <ProductTabs text={details} bids={bids} />
+          <ProductActions isLive={true} currency={currency} buyAmount={price} onBuy={onBuy} onBid={onBid} bidAmount={1} />
 
         </Grid>
       </Grid>
