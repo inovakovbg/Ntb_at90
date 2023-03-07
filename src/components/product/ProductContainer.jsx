@@ -8,7 +8,9 @@ import ProductImage from './ProductImage';
 
 
 
-export default function ProductContainer({ name, owner, price, currency, likes, auction_end, details, source, bids }) {
+export default function ProductContainer({ name, owner, price, currency, likes, auction_end, details, source, bids }) 
+
+{
 
   const product = {
     title: name,
@@ -42,7 +44,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
         </Grid>
         <Grid item xs={5}>
 
-          <ProductInfo {...product} />
+          <ProductInfo title={name} creator={owner} price={price} currency={currency} likes={likes}/>
           <ProductTabs {...activeBids} />
           <ProductActions isLive={true} currency={currency} buyAmount={price} bidAmount={1} />
 

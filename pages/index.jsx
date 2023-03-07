@@ -52,81 +52,86 @@ export default function Index() {
    const [TrendingCards, setTrending] = useState([]);
    const [AuctionsItems, setAuctions] = useState([]);
 
-   const productCont = {
-      name: 'Shallow Son',
-      owner: {
-         username: 'toadnft',
-         avatar: 'images/avatar.png',
-         verified: false
-      },
-      price: 5,
-      currency: 'ETH',
-      likes: 5400,
-      onTimeEnd: () => { console.log('Auction time is up!'); },
-      auction_end: "2024-09-02T20:43:19.149Z",
-      isLive: false,
-      details:"Beaten back with a crack not knowing what was two and frow."+
-      "The education system spews out to the TAB the broken promises."+
-      "Unable to find a journey in a sea of dead bolted doors behind their salvation.",
+   const product = dataNfts[0];
 
-      "source":{
-         "url": "/images/nft.jpg"
-      },
+   
+   
 
-      bids: [
-         {
-            user: {
-               info: 1,
-               avatar: "images/avatar.png'",
-               name: "Cupcat NFT",
-               verified: true,
-            },
-            amount: 1,
-            date: "2023-02-25",
-         },
-         {
-            user: {
-               info: 2,
-               avatar: "images/avatar.png'",
-               name: "Cupcat NFT",
-               verified: false,
-            },
-            amount: 1,
-            date: "2023-02-26",
-         },
-         {
-            user: {
-               info: 3,
-               avatar: "images/avatar.png'",
-               name: "Cupcat NFT",
-               verified: false,
-            },
-            amount: 1,
-            date: "2023-02-26",
-         },
-         {
-            user: {
-               info: 4,
-               avatar: "images/avatar.png'",
-               name: "Cupcat NFT",
-               verified: false,
-            },
-            amount: 1,
-            date: "2023-02-26",
-         },
-         {
-            user: {
-               info: 5,
-               avatar: "images/avatar.png'",
-               name: "Cupcat NFT",
-               verified: false,
-            },
-            amount: 1,
-            date: "2023-02-26",
-         },
-      ]
+   // const productCont = {
+   //    name: 'Shallow Son',
+   //    owner: {
+   //       username: 'toadnft',
+   //       avatar: 'images/avatar.png',
+   //       verified: false
+   //    },
+   //    price: 5,
+   //    currency: 'ETH',
+   //    likes: 5400,
+   //    onTimeEnd: () => { console.log('Auction time is up!'); },
+   //    auction_end: "2024-09-02T20:43:19.149Z",
+   //    isLive: false,
+   //    details:"Beaten back with a crack not knowing what was two and frow."+
+   //    "The education system spews out to the TAB the broken promises."+
+   //    "Unable to find a journey in a sea of dead bolted doors behind their salvation.",
 
-   };
+   //    "source":{
+   //       "url": "/images/nft.jpg"
+   //    },
+
+   //    bids: [
+   //       {
+   //          user: {
+   //             info: 1,
+   //             avatar: "images/avatar.png'",
+   //             name: "Cupcat NFT",
+   //             verified: true,
+   //          },
+   //          amount: 1,
+   //          date: "2023-02-25",
+   //       },
+   //       {
+   //          user: {
+   //             info: 2,
+   //             avatar: "images/avatar.png'",
+   //             name: "Cupcat NFT",
+   //             verified: false,
+   //          },
+   //          amount: 1,
+   //          date: "2023-02-26",
+   //       },
+   //       {
+   //          user: {
+   //             info: 3,
+   //             avatar: "images/avatar.png'",
+   //             name: "Cupcat NFT",
+   //             verified: false,
+   //          },
+   //          amount: 1,
+   //          date: "2023-02-26",
+   //       },
+   //       {
+   //          user: {
+   //             info: 4,
+   //             avatar: "images/avatar.png'",
+   //             name: "Cupcat NFT",
+   //             verified: false,
+   //          },
+   //          amount: 1,
+   //          date: "2023-02-26",
+   //       },
+   //       {
+   //          user: {
+   //             info: 5,
+   //             avatar: "images/avatar.png'",
+   //             name: "Cupcat NFT",
+   //             verified: false,
+   //          },
+   //          amount: 1,
+   //          date: "2023-02-26",
+   //       },
+   //    ]
+
+   // };
 
 
 
@@ -507,7 +512,7 @@ Unable to find a journey in a sea of dead bolted doors behind their salvation.
 
        
 
-         <ProductContainer {...productCont} />
+         <ProductContainer {...product} />
 
 
          <br></br>
