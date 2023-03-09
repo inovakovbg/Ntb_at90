@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from 'react';
 
 
-const ProfileCollectionFilters = ({ filters }) => {
+export default function ProfileCollectionFilters  ({ filters })  {
     const { sort, price } = filters;
 
     // const [sortBy, setSortBy] = useState('');
@@ -78,4 +78,4 @@ const ProfileCollectionFilters = ({ filters }) => {
     );
 };
 
-export default ProfileCollectionFilters;
+
