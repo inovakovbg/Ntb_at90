@@ -38,7 +38,7 @@ const ProfileCollectionFilters = ({ filters }) => {
                     </Select>
                 </FormControl>
 
-                <TextField className={styles.textField}
+                <TextField className={styles.textField}   type="search"
                     variant="outlined"
                     // placeholder="Search NFTs"
                     InputProps={{
