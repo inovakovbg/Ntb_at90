@@ -8,7 +8,7 @@ export default function Description({text, image }) {
 
     return (
         <div className={styles.description}>
-            <Typography variant='body1' className={styles.atext}>
+            <Typography variant='body1' className={styles.text}>
                 {text}
             </Typography>
 
