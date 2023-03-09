@@ -12,7 +12,7 @@ export default function Hero({text, image }) {
                 {text}
             </Typography>
 
-            <img className={styles.image} src="/images/avatar.png"/> 
+            <img className={styles.image} src={image}/> 
         </div>
     )
 }
