@@ -1,0 +1,14 @@
+@use "../../styles/colors";
+
+
+.hero {
+  background: colors.$primary_main;
+  display: flex !important;
+  min-height: 322px !important;
+  align-items: center;
+}
+
+.text {
+  color: colors.$text_primary;
+  text-align: center;
+}
