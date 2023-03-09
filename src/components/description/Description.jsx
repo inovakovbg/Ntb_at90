@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { Container } from '@mui/material';
 
 
-export default function Hero({text, image }) {
+export default function Description({text, image }) {
 
     return (
         <div className={styles.description}>
