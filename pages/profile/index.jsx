@@ -9,7 +9,7 @@ import ProfileCollectionFilters from '../../src/components/profile/ProfileCollec
 export default function Profile() {
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex',  justifyContent: 'center', flexDirection: 'column' }}>
       <Header />
       <ProfileHero image="/images/avatar.png"/>
       <ProfileUser 
