@@ -1,0 +1,28 @@
+@use "../../styles/colors";
+
+
+.description{
+  
+  
+  max-width: 839px !important;
+  background: colors.$background_paper;
+  display: flex !important;
+
+  margin-top: -50px;
+  margin-bottom: 97px;
+  flex-direction: column;
+  
+}
+
+.atext {
+  // background-color: black;
+  color: colors.$text_primary;
+  padding: 66px !important;
+
+}
+
+.image {
+  padding: 66px;
+  padding-top: 0px;
+  border-radius: 15px !important;
+}
