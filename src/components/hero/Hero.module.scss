@@ -6,11 +6,12 @@
   display: flex !important;
   min-height: 322px !important;
   align-items: center;
+  justify-content: center;
 }
 
 .text {
+  // background-color: black;
   color: colors.$text_primary;
-  text-align: center;
   text-transform: uppercase;
 
 }

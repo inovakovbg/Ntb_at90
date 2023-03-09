@@ -4,14 +4,16 @@ import Typography from "@mui/material/Typography";
 import { Container } from '@mui/material';
 
 
-export default function Hero({text="hOW IT WORKS"}) {
+export default function Hero({ text = "hOW IT WORKS" }) {
 
     return (
         <div className={styles.hero}>
-        <Container>
-            <Typography variant='h1' className={styles.text}>{text} </Typography>
-      
-            </Container>
+            
+                <Typography variant='h1' className={styles.text}>
+                    {text}
+                </Typography>
+
+           
         </div>
 
     )
