@@ -1,0 +1,26 @@
+@use "../../styles/colors";
+
+
+.profile-user {
+ 
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 98px;
+  margin-top: -143px;
+  
+  // justify-content: center;
+  // width:100%;
+  
+}
+
+.name{
+  padding: 26px!important;
+}
+
+.info{
+  max-width: 520px !important;
+  text-align: center;
+}
+
+
