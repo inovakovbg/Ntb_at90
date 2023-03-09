@@ -8,7 +8,7 @@ export default function How() {
   return (
     <div>
       <Header />
-      <Hero text="HOW IT WORKS" />
+      <Hero />
       <Footer />
     </div>
   );
