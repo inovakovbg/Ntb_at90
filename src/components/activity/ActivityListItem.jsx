@@ -12,7 +12,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
 
 
     return (
-        <Container maxWidth="xl" className={styles['activity-list-item']  }>
+        <div maxWidth="xl" className={styles['activity-list-item']  }>
             <Stack direction="row"   spacing={2}>
             <Avatar size={56} url={user.avatar.url} verified={user.verified}/>
             <Stack className={styles['activity-list-item-details']}>
@@ -29,7 +29,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
                 <p>{formatDistance(parseISO(created_at), new Date())}</p>
             </Stack>
             </Stack>
-        </Container>
+        </div>
     )
 };
 
