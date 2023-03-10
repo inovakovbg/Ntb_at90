@@ -4,7 +4,7 @@ import styles from "./ActivityListItem.module.scss"
 import Link from "../link/Link";
 import formatDistance from 'date-fns/formatDistance';
 import parseISO from 'date-fns/parseISO';
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 
 
 export default function ActivityListItem({ user, created_at, nft, type = 'like' }) {
@@ -12,7 +12,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
 
 
     return (
-        <div className={styles['activity-list-item']}>
+        <Container maxWidth="xl" className={styles['activity-list-item']  }>
             <Stack direction="row"   spacing={2}>
             <Avatar size={90} url='images/avatar.png' />
             <Stack className={styles['activity-list-item-details']}>
@@ -21,7 +21,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
                     <Link color="secondary" href={`/product/${nft.id}`}>
                         "{nft.name}"
                     </Link>{' '}by{' '}    
-                    <Link color="secondary" href={`/profile/${nft.owner.id}`}>
+                    <Link color="secondary" href={`/profile/${user.id}`}>
                         {nft.owner.username}
                     </Link>
                 </p>
@@ -29,7 +29,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
                 <p>{formatDistance(parseISO(created_at), new Date())}</p>
             </Stack>
             </Stack>
-        </div>
+        </Container>
     )
 };
 
