@@ -15,11 +15,11 @@ export default function ActivityListItem({ user, created_at, nft, type = 'liked'
             <Avatar size={90} url='images/avatar.png' />
             <div className={styles['activity-list-item-details']}>
                 <p>
-                    {user} {type} 
-                    <Link href={`/product/${nft.id}`}>
+                    {user} {type} {' '}  
+                    <Link color="secondary" href={`/product/${nft.id}`}>
                         "{nft.name}"
-                    </Link> by    
-                    <Link href={`/profile/${nft.owner.username}`}>
+                    </Link>{' '}by{' '}    
+                    <Link color="secondary" href={`/profile/${nft.owner.id}`}>
                         {nft.owner.username}
                     </Link>
                 </p>

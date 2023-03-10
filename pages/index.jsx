@@ -451,8 +451,8 @@ export default function Index() {
 
 
 
-         <Header />
-         <br></br>
+         {/* <Header />
+         <br></br> */}
 
          {/* 
          <ProductImage url="/images/nft.jpg" />
@@ -526,10 +526,10 @@ Unable to find a journey in a sea of dead bolted doors behind their salvation.
 {/* 
          <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts} /> */}
          <ActivityListItem user={act.user.username} nft={act.nft} created_at={act.nft.created_at}/>
-         <br></br>
+         {/* <br></br>
          <Footer />
 
-
+ */}
 
 
 
