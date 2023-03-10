@@ -10,10 +10,9 @@
 
   min-width: 940px;
   max-height: 105px !important;
-
   border-radius: 15px;
   padding: 20px;
-  align-items: center;
+  align-items: center !important;
   background-color: colors.$background_paper;
 
 
@@ -23,6 +22,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  justify-content: center !important;
 }
 
 .activity-list-item-details p {
