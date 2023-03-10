@@ -12,7 +12,7 @@ import ActivityListItem from '../../src/components/activity/ActivityListItem';
 
 export default function Activity() {
 
-  const act=activity[0];
+  const act=activity[1];
   console.log({act})
 
   return (

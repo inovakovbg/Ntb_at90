@@ -36,18 +36,24 @@ import ProductTabs from "../src/components/product/ProductTabs";
 import ProductActions from "../src/components/product/ProductActions";
 import ProductContainer from "../src/components/product/ProductContainer";
 import ProfileCollection from "../src/components/profile/ProfileCollection";
+import ActivityListItem from "../src/components/activity/ActivityListItem";
 
 
 import profileData from '../data/profile.json';
 import filtersData from '../data/filtersProfile.json';
+import activity from '../data/activity.json';
 
 
 
 export default function Index() {
 
    function handleTimeEnd() {
-  console.log('Auction time is up!');
-}
+      console.log('Auction time is up!');
+   }
+
+   const act = activity[0];
+   console.log({ act })
+
 
 
    const [collectors, setCollectors] = useState([]);
@@ -57,8 +63,8 @@ export default function Index() {
 
    const product = dataNfts[0];
 
-   
-   
+
+
 
    // const productCont = {
    //    name: 'Shallow Son',
@@ -448,14 +454,14 @@ export default function Index() {
          <Header />
          <br></br>
 
-{/* 
+         {/* 
          <ProductImage url="/images/nft.jpg" />
          <ProductInfoTitle text="Shallow Son" />
          <ProductInfoPrice amount={3} currency="ETH"/>
          <ProductInfoStatus/>
          <ProductInfoLikes amount={5400}/>
          <ProductInfoCreator name='toadnft' avatar='images/avatar.png' /> */}
-         <ProductInfoTimer timeEnd="2023-03-07T20:30:23.382Z" onTimeEnd={handleTimeEnd}/> 
+         <ProductInfoTimer timeEnd="2023-03-07T20:30:23.382Z" onTimeEnd={handleTimeEnd} />
 
          {/* <ProductInfo {...product} /> */}
 
@@ -513,13 +519,13 @@ Unable to find a journey in a sea of dead bolted doors behind their salvation.
 
          /> */}
 
-       
+
 
          {/* <ProductContainer {...product} /> */}
 
-
-         <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts}/>
-
+{/* 
+         <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts} /> */}
+         <ActivityListItem user={act.user.username} nft={act.nft} created_at={act.nft.created_at}/>
          <br></br>
          <Footer />
 
