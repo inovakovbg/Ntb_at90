@@ -35,8 +35,11 @@ import ProductInfo from "../src/components/product/ProductInfo";
 import ProductTabs from "../src/components/product/ProductTabs";
 import ProductActions from "../src/components/product/ProductActions";
 import ProductContainer from "../src/components/product/ProductContainer";
+import ProfileCollection from "../src/components/profile/ProfileCollection";
 
 
+import profileData from '../data/profile.json';
+import filtersData from '../data/filtersProfile.json';
 
 
 
@@ -512,8 +515,10 @@ Unable to find a journey in a sea of dead bolted doors behind their salvation.
 
        
 
-         <ProductContainer {...product} />
+         {/* <ProductContainer {...product} /> */}
 
+
+         <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts}/>
 
          <br></br>
          <Footer />

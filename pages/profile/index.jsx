@@ -26,7 +26,7 @@ export default function Profile() {
 
       {/* <ProfileCollectionFilters filters={filtersData} /> */}
 
-      <ProfileCollection user={profileData.username} filter={filtersData} items={profileData.nfts}/>
+      <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts}/>
 
       <Footer />
     </div>

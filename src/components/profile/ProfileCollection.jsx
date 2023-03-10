@@ -10,7 +10,7 @@ import ProfileCollectionFilters from './ProfileCollectionFilters';
 
 
 
-export default function ProfileCollection({ user, filter, items = [] }) {
+export default function ProfileCollection({ user, filters, items = [] }) {
 
 
 
@@ -23,7 +23,7 @@ export default function ProfileCollection({ user, filter, items = [] }) {
                         <Typography variant='h3'>Collection</Typography>
                     </Grid>
                     <Grid item xs={9}>
-                        <ProfileCollectionFilters filters={filter} />
+                        <ProfileCollectionFilters filters={filters} />
                     </Grid>
                 </Grid>
 
@@ -38,9 +38,9 @@ export default function ProfileCollection({ user, filter, items = [] }) {
                         return (
                             <Grid Grid item xs={3}>
                                 <Card name={card.name}
-                                    user={card.user}
+                                    user={user}
                                     likes={card.likes}
-                                    mediaUrl={card.mediaUrl}
+                                    mediaUrl={card.source.url}
                                     price={card.price}
                                     currency={card.currency}
                                 />
