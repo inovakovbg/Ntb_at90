@@ -1,0 +1,19 @@
+@use "../../styles/colors";
+
+
+.profile-hero {
+ 
+  display: flex !important;
+  // align-items: center;
+  // justify-content: center;
+  width:100%;
+  
+}
+
+.image{
+  height: 330px; 
+  width: 100%; 
+  object-fit: cover; 
+  margin:0px !important; 
+}
+
