@@ -14,7 +14,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
     return (
         <Container maxWidth="xl" className={styles['activity-list-item']  }>
             <Stack direction="row"   spacing={2}>
-            <Avatar size={90} url={user.avatar.url} verified={user.verified}/>
+            <Avatar size={56} url={user.avatar.url} verified={user.verified}/>
             <Stack className={styles['activity-list-item-details']}>
                 <p>
                     {user.username}  {type == "like" ? "liked" : "bought"}{' '}
