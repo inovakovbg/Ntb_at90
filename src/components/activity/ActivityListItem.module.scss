@@ -1,0 +1,42 @@
+@use "../../styles/colors";
+
+
+.activity-list-item {
+ 
+  display: flex !important;
+
+
+  justify-content: flex-start!important;
+
+  min-width: 940px;
+  max-height: 105px !important;
+
+  border-radius: 15px;
+  padding: 20px;
+  align-items: center;
+  background-color: colors.$background_paper;
+
+
+}
+
+.activity-list-item-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.activity-list-item-details p {
+  margin: 3px;
+}
+
+// .avatar-container {
+//   max-width: calc(20% - 10px) !important;
+//   padding: 10px;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+

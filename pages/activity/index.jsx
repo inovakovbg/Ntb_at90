@@ -6,6 +6,7 @@ import Hero from '../../src/components/hero/Hero';
 
 import filtersData from '../../data/filtersActivity.json';
 import ActivityFilters from '../../src/components/activity/ActivityFilters';
+import ActivityListItem from '../../src/components/activity/ActivityListItem';
 
 export default function How() {
 
@@ -14,6 +15,7 @@ export default function How() {
       <Header />
       <Hero text='Activity'/>
       <ActivityFilters filters={filtersData} />
+      <ActivityListItem/>
       <Footer />
     </div>
   );
