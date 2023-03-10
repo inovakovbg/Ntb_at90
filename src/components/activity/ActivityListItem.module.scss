@@ -8,12 +8,13 @@
 
   justify-content: flex-start!important;
 
-  min-width: 940px !important;
-  max-height: 105px !important;
+  width: 940px !important;
+  // max-height: 105px !important;
   border-radius: 15px;
   padding: 28px !important;
-  align-items: center !important;
+  // align-items: center !important;
   background-color: colors.$background_paper;
+  margin-bottom: 20px;
 
 
 }
