@@ -5,7 +5,7 @@
       "username": "Brannon.Doyle29",
       "email": "Gerard31@hotmail.com",
       "provider": null,
-      "verified": true,
+      "verified": false,
       "blocked": null,
       "role": {
         "id": 1,
@@ -27,7 +27,7 @@
         "ext": ".jpg",
         "mime": "image/jpeg",
         "size": 4.87,
-        "url": "https://nft-auction.herokuapp.com/uploads/0xbf9572dee0ce4be2fbc21404f5046be1c1f6e6a3_ae7ca14bec.jpg",
+        "url": "/images/avatar.png",
         "previewUrl": null,
         "provider": "local",
         "provider_metadata": null,
