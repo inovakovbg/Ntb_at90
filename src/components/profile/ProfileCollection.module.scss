@@ -1,0 +1,23 @@
+@use "../../styles/colors";
+
+
+.profile-collection{
+ 
+  display: flex !important;
+  // // max-width: 1000px;
+  // background-color: aquamarine;
+  // align-items: right !important;
+
+
+  
+}
+
+.grid {
+  padding-bottom: 20px ;
+}
+
+.cards{
+  display: flex !important;
+  justify-content: center !important;
+  // background-color: aqua;
+}
