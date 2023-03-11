@@ -8,19 +8,19 @@ import activity from '../../data/activity.json';
 
 import filtersData from '../../data/filtersActivity.json';
 import ActivityFilters from '../../src/components/activity/ActivityFilters';
-import ActivityListItem from '../../src/components/activity/ActivityListItem';
+import ActivityList from '../../src/components/activity/ActivityList';
 
 export default function Activity() {
 
-  const act=activity[0];
-  console.log(act.user.username)
+  // const act=activity[0];
+  // console.log(act.user.username)
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
       <Header />
       <Hero text='Activity'/>
       <ActivityFilters filters={filtersData} />
-      <ActivityListItem user={act.user} nft={act.nft} created_at={act.nft.created_at}/>
+      <ActivityList items={activity} />
       <Footer />
     </div>
   );

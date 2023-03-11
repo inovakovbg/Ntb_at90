@@ -32,7 +32,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
                         </Link>
                     </p>
 
-                    <p>{formatDistance(parseISO(created_at), new Date())}</p>
+                    <p>{formatDistance(parseISO(created_at), new Date())} ago</p>
 
                 </div>
             </Container>
