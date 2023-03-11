@@ -14,13 +14,13 @@ export default function ActivityList({ items }) {
 
 
     return (
-        <Container className={classNames(styles["activity-list"])}>
+        <div className={classNames(styles["activity-list"])}>
             <Stack direction="column" spacing={2}>
-                {items.map((item) => (
-                    <ActivityListItem user={item.user} created_at={item.created_at}nft={item.nft} type={item.type}
+                {items.map((item) => {
+                    return <ActivityListItem key={item.index} user={item.user} created_at={item.created_at} nft={item.nft} type={item.type}
                     />
-                ))}
+                })}
             </Stack>
-        </Container>
+        </div>
     )
 };
