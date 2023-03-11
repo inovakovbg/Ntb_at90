@@ -5,24 +5,24 @@ import ProfileUser from '../../src/components/profile/ProfileUser';
 import ProfileHero from '../../src/components/profile/ProfileHero';
 import filtersData from '../../data/filtersProfile.json';
 import ProfileCollection from '../../src/components/profile/ProfileCollection';
-import profileData from '../../data/profile.json';
+import user from '../../data/profile.json';
 
 export default function Profile() {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
       <Header />
-      <ProfileHero image={profileData.avatar.backgroundUrl} />
+      <ProfileHero image={user.avatar.backgroundUrl} />
       <ProfileUser
 
-        name={profileData.username}
-        info={profileData.info}
+        name={user.username}
+        info={user.info}
        
-        avatar={profileData.avatar.url}
-        verified={profileData.verified}
+        avatar={user.avatar.url}
+        verified={user.verified}
       />
 
-      <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts}/>
+      <ProfileCollection user={user} filters={filtersData} items={user.nfts}/>
 
       <Footer />
     </div>
