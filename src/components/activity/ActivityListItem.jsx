@@ -20,7 +20,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
             >
 
             <Avatar classname={styles['activity-list-item-avatar']} url={user.avatar.url} size={55} verified={user.verified} />
-            <Stack className={styles['activity-list-item-details']}>
+            <Stack direction="column" className={styles['activity-list-item-details']}>
                 <p>
                     {user.username}  {type == "like" ? "liked" : "bought"}{' '}
                     <Link color="secondary" href={`/product/${nft.id}`}>
