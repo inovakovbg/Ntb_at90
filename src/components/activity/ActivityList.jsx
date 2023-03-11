@@ -13,12 +13,12 @@ import classNames from "classnames";
 export default function ActivityList({ items }) {
 
     return (
-        <Container maxWidth='xl' className={styles['activity-list']}>
+        <div maxWidth='xl' className={styles['activity-list']}>
             <Stack  direction="column" spacing={2} >
                 {items.map((item, i) => (
                     <ActivityListItem key={i} user={item.user} created_at={item.created_at} nft={item.nft} type={item.type} />
                 ))}
             </Stack>
-        </Container>
+        </div>
     );
 }
