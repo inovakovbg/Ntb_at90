@@ -16,12 +16,12 @@ export default function ActivityList({ items }) {
     return (
         <div className={classNames(styles["activity-list"])}>
             <Stack direction="column" spacing={2}>
-                <div>
+              
                 {items.map((item, index) =>
                     <ActivityListItem key={index} user={item.user} created_at={item.created_at} nft={item.nft} type={item.type}
                     />
                 )}
-                </div>
+              
             </Stack>
             
         </div>
