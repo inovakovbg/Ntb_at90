@@ -7,19 +7,20 @@ import parseISO from 'date-fns/parseISO';
 import { Container, Stack } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
 import ActivityListItem from "./ActivityListItem";
+import classNames from "classnames";
 
 
 export default function ActivityList({ items }) {
 
 
     return (
-        <div className={styles['activity-list']}>
+        <Container className={classNames(styles["activity-list"])}>
             <Stack direction="column" spacing={2}>
                 {items.map((item) => (
                     <ActivityListItem user={item.user} created_at={item.created_at}nft={item.nft} type={item.type}
                     />
                 ))}
             </Stack>
-        </div>
+        </Container>
     )
 };
