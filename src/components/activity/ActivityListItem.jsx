@@ -16,7 +16,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
             <Container maxWidth="xl" className={styles['activity-list-item']} disableGutters >
 
 
-                <Avatar url={user.avatar.url} className={styles.avatar}
+                <Avatar size={56} url={user.avatar.url} className={styles.avatar}
 
                     verified={user.verified}
                 />
