@@ -10,16 +10,16 @@ import { useState, useEffect, useRef } from "react";
 
 export default function ActivityListItem({ user, created_at, nft, type = 'like' }) {
 
- 
+
     return (
         <div maxWidth="xl" className={styles['activity-list-item']}>
-      
-<div className={styles['avatar-wrapper']}>
-            <Avatar  url={user.avatar.url}
-             size={55} 
-             verified={user.verified}
-            />
-</div>
+
+            <div className={styles['avatar-wrapper']}>
+                <Avatar url={user.avatar.url}
+                    size='33px'
+                    verified={user.verified}
+                />
+            </div>
             <div direction="column" className={styles['activity-list-item-details']}>
                 <p>
                     {user.username}  {type == "like" ? "liked" : "bought"}{' '}
@@ -32,7 +32,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
                 </p>
 
                 <p>{formatDistance(parseISO(created_at), new Date())}</p>
-            
+
             </div>
         </div>
     )
