@@ -16,7 +16,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
 
 
             <Avatar url={user.avatar.url}
-                size='56px'
+                size={56}
                 verified={user.verified}
             />
 

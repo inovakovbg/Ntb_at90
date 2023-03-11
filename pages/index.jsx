@@ -525,7 +525,7 @@ Unable to find a journey in a sea of dead bolted doors behind their salvation.
 
 {/* 
          <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts} /> */}
-         <ActivityListItem user={act.user.username} nft={act.nft} created_at={act.nft.created_at}/>
+         <ActivityListItem user={act.user} nft={act.nft} created_at={act.nft.created_at}/>
          {/* <br></br>
          <Footer />
 
