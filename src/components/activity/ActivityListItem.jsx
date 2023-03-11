@@ -13,7 +13,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
 
     return (
         <div>
-            <Container maxWidth="xl" className={styles['activity-list']} disableGutters >
+            <Container maxWidth="xl" className={styles['activity-list-item']} disableGutters >
 
 
                 <Avatar size={56} url={user.avatar.url} className={styles.avatar}
