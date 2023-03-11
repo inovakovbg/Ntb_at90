@@ -12,6 +12,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
 
 
     return (
+        <div>
         <Container maxWidth="xl" className={styles['activity-list-item']}>
 
 
@@ -35,6 +36,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
 
             </div>
         </Container>
+        </div>
     )
 };
 
