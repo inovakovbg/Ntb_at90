@@ -4,7 +4,7 @@ import styles from "./ActivityList.module.scss"
 import Link from "../link/Link";
 import formatDistance from 'date-fns/formatDistance';
 import parseISO from 'date-fns/parseISO';
-import { Container, Stack } from "@mui/material";
+import Stack  from "@mui/material/Stack";
 import { useState, useEffect, useRef } from "react";
 import ActivityListItem from "./ActivityListItem";
 import classNames from "classnames";
