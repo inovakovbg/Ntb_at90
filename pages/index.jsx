@@ -42,6 +42,7 @@ import ActivityListItem from "../src/components/activity/ActivityListItem";
 import profileData from '../data/profile.json';
 import filtersData from '../data/filtersProfile.json';
 import activity from '../data/activity.json';
+import ActivityList from "../src/components/activity/ActivityList";
 
 
 
@@ -51,8 +52,8 @@ export default function Index() {
       console.log('Auction time is up!');
    }
 
-   const act = activity[0];
-   console.log({ act })
+   // const act = activity[0];
+   // console.log({ act })
 
 
 
@@ -525,7 +526,7 @@ Unable to find a journey in a sea of dead bolted doors behind their salvation.
 
 {/* 
          <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts} /> */}
-         <ActivityListItem user={act.user} nft={act.nft} created_at={act.nft.created_at}/>
+         <ActivityList items={activity} />
          {/* <br></br>
          <Footer />
 
