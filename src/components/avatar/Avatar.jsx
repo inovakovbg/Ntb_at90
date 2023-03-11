@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from "./Avatar.module.scss";
 
-export default function Avatar({size=90 ,url='/images/avatar.png',verified=true}) {
+export default function Avatar({size=90 ,url='/images/avatar.png',verified=false}) {
     return( 
     <div className={classNames(styles.avatar)} style={{width:size+"px", height:size+"px"}}>
             <img className={classNames(styles.image)} src={url}/> 

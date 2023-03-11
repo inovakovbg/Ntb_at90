@@ -1,22 +1,49 @@
-@use "../../styles/colors.scss";
+@use "../../styles/colors";
 
 
-.list-item {
-    width: 940px;
-    padding: 28px;
-    border-radius: 15px;
-    background-color: colors.$background_paper;
+.activity-list-item {
+ 
+  display: flex !important;
+  justify-content: flex-start!important;
+
+  width: 940px !important;
+
+
+  border-radius: 15px;
+  padding: 20px;
+  align-items: center;
+  background-color: colors.$background_paper;
+
+
 }
 
-.user{
-    font-weight: 600;
+.activity-list-item-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 }
 
-.text, .text-secondary {
-    margin: 0;
+.activity-list-item-details p {
+  margin: 3px;
 }
 
-.text-secondary {
-    font-size: .88rem;
-    color: colors.$text_secondary;
-}
+// .avatar {
+
+//   height: 50% !important;
+//   width: 50% !important;
+//   margin-right: 5rem !important; /* adjust as necessary */
+// }
+
+
+
+// .avatar-container {
+//   max-width: calc(20% - 10px) !important;
+//   padding: 10px;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+

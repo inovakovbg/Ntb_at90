@@ -11,31 +11,31 @@ import { useState, useEffect, useRef } from "react";
 export default function ActivityListItem({ user, created_at, nft, type = 'like' }) {
 
 
-{
     return (
-        <Container maxWidth="xl">
-            <Stack
-                direction="row"
-                spacing={2}
-                className={styles["list-item"]}
-            >
-                <Avatar size={56} verified={user.verified} url={user.avatar.url} />
-                <Stack>
-                    <p className={styles.text}>
-                        <span className={styles.user}>{user.username}</span>{" "}
-                        {type == "like" ? "liked" : "bought"}{" "}
+        <div>
+            <Container maxWidth="xl" className={styles['activity-list-item']} disableGutters >
+
+
+                <Avatar url={user.avatar.url} className={styles.avatar}
+
+                    verified={user.verified}
+                />
+
+                <div direction="column" className={styles['activity-list-item-details']}>
+                    <p>
+                        {user.username}  {type == "like" ? "liked" : "bought"}{' '}
                         <Link color="secondary" href={`/product/${nft.id}`}>
                             "{nft.name}"
                         </Link>{' '}by{' '}
-                        <Link color="secondary" href={`/profile/${user.id}`} >
+                        <Link color="secondary" href={`/profile/${user.id}`}>
                             {nft.owner.username}
                         </Link>
                     </p>
-                    <p className={styles["text-secondary"]}>
-                        {formatDistance(parseISO(created_at), new Date())} ago
-                    </p>
-                </Stack>
-            </Stack>
-        </Container>
-    );
-}}
+
+                    <p>{formatDistance(parseISO(created_at), new Date())}</p>
+
+                </div>
+            </Container>
+        </div>
+    )
+};
