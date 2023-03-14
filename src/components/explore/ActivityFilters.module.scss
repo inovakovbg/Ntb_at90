@@ -1,0 +1,42 @@
+@use "../../styles/colors";
+
+
+.activity-filters {
+ 
+  display: flex !important;
+  // max-width: 1000px;
+  // background-color: aquamarine;
+  align-items: right !important;
+  justify-content: flex-end !important;
+  margin-top: -110px;
+  margin-bottom: 150px;
+  
+
+}
+
+.form {
+  // display: flex !important;
+  
+  // background-color: aqua;
+  min-width:220px !important;
+  
+}
+
+
+
+.icon{
+  color:colors.$text_primary;
+}
+
+.textField {
+ 
+  background-color: colors.$background_paper;
+  border-radius: 30px;
+  min-width:220px !important;
+  
+
+  
+}
+
+
+

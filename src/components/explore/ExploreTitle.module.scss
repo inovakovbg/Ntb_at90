@@ -1,0 +1,16 @@
+@use "../../styles/colors";
+
+
+.explore-title {
+  display: flex !important;
+  align-items: center;
+  justify-content: start;
+  width:100%
+}
+
+.text {
+  // background-color: black;
+  color: colors.$text_primary;
+
+
+}
