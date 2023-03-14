@@ -1,12 +1,12 @@
 import { FormControl, InputLabel, MenuItem, Select, Stack, TextField,InputAdornment } from '@mui/material';
 import { Search } from '@mui/icons-material';
-import styles from './ActivityFilters.module.scss';
+import styles from './ExploreFilters.module.scss';
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from 'react';
 
 
-export default function ActivityFilters  ({ filters })  {
-    const { sort, type } = filters;
+export default function ExploreFilters  ({ filters })  {
+    const { sort, price } = filters;
 
     // const [sortBy, setSortBy] = useState('');
     // const [priceRange, setPriceRange] = useState('');
@@ -21,7 +21,7 @@ export default function ActivityFilters  ({ filters })  {
   
 
     return (
-        <div className={styles['activity-filters']}>
+        <div className={styles['explore-filters']}>
 
 
             <Stack direction="row" spacing={2} >
@@ -42,9 +42,9 @@ export default function ActivityFilters  ({ filters })  {
 
 
                 <FormControl variant="outlined" className={styles.form}>
-                    <InputLabel>Type</InputLabel>
+                    <InputLabel>Price range</InputLabel>
                     <Select>
-                        {type.map((option) => (
+                        {price.map((option) => (
                             <MenuItem value={option.value} >
                                 {option.label}
                             </MenuItem>
