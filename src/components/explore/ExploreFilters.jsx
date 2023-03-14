@@ -24,7 +24,7 @@ export default function ExploreFilters  ({ filters })  {
         <div className={styles['explore-filters']}>
 
 
-            <Stack direction="row" spacing={2} >
+            <Stack direction="row" spacing={2} justifyContent={"flex-end"} >
 
                 <FormControl variant="outlined" className={styles.form}>
                     <InputLabel>Sort By</InputLabel>
@@ -66,6 +66,7 @@ export default function ExploreFilters  ({ filters })  {
                                 <SearchIcon className={styles.icon}/>
                             </InputAdornment>
                         ),
+                        disableUnderline: true
                     }}
                     
                 />
