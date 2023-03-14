@@ -4,12 +4,12 @@ import Typography from "@mui/material/Typography";
 import { Container } from '@mui/material';
 
 
-export default function ExploreTitle() {
+export default function ExploreTitle({ text }) {
 
     return (
         <div className={styles['explore-title']}>
             <Typography variant='h1' className={styles.text}>
-                Explore
+                {text}
             </Typography>
         </div>
     )
