@@ -17,11 +17,11 @@ export default function Activity() {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-      {/* <Header />
+      <Header />
       <Hero text='Activity'/>
-      <ActivityFilters filters={filtersData} /> */}
+      <ActivityFilters filters={filtersData} />
       <ActivityList items={activity} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
