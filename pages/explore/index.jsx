@@ -7,7 +7,7 @@ import ExploreFilters from '../../src/components/explore/ExploreFilters';
 
 export default function Explore() {
 
-  
+
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>

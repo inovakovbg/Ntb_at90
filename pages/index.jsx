@@ -43,6 +43,9 @@ import profileData from '../data/profile.json';
 import filtersData from '../data/filtersProfile.json';
 import activity from '../data/activity.json';
 import ActivityList from "../src/components/activity/ActivityList";
+import ActivityFilters from "../src/components/activity/ActivityFilters";
+import fitersExploreData from'../data/filtersExplore.json';
+import ExploreFilters from "../src/components/explore/ExploreFilters";
 
 
 
@@ -524,13 +527,15 @@ Unable to find a journey in a sea of dead bolted doors behind their salvation.
 
          {/* <ProductContainer {...product} /> */}
 
-{/* 
+         {/* 
          <ProfileCollection user={profileData} filters={filtersData} items={profileData.nfts} /> */}
-         <ActivityList items={activity} />
+       
          {/* <br></br>
          <Footer />
 
  */}
+
+         <ExploreFilters filters={fitersExploreData} />
 
 
 
