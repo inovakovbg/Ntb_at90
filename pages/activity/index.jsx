@@ -1,9 +1,10 @@
-
+import React from "react";
+import { useState, useEffect } from "react";
 import Header from '../../src/components/header/Header';
 import Footer from '../../src/components/footer/Footer';
 import Hero from '../../src/components/hero/Hero';
 
-import activity from '../../data/activity.json';
+// import activity from '../../data/activity.json';
 
 
 import filtersData from '../../data/filtersActivity.json';
@@ -12,8 +13,16 @@ import ActivityList from '../../src/components/activity/ActivityList';
 
 export default function Activity() {
 
-  // const act=activity[0];
-  // console.log(act.user.username)
+  const [activity, setActivity] = useState([]);
+  const [activityFilters, setActivityFilters] = useState([]);
+
+  useEffect(async () => {
+    const result = await fetch(process.env.apiUrl + "/activities");
+    const exploreActivity = await result.json();
+    setActivity(exploreActivity.activities);
+    setActivityFilters(exploreActivity.filters);
+  }, []);
+
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>

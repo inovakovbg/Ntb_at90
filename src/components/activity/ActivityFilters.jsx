@@ -66,6 +66,7 @@ export default function ActivityFilters  ({ filters })  {
                                 <SearchIcon className={styles.icon}/>
                             </InputAdornment>
                         ),
+                        disableUnderline: true
                     }}
                     
                 />
