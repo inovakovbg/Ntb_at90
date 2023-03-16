@@ -66,6 +66,7 @@ export default function ProfileCollectionFilters  ({ filters })  {
                                 <SearchIcon className={styles.icon}/>
                             </InputAdornment>
                         ),
+                        disableUnderline: true
                     }}
                     
                 />
