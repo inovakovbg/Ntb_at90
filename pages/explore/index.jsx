@@ -1,14 +1,30 @@
 
+import React from "react";
+import { useState, useEffect } from "react";
 import Header from '../../src/components/header/Header';
 import Footer from '../../src/components/footer/Footer';
 import ExploreTitle from '../../src/components/explore/ExploreTitle';
 import filtersData from '../../data/filtersExplore.json';
 import ExploreFilters from '../../src/components/explore/ExploreFilters';
 import { Container, Grid } from '@mui/material';
-import nfts from '../../data/nfts.json';
+
 import Card from '../../src/components/card/Card';
 
+
+
 export default function Explore() {
+
+
+  const [nfts, setNfts] = useState([]);
+  const [nftFilters, setNftFilters] = useState([]);
+
+
+  useEffect(async () => {
+    const result = await fetch(process.env.apiUrl + "/explore");
+    const exploreData = await result.json();
+    setNfts(exploreData.nfts);
+    setNftFilters(exploreData.filters);
+  }, [nfts]);
 
 
 
@@ -22,7 +38,7 @@ export default function Explore() {
             <ExploreTitle text='Explore' />
           </Grid>
           <Grid item xs={7}>
-            <ExploreFilters filters={filtersData} />
+            <ExploreFilters filters={nftFilters} />
           </Grid>
         </Grid>
 
