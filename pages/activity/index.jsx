@@ -21,7 +21,7 @@ export default function Activity() {
     const exploreActivity = await result.json();
     setActivity(exploreActivity.activities);
     setActivityFilters(exploreActivity.filters);
-  }, []);
+  }, [activity]);
 
 
   return (
