@@ -17,6 +17,7 @@ export default function Profile() {
 
   useEffect(async () => {
     try {
+      if (!id) return; 
       console.log(`/users/${id}`);
       const result = await fetch(process.env.apiUrl + `/users/${id}`);
       if (!result.ok) {
