@@ -9,9 +9,14 @@ import { useRouter } from 'next/router'
 
 
 
-
 export default function Featured({ items = [] }) {
 
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        router.push(`product/${item.id}`);
+      };
+    
     return (
         <div >
             <Container className={styles.container} disableGutters maxWidth='xl'>
@@ -39,21 +44,6 @@ export default function Featured({ items = [] }) {
                         )
                     })}
                 </ImageList>
-
-
-
-                {/* {items.map((card, index) => {
-
-                            return (
-                                <Grid item >
-                                    <Step number={index + 1}
-                                        title={card.title}
-                                        description={card.description}
-
-                                    />
-                                </Grid>)
-                        })}  */}
-
 
             </Container>
         </div>

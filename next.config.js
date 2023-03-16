@@ -1,6 +1,6 @@
-const nextConfig = {
+
+module.exports = {
     env: {
-        apiUrl: 'https://project-4-api.boom.dev'
-    }
-}
-module.exports = nextConfig
+      apiUrl: 'https://project-4-api.boom.dev',
+    },
+  }
