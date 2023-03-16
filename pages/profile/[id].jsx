@@ -37,17 +37,17 @@ export default function Profile() {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
       <Header />
-      <ProfileHero image={profile.avatar.backgroundUrl} />
+      <ProfileHero image={profile?.avatar.backgroundUrl} />
       <ProfileUser
 
-        name={profile.username}
-        info={profile.info}
+        name={profile?.username}
+        info={profile?.info}
        
-        avatar={profile.avatar.url}
-        verified={profile.verified}
+        avatar={profile?.avatar.url}
+        verified={profile?.verified}
       />
 
-      <ProfileCollection user={profile} filters={filtersData} items={profile.nfts}/>
+      <ProfileCollection user={profile} filters={filtersData} items={profile?.nfts}/>
 
       <Footer />
     </div>
