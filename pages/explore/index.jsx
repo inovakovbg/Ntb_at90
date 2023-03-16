@@ -38,7 +38,7 @@ export default function Explore() {
             <ExploreTitle text='Explore' />
           </Grid>
           <Grid item xs={7}>
-            <ExploreFilters filters={nftFilters} />
+            <ExploreFilters filters={filtersData} />
           </Grid>
         </Grid>
 
