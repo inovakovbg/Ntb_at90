@@ -11,15 +11,14 @@ import lodash from 'lodash';
 
 
 
-export default function TopCollectors({collectors = [] }) {
+export default function TopCollectors({ collectors = [] }) {
 
     return (
-        <div className={classNames(styles.wrapper)}>
-            <Container
-                maxWidth='xl'>
-                <Box >
+        <div>
+            <Container maxWidth='xl' disableGutters className={styles.container}>
+                <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
 
-                    <Typography className={classNames(styles.heading)} variant='h2'>Top Collectors</Typography>
+                    <Typography variant='h2'>Top Collectors</Typography>
 
                     <Select className={classNames(styles.select)}
                         value='This week'
@@ -29,36 +28,23 @@ export default function TopCollectors({collectors = [] }) {
 
                 </Box>
 
-                <Grid className={classNames(styles.grid)}
-                    container spacing={1}
-                    justifyContent='space-between'
-                    alignItems='center'>
+                <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Grid className={classNames(styles.grid)} container spacing={2}>
 
 
-                    {/* 
-                    {collectors.map((abv, index) =>{ ({ ...abv, 'id':index+1})}
-                     
+                        {lodash.chunk(
 
-                    )}  */}
+                            collectors.map((abv, index) => ({ ...abv, 'id': index + 1 })), 3)
 
+                            .map((item) => {
+                                return (
+                                    <Grid item xs={3}>
+                                        <CollectorColumn items={item} />
+                                    </Grid>)
+                            })}
 
-
-
-                    {lodash.chunk(
-
-                        collectors.map((abv, index) => ({ ...abv, 'id': index + 1 })), 3)
-
-                        .map((item) => {
-                            return (
-                                <Grid item xs={3}>
-                                    <CollectorColumn items={item} />
-                                </Grid>)
-                        })}
-
-
-
-
-                </Grid>
+                    </Grid>
+                </Box>
 
             </Container>
         </div>

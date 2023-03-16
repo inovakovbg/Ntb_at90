@@ -1,14 +1,16 @@
 @use "../../styles/colors";
 
 .container {
- 
+  display: flex !important;
   background-color: rgba(colors.$primary_main, 0.05) !important;
-  // border-radius: 15px 15px 15px 15px
+  
 
 }
 
 .grid {
+  display: flex !important;
   min-height: 70px;
+
    
 }
 .darkerNum {

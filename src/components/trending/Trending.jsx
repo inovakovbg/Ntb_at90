@@ -14,7 +14,7 @@ export default function Trending({ cards = [] }) {
 
 
     return (
-        <div className={classNames(styles.wrapper)}>
+        <div >
             <Container maxWidth='xl' className={styles.container} disableGutters >
                 <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
 
@@ -27,9 +27,7 @@ export default function Trending({ cards = [] }) {
                     </Select>
 
                 </Box>
-                <Grid className={classNames(styles.grid)} 
-                    container spacing={2}
-                    >
+                <Grid className={classNames(styles.grid)} container spacing={2}>
 
                     {cards.map((card) => {
 
