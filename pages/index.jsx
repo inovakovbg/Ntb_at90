@@ -83,7 +83,7 @@ export default function Index() {
          <Header />
          <Featured items={featuredCards} />
          <Trending cards={trendingItems} filters={trendingFilters} />
-         <TopCollectors collectors={collectors} />
+         <TopCollectors collectors={collectors} filters={colectorFilters}/>
 
          <Footer />
       </div>
