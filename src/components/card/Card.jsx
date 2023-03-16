@@ -28,19 +28,20 @@ export default function Card({ name, likes = 0, mediaUrl, user = { avatar: { ver
   
   return (
 
-    <MUICard className={styles.card} sx={{ maxWidth: 339, background: timeLeft && 'rgba(36,242,94,0.08)' }}>
+    <MUICard className={styles.card} sx={{ background: timeLeft && 'rgba(36,242,94,0.08)' }}>
 
       <CardHeader
         avatar={
-          <Avatar url={user.avatar.url} size='33px' verified={user.avatar.verified} />
+          <Avatar url={user.avatar.url} size={33} verified={user.avatar.verified} />
 
         }
       />
-      <div className={styles.box}>
+    
         <CardMedia className={styles.media}
           component="img"
-          width="200"
+         
           image={mediaUrl}
+          
         // alt="Paella dish"
         />
 
@@ -49,7 +50,7 @@ export default function Card({ name, likes = 0, mediaUrl, user = { avatar: { ver
         {timeLeft && <Chip className={styles.badge}  icon={<CircleIcon />} label="LIVE" variant="filled" />}
 
    
-      </div>
+   
 
       <CardContent>
         <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }} >
