@@ -8,14 +8,13 @@ import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router'
 
 
+export default function Featured({ items = [] ,handleClick}) {
 
-export default function Featured({ items = [] }) {
 
-
-    const handleClick = (e) => {
-        e.preventDefault();
-        router.push(`product/${item.id}`);
-      };
+    // const handleClick = (e) => {
+    //     e.preventDefault();
+    //     router.push(`product/${item.id}`);
+    //   };
     
     return (
         <div >
@@ -37,7 +36,8 @@ export default function Featured({ items = [] }) {
                             <img className={styles.image}
                                 src={item.image}
                                 alt={item.title}
-                                onClick={handleClick}
+                                onClick={() => {router.push({pathname: `/product/${item.id}`});
+                                  }}
 
                             />
                         </ImageListItem>

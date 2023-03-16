@@ -5,6 +5,7 @@ import ProductInfo from './ProductInfo';
 import ProductTabs from './ProductTabs';
 import ProductActions from './ProductActions';
 import ProductImage from './ProductImage';
+import { Container } from '@mui/material';
 
 
 
@@ -31,7 +32,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
 
 
   return (
-    <div className={styles['product-container']}>
+    <Container maxWidth='xl'className={styles['product-container']} disableGutters>
       <Grid container direction="row" justifyContent="space-between" spacing={2}>
         <Grid item xs={6}  >
           <ProductImage url={source.url} />
@@ -45,6 +46,6 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
         </Grid>
       </Grid>
 
-    </div>
+    </Container>
   );
 };
