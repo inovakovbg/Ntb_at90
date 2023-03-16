@@ -17,6 +17,8 @@ import Footer from "../src/components/footer/Footer";
 
 import feat from "../data/featured.json"
 import TopCollectors from "../src/components/collectors/TopCollectors";
+import How from "../src/components/how/How";
+import Auctions from "../src/components/auctions/Auctions";
 
 
 
@@ -34,6 +36,9 @@ export default function Index() {
 
    const [collectors, setCollectors] = useState([]);
    const [colectorFilters, setCollectorFilters] = useState([]);
+
+   const [auctions, setAuctions] = useState([]);
+   const [auctionFilters, setAuctionFilters] = useState([]);
 
 
    // FEATURED
@@ -72,6 +77,15 @@ export default function Index() {
       setCollectorFilters(topCollData.filters);
    }, []);
 
+   //LIVE AUCTIONS
+   useEffect(async () => {
+      const result = await fetch(process.env.apiUrl + "/live-auctions");
+      const auctionsData = await result.json();
+      setAuctions(auctionsData.nfts);
+      setAuctionFilters(auctionsData.filters);
+   }, []);
+
+
 
 
 
@@ -83,7 +97,27 @@ export default function Index() {
          <Header />
          <Featured items={featuredCards} />
          <Trending cards={trendingItems} filters={trendingFilters} />
-         <TopCollectors collectors={collectors} filters={colectorFilters}/>
+         <TopCollectors collectors={collectors} filters={colectorFilters} />
+
+         <How title='HOW IT WORKS'
+            description="Discover, collect, and sell extraordinary NFTs
+       on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
+            items={[
+               {
+                  "title": "DIGITAL CURRENCY",
+                  "description": 'You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange',
+               },
+               {
+                  "title": 'CRYPTO WALLET',
+                  "description": 'A crypto wallet, such as Metamask, stores your ETH and processes transactions on the Ethereum blockchain.',
+               },
+               {
+                  "title": 'BUM.',
+                  "description": "Let'connect your wallet to BUM,edit your profile,and begin interacting in the space.",
+               }
+            ]} />
+
+         <Auctions cards={auctions} filters={auctionFilters} />
 
          <Footer />
       </div>

@@ -1,53 +1,29 @@
 @use "../../styles/colors";
 
-.heading{
- 
-  padding:30px;
-  // font-family: 'Montserrat';
-font-style: normal;
-font-weight: 800;
-font-size: 48px;
-line-height: 59px;
 
-  
-}
 
-.wrapper {
-  padding: 100px;
-  background-color: colors.$background_default;
-}
+
 .container {
-  
-  background: colors.$background_default ;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+  margin-top: 75px !important;
 
-}
-.box {
-  position:relative;
 }
 
 
 .grid {
-  padding: 20px;
+  // display: flex !important;
+  // justify-content: space-between;
+  padding: 45px 0px;
 }
 
 
-.search {
-  background: colors.$background_default  ;
-  color: colors.$text_primary;
-}
 
 .select{
-  position:absolute;
+  
   width: 150px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  top:0%;
-  right:0%;
- 
+
 }
 

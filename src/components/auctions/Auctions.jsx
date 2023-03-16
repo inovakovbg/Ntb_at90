@@ -3,7 +3,7 @@ import Logo from '../logo/Logo';
 import styles from "./Auctions.module.scss";
 import classNames from "classnames";
 
-import {Container , Grid, Select, MenuItem, Box } from "@mui/material";
+import { Container, Grid, Select, MenuItem, Box } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import Card from '../card/Card';
 
@@ -12,42 +12,40 @@ import Card from '../card/Card';
 export default function Auctions({ cards = [] }) {
 
     return (
-        <div className={classNames(styles.wrapper)}>
-        <Container 
-              maxWidth='xl'>
-              <Box className={classNames(styles.box)}>
-                
-                     <Typography className={classNames(styles.heading)} variant='h2'>Live Auctions</Typography>
+        <div>
+            <Container maxWidth='xl' className={styles.container} disableGutters >
 
-            <Select className={classNames(styles.select)}
-                value='This week'
-                label='This week'>
-                <MenuItem value="This week">This week</MenuItem>
-            </Select>
+                <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
 
-            </Box>
-            <Grid className={classNames(styles.grid)}
-                container spacing={1}
-                justifyContent='space-between'
-                alignItems='center'>
+                    <Typography variant='h2'>Live Auctions</Typography>
 
-                {cards.map((card) => {
+                    <Select className={classNames(styles.select)}
+                        value='This week'
+                        label='This week'>
+                        <MenuItem value="This week">This week</MenuItem>
+                    </Select>
 
-                    return (
-                        <Grid Grid item xs={3}>
-                            <Card name={card.name}
-                                user={card.user}
-                                likes={card.likes}
-                                mediaUrl={card.mediaUrl}
-                                price={card.price}
-                                currency={card.currency}
-                                timeLeft={card.timeLeft}
-                            />
-                        </Grid>)
-                })}
-            </Grid>
+                </Box>
+                <Grid className={classNames(styles.grid)} container spacing={2}>
 
-        </Container>
+                    {cards.map((card) => {
+
+
+                        return (
+                            <Grid Grid item xs={3}>
+                                <Card name={card.name}
+                                    user={card.user}
+                                    likes={card.likes}
+                                    mediaUrl={card.mediaUrl}
+                                    price={card.price}
+                                    currency={card.currency}
+                                    timeLeft={card.timeLeft}
+                                />
+                            </Grid>)
+                    })}
+                </Grid>
+
+            </Container>
         </div>
 
 
