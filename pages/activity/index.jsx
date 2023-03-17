@@ -34,8 +34,8 @@ export default function Activity() {
 
   const filterMethods = {
     "":(act) => act.type,
-    7: (act) => act.type = "Liked",
-    8: (act) => act.type = "Bought",
+    1: (act) => act.type = "like",
+    8: (act) => act.type = "buy",
   
   };
 
@@ -45,7 +45,7 @@ export default function Activity() {
     (async () => {
       const url = `${process.env.apiUrl}/activities?sort=${sortMethod}&type=${filterType}`
       console.log(url)
-      const result = await fetch(url);
+      const result = await fetch(process.env.apiUrl + "/activities");
       const exploreActivity = await result.json();
 
       const dataAct = exploreActivity.activities.filter(filterMethods[filterType]);
