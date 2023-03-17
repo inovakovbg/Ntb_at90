@@ -27,7 +27,7 @@ export default function ActivityListItem({ user, created_at, nft, type = 'like' 
                         <Link color="secondary" href={`/product/${nft.id}`}>
                             "{nft.name}"
                         </Link>{' '}by{' '}
-                        <Link color="secondary" href={`/profile/${user.id}`}>
+                        <Link color="secondary" href={`/profile/${nft.owner.id}`}>
                             {nft.owner.username}
                         </Link>
                     </p>

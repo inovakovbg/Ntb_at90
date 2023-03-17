@@ -1,13 +1,13 @@
 
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import Header from '../../src/components/header/Header';
-import Footer from '../../src/components/footer/Footer';
-import ProfileUser from '../../src/components/profile/ProfileUser';
-import ProfileHero from '../../src/components/profile/ProfileHero';
-import filtersData from '../../data/filtersProfile.json';
-import ProfileCollection from '../../src/components/profile/ProfileCollection';
-import user from '../../data/profile.json';
+import Header from '../../../src/components/header/Header';
+import Footer from '../../../src/components/footer/Footer';
+import ProfileUser from '../../../src/components/profile/ProfileUser';
+import ProfileHero from '../../../src/components/profile/ProfileHero';
+import filtersData from '../../../data/filtersProfile.json';
+import ProfileCollection from '../../../src/components/profile/ProfileCollection';
+import user from '../../../data/profile.json';
 
 export default function Profile() {
   const router = useRouter();

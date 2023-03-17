@@ -45,7 +45,7 @@ export default function Explore() {
   useEffect(() => {
     (async () => {
       const url = `${process.env.apiUrl}/explore?sort=${sortMethod}&price=${filterPrice}`;
-
+      console.log(url)
       const result = await fetch(url);
       const exploreData = await result.json();
 

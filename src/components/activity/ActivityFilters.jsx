@@ -1,24 +1,20 @@
-import { FormControl, InputLabel, MenuItem, Select, Stack, TextField,InputAdornment } from '@mui/material';
+import { FormControl, InputLabel, MenuItem, Select, Stack, TextField, InputAdornment } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import styles from './ActivityFilters.module.scss';
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from 'react';
 
 
-export default function ActivityFilters  ({ filters })  {
+export default function ActivityFilters({
+    filters,
+    sortMethod,
+    filterType,
+    handleChangeSort,
+    handleChangeFilter,
+
+}) {
     const { sort, type } = filters;
 
-    // const [sortBy, setSortBy] = useState('');
-    // const [priceRange, setPriceRange] = useState('');
-  
-    // const handleSortByChange = (event) => {
-    //   setSortBy(event.target.value);
-    // };
-  
-    // const handlePriceRangeChange = (event) => {
-    //   setPriceRange(event.target.value);
-    // };
-  
 
     return (
         <div className={styles['activity-filters']}>
@@ -29,13 +25,17 @@ export default function ActivityFilters  ({ filters })  {
                 <FormControl variant="outlined" className={styles.form}>
                     <InputLabel>Sort By</InputLabel>
 
-                    <Select   >
-                   
-                        {sort.map((option) => (
-                            <MenuItem value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}
+                    <Select
+                        value={sortMethod}
+                        onChange={handleChangeSort}
+                        label="Sort by"  >
+
+                        {Object.values(filters).length > 0 &&
+                            sort.map((option) => (
+                                <MenuItem value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
                     </Select>
 
                 </FormControl>
@@ -43,32 +43,38 @@ export default function ActivityFilters  ({ filters })  {
 
                 <FormControl variant="outlined" className={styles.form}>
                     <InputLabel>Type</InputLabel>
-                    <Select>
-                        {type.map((option) => (
-                            <MenuItem value={option.value} >
-                                {option.label}
-                            </MenuItem>
-                        ))}
+                    <Select
+
+                        value={filterType}
+                        onChange={handleChangeFilter}
+                        label="Type"
+                    >
+                        {Object.values(filters).length > 0 &&
+                            type.map((option) => (
+                                <MenuItem value={option.value} >
+                                    {option.label}
+                                </MenuItem>
+                            ))}
                     </Select>
                 </FormControl>
 
-                
+
 
                 <TextField className={styles.textField} type="search"
                     variant="standard"
                     // placeholder="Search NFTs"
                     inputProps={{
                         style: { display: "flex", alignItems: "center" }
-                      }}
+                    }}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
-                                <SearchIcon className={styles.icon}/>
+                                <SearchIcon className={styles.icon} />
                             </InputAdornment>
                         ),
                         disableUnderline: true
                     }}
-                    
+
                 />
 
 

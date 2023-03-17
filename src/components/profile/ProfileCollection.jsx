@@ -10,7 +10,7 @@ import ProfileCollectionFilters from './ProfileCollectionFilters';
 
 
 
-export default function ProfileCollection({ user, filters, items = [] }) {
+export default function ProfileCollection({ user, filters, items=[] }) {
 
 
 
