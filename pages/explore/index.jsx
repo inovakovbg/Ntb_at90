@@ -14,17 +14,48 @@ import Card from '../../src/components/card/Card';
 
 export default function Explore() {
 
-
   const [nfts, setNfts] = useState([]);
-  const [nftFilters, setNftFilters] = useState([]);
+  const [filtersNft, setNftFilters] = useState({});
+
+  const [sortMethod, setSortMethod] = useState("");
+  const [filterPrice, setFilterPrice] = useState("");
+
+  const handleChangeSort = (event) => { setSortMethod(event.target.value); };
+  const handleChangeFilter = (event) => { setFilterPrice(event.target.value); };
+
+  const sortMethods = {
+    "": (a, b) => null,
+    1: (a, b) => new Date(a.created_at) - new Date(b.created_at),
+    2: (a, b) => new Date(b.created_at) - new Date(a.created_at),
+    3: (a, b) => a.name.localeCompare(b.name),
+    4: (a, b) => b.name.localeCompare(a.name),
+    5: (a, b) => a.price - b.price,
+    6: (a, b) => b.price - a.price,
+  };
+
+  const filterMethods = {
+    "": (nft) => nft.price,
+    7: (nft) => nft.price <= 1,
+    8: (nft) => nft.price >= 1 && nft.price <= 4,
+    9: (nft) => nft.price >= 4 && nft.price <= 10,
+  };
 
 
-  useEffect(async () => {
-    const result = await fetch(process.env.apiUrl + "/explore");
-    const exploreData = await result.json();
-    setNfts(exploreData.nfts);
-    setNftFilters(exploreData.filters);
-  }, [nfts]);
+
+  useEffect(() => {
+    (async () => {
+
+      const result = await fetch(process.env.apiUrl + "/explore");
+      const exploreData = await result.json();
+
+      const dataNfts = exploreData.nfts.filter(filterMethods[filterPrice]);
+      dataNfts.sort(sortMethods[sortMethod]);
+      setNfts(dataNfts);
+      setNftFilters(exploreData.filters);
+
+    })();
+  }, [sortMethod, filterPrice]);
+
 
 
 
@@ -38,7 +69,17 @@ export default function Explore() {
             <ExploreTitle text='Explore' />
           </Grid>
           <Grid item xs={7}>
-            <ExploreFilters filters={filtersData} />
+
+
+
+            <ExploreFilters
+              filters={filtersNft}
+              sortMethod={sortMethod}
+              filterPrice={filterPrice}
+              handleChangeSort={handleChangeSort}
+              handleChangeFilter={handleChangeFilter}
+            />
+
           </Grid>
         </Grid>
 
