@@ -4,7 +4,7 @@ import Header from '../../src/components/header/Header';
 import Footer from '../../src/components/footer/Footer';
 import Hero from '../../src/components/hero/Hero';
 
-// import activity from '../../data/activity.json';
+import activityLocal from '../../data/activity.json';
 
 
 import filtersData from '../../data/filtersActivity.json';
@@ -34,8 +34,8 @@ export default function Activity() {
 
   const filterMethods = {
     "":(act) => act.type,
-    1: (act) => act.type = "like",
-    8: (act) => act.type = "buy",
+    7: (act) => act.type === "like",
+    8: (act) => act.type === "buy",
   
   };
 
@@ -44,15 +44,28 @@ export default function Activity() {
   useEffect(() => {
     (async () => {
       const url = `${process.env.apiUrl}/activities?sort=${sortMethod}&type=${filterType}`
+      const url1 = `${process.env.apiUrl}/activities`
       console.log(url)
-      const result = await fetch(process.env.apiUrl + "/activities");
+      const result = await fetch(url1);
+      // const result = await fetch(process.env.apiUrl + "/activities");
+
+
       const exploreActivity = await result.json();
 
-      const dataAct = exploreActivity.activities.filter(filterMethods[filterType]);
-      dataAct.sort(sortMethods[sortMethod]);
+      const filtersRem = exploreActivity.filters;
+      console.log(filtersRem.type[0]);
+      filtersRem.type[0].value = 7;
+      console.log(filtersRem.type[0]);
 
+
+      const dataAct = exploreActivity.activities.filter(filterMethods[filterType]);
+      // const dataAct = activityLocal.filter(filterMethods[filterType]);
+      
+      dataAct.sort(sortMethods[sortMethod]);
       setActivity(dataAct);
-      setActivityFilters(exploreActivity.filters);
+
+      setActivityFilters(filtersRem);
+      // setActivityFilters(filtersData);
 
     })();
     }, [sortMethod, filterType]);
