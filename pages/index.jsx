@@ -63,6 +63,7 @@ export default function Index() {
       const trendingData = await result.json();
       setTrendingItems(trendingData.nfts);
       setTrendingFilters(trendingData.filters);
+      console.log(trendingFilters)
    }, []);
 
    //TOP COLLECTORS

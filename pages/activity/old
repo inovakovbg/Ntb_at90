@@ -43,13 +43,13 @@ export default function Activity() {
 
   useEffect(() => {
     (async () => {
-      // const url = `${process.env.apiUrl}/activities?type=${filterType}`
-      // console.log(url)
-      // const result = await fetch(url);
+      const url = `${process.env.apiUrl}/activities?type=${filterType}`
+      
+      console.log(url)
+      const result = await fetch(url);
+      // const result = await fetch(process.env.apiUrl + "/activities");
 
-      const result = await fetch(process.env.apiUrl + "/activities?type=");
 
-     
       const exploreActivity = await result.json();
 
       const filtersRem = exploreActivity.filters;
