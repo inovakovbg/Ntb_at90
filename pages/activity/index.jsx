@@ -33,58 +33,62 @@ export default function Activity() {
   };
 
   const filterMethods = {
-    "":(act) => act.type,
+    "": (act) => act.type,
     7: (act) => act.type === "like",
     8: (act) => act.type === "buy",
-  
+
   };
 
 
 
   useEffect(() => {
+
     (async () => {
-      // const url = `${process.env.apiUrl}/activities?type=${filterType}`
-      // console.log(url)
-      // const result = await fetch(url);
+      try {
+        const url = `${process.env.apiUrl}/activities?sort=${sortMethod}&type=${filterType}`
+        console.log(url)
+        const result = await fetch(url);
 
-      const result = await fetch(process.env.apiUrl + "/activities?type=");
-
-     
-      const exploreActivity = await result.json();
-
-      const filtersRem = exploreActivity.filters;
-      console.log(filtersRem.type[0]);
-      filtersRem.type[0].value = 7;
-      console.log(filtersRem.type[0]);
+        // const result = await fetch(process.env.apiUrl + "/activities?type=");
 
 
-      const dataAct = exploreActivity.activities.filter(filterMethods[filterType]);
-      // const dataAct = activityLocal.filter(filterMethods[filterType]);
-      
-      dataAct.sort(sortMethods[sortMethod]);
-      setActivity(dataAct);
+        const exploreActivity = await result.json();
 
-      setActivityFilters(filtersRem);
-      // setActivityFilters(filtersData);
+        const filtersRem = exploreActivity.filters;
+        console.log(filtersRem.type[0]);
+        filtersRem.type[0].value = 7;
+        console.log(filtersRem.type[0]);
 
+
+        const dataAct = exploreActivity.activities.filter(filterMethods[filterType]);
+        // const dataAct = activityLocal.filter(filterMethods[filterType]);
+
+        dataAct.sort(sortMethods[sortMethod]);
+        setActivity(dataAct);
+
+        setActivityFilters(filtersRem);
+        // setActivityFilters(filtersData);
+      } catch (error) {
+        console.log(error);
+      }
     })();
-    }, [sortMethod, filterType]);
+  }, [sortMethod, filterType]);
 
 
-    return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-        <Header />
-        <Hero text='Activity' />
-        <ActivityFilters 
-             filters={activityFilters}
-             sortMethod={sortMethod}
-             filterType={filterType}
-             handleChangeSort={handleChangeSort}
-             handleChangeFilter={handleChangeFilter}
-          
-        />
-        <ActivityList items={activity} />
-        <Footer />
-      </div>
-    );
-  }
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+      <Header />
+      <Hero text='Activity' />
+      <ActivityFilters
+        filters={activityFilters}
+        sortMethod={sortMethod}
+        filterType={filterType}
+        handleChangeSort={handleChangeSort}
+        handleChangeFilter={handleChangeFilter}
+
+      />
+      <ActivityList items={activity} />
+      <Footer />
+    </div>
+  );
+}

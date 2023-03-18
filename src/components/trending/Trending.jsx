@@ -9,7 +9,7 @@ import Card from '../card/Card';
 
 
 
-export default function Trending({ cards = [] }) {
+export default function Trending({ cards = [],filters }) {
 
 
 
@@ -20,11 +20,16 @@ export default function Trending({ cards = [] }) {
 
                     <Typography  variant='h2'>Trending</Typography>
 
-                    <Select className={classNames(styles.select)}
-                        value='This week'
-                        label='This week'>
-                        <MenuItem value="This week">This week</MenuItem>
+                     <Select className={classNames(styles.select)}>
+
+                       {Object.values(filters).length > 0 &&
+                        filters.map((option) => (
+                            <MenuItem value={option.value} >
+                                {option.label}
+                            </MenuItem>
+                        ))}
                     </Select>
+
 
                 </Box>
                 <Grid className={classNames(styles.grid)} container spacing={2}>
