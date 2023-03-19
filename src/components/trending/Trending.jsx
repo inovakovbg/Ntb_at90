@@ -9,7 +9,7 @@ import Card from '../card/Card';
 
 
 
-export default function Trending({ cards = [],filters }) {
+export default function Trending({ cards = [], filters, filterValue, handleChangeFilter }) {
 
 
 
@@ -18,16 +18,20 @@ export default function Trending({ cards = [],filters }) {
             <Container maxWidth='xl' className={styles.container} disableGutters >
                 <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
 
-                    <Typography  variant='h2'>Trending</Typography>
+                    <Typography variant='h2'>Trending</Typography>
 
-                     <Select className={classNames(styles.select)}>
+                    <Select className={classNames(styles.select)}
 
-                       {Object.values(filters).length > 0 &&
-                        filters.map((option) => (
-                            <MenuItem value={option.value} >
-                                {option.label}
-                            </MenuItem>
-                        ))}
+                        value={filterValue}
+                        onChange={handleChangeFilter}
+                        >
+
+                        {Object.values(filters.sort).length > 0 &&
+                            filters.sort.map((option) => (
+                                <MenuItem value={option.value} >
+                                    {option.label}
+                                </MenuItem>
+                            ))}
                     </Select>
 
 

@@ -45,11 +45,11 @@ export default function Activity() {
 
     (async () => {
       try {
-        const url = `${process.env.apiUrl}/activities?sort=${sortMethod}&type=${filterType}`
-        console.log(url)
-        const result = await fetch(url);
+        // const url = `${process.env.apiUrl}/activities?sort=${sortMethod}&type=${filterType}`
+        // console.log(url)
+        // const result = await fetch(url);
 
-        // const result = await fetch(process.env.apiUrl + "/activities?type=");
+        const result = await fetch(process.env.apiUrl + "/activities");
 
 
         const exploreActivity = await result.json();

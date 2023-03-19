@@ -12,7 +12,7 @@ import Trending from "../src/components/trending/Trending";
 // import dataUsers from "../data/users.json";
 
 import Footer from "../src/components/footer/Footer";
-// import dataTrending from "../data/trending.json";
+import dataTrending from "../data/trending.json";
 // import dataNfts from "../data/nfts.json";
 
 import feat from "../data/featured.json"
@@ -40,9 +40,22 @@ export default function Index() {
    const [auctions, setAuctions] = useState([]);
    const [auctionFilters, setAuctionFilters] = useState([]);
 
+   const [filterValue, setFilterValue] = useState("");
+   const handleChangeFilter = (event) => { setFilterValue(event.target.value); };
+
+
+
+   const filterMethods = {
+      "": (nft) => nft.price,
+      1: (nft) => nft.price <= 1,
+      2: (nft) => nft.price >= 1 && nft.price <= 4,
+     
+    };
 
    // FEATURED
    useEffect(async () => {
+
+
       const result = await fetch(process.env.apiUrl + "/featured");
       const featuredData = await result.json();
 
@@ -59,12 +72,18 @@ export default function Index() {
 
    //TRENDING
    useEffect(async () => {
+      // const urlTr = `${process.env.apiUrl}/trending?sort=${filterValue}`
+      // const result = await fetch(urlTr);
+
       const result = await fetch(process.env.apiUrl + "/trending");
       const trendingData = await result.json();
-      setTrendingItems(trendingData.nfts);
+
+      const dataTrend = trendingData.nfts.filter(filterMethods[filterValue]);
+
+      setTrendingItems(dataTrend);
       setTrendingFilters(trendingData.filters);
-      console.log(trendingFilters)
-   }, []);
+      console.log(trendingData.filters)
+   }, [filterValue]);
 
    //TOP COLLECTORS
 
@@ -97,8 +116,12 @@ export default function Index() {
       <div>
          <Header />
          <Featured items={featuredCards} />
-         <Trending cards={trendingItems} filters={trendingFilters} />
-         <TopCollectors collectors={collectors} filters={colectorFilters} />
+         <Trending cards={trendingItems} 
+            filters={trendingFilters} 
+            filterTime={filterValue}
+            handleChangeFilter={handleChangeFilter}/>
+
+         <TopCollectors collectors={collectors}  />
 
          <How title='HOW IT WORKS'
             description="Discover, collect, and sell extraordinary NFTs
