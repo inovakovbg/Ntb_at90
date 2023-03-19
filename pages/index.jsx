@@ -80,10 +80,11 @@ export default function Index() {
 
    //TRENDING
    useEffect(async () => {
-      // const urlTr = `${process.env.apiUrl}/trending?sort=${filterValue}`
-      // const result = await fetch(urlTr);
+      const urlTr = `${process.env.apiUrl}/trending?sort=${filterValue}`
+      const result = await fetch(urlTr);
 
-      const result = await fetch(process.env.apiUrl + "/trending");
+      // const result = await fetch(process.env.apiUrl + "/trending");
+
       const trendingData = await result.json();
 
       const dataTrend = trendingData.nfts.filter(filterMethods[filterValue]);
@@ -167,7 +168,7 @@ export default function Index() {
             ]} />
 
          <Auctions cards={auctions}
-           filters={trendingFilters} 
+           filters={auctionFilters} 
            filterTime={filterValue}
            handleChangeFilter={handleChangeFilter} />
 
