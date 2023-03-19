@@ -43,6 +43,14 @@ export default function Index() {
    const [filterValue, setFilterValue] = useState("");
    const handleChangeFilter = (event) => { setFilterValue(event.target.value); };
 
+   
+  
+   const sortMethods = {
+      "": (a, b) => null,
+      asc: (a, b) => a.nftCount - b.nftCount,
+      desc: (a, b) => b.nftCount - a.nftCount,
+     
+    };
 
 
    const filterMethods = {
@@ -88,14 +96,19 @@ export default function Index() {
    //TOP COLLECTORS
 
    useEffect(async () => {
-      const result = await fetch(process.env.apiUrl + "/top-collectors");
+      const urlTop = `${process.env.apiUrl}/top-collectors?sort=${filterValue}`
+      const result = await fetch(urlTop);
+      // const result = await fetch(process.env.apiUrl + "/top-collectors");
       const topCollData = await result.json();
 
-      topCollData.users.sort((a, b) => b.nftCount - a.nftCount);
+      // topCollData.users.sort((a, b) => a.nftCount - b.nftCount);
 
-      setCollectors(topCollData.users);
+      const dataColl = topCollData.users;
+      dataColl.sort(sortMethods[filterValue]);
+
+      setCollectors(dataColl);
       setCollectorFilters(topCollData.filters);
-   }, []);
+   }, [filterValue]);
 
    //LIVE AUCTIONS
    useEffect(async () => {
@@ -121,7 +134,12 @@ export default function Index() {
             filterTime={filterValue}
             handleChangeFilter={handleChangeFilter}/>
 
-         <TopCollectors collectors={collectors}  />
+         <TopCollectors collectors={collectors}  
+         filters={colectorFilters} 
+         filterValue={filterValue}
+         handleChangeFilter={handleChangeFilter}
+         
+         />
 
          <How title='HOW IT WORKS'
             description="Discover, collect, and sell extraordinary NFTs

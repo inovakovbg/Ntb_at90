@@ -11,7 +11,7 @@ import lodash from 'lodash';
 
 
 
-export default function TopCollectors({ collectors = [] }) {
+export default function TopCollectors({ collectors = [], filters, filterValue, handleChangeFilter }) {
 
     return (
         <div>
@@ -21,9 +21,18 @@ export default function TopCollectors({ collectors = [] }) {
                     <Typography variant='h2'>Top Collectors</Typography>
 
                     <Select className={classNames(styles.select)}
-                        value='This week'
-                        label='This week'>
-                        <MenuItem value="This week">This week</MenuItem>
+                    
+                        value={filterValue}
+                        onChange={handleChangeFilter}
+                    >
+                        {Object.values(filters.sort).length > 0 &&
+                            filters.sort.map((option) => (
+                                <MenuItem value={option.value} >
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+
+
                     </Select>
 
                 </Box>
