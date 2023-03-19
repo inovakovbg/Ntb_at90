@@ -9,7 +9,7 @@ import Card from '../card/Card';
 
 
 
-export default function Auctions({ cards = [] }) {
+export default function Auctions({ cards = [], filters, filterValue, handleChangeFilter }) {
 
     return (
         <div>
@@ -20,9 +20,16 @@ export default function Auctions({ cards = [] }) {
                     <Typography variant='h2'>Live Auctions</Typography>
 
                     <Select className={classNames(styles.select)}
-                        value='This week'
-                        label='This week'>
-                        <MenuItem value="This week">This week</MenuItem>
+                        value={filterValue}
+                        onChange={handleChangeFilter}
+                    >
+
+                        {Object.values(filters.sort).length > 0 &&
+                            filters.sort.map((option) => (
+                                <MenuItem value={option.value} >
+                                    {option.label}
+                                </MenuItem>
+                            ))}
                     </Select>
 
                 </Box>
