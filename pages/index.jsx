@@ -113,7 +113,7 @@ export default function Index() {
    //LIVE AUCTIONS
    useEffect(async () => {
 
-      const urlAuc = `${process.env.apiUrl}/live-auctions=${filterValue}`
+      const urlAuc = `${process.env.apiUrl}/live-auctions?sort=${filterValue}`
       const result = await fetch(urlAuc);
 
       // const result = await fetch(process.env.apiUrl + "/live-auctions");
