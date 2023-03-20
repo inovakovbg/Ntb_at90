@@ -25,8 +25,8 @@ export default function Auctions({ cards = [], filters, filterValue, handleChang
                         onChange={handleChangeFilter}
                     >
 
-                        {Object.values(filters.sort).length > 0 &&
-                            filters.sort.map((option) => (
+                        {Object.values(filters).length > 0 &&
+                            filters.price.map((option) => (
                                 <MenuItem value={option.value} >
                                     {option.label}
                                 </MenuItem>
