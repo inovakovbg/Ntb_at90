@@ -5,8 +5,14 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from 'react';
 
 
-export default function ProfileCollectionFilters  ({ filters })  {
-    const { sort, price } = filters;
+export default function ProfileCollectionFilters  ({
+    filters,
+    sortMethod,
+    filterPrice,
+    handleChangeSort,
+    handleChangeFilter,
+    })  {
+    // const { sort, price } = filters;
 
     // const [sortBy, setSortBy] = useState('');
     // const [priceRange, setPriceRange] = useState('');
@@ -29,9 +35,12 @@ export default function ProfileCollectionFilters  ({ filters })  {
                 <FormControl variant="outlined" className={styles.form}>
                     <InputLabel>Sort By</InputLabel>
 
-                    <Select   >
-                   
-                        {sort.map((option) => (
+                    <Select   
+                        value={sortMethod}
+                        onChange={handleChangeSort}
+                        label="Sort by">
+                    
+                        {filters?.sort.map((option) => (
                             <MenuItem value={option.value}>
                                 {option.label}
                             </MenuItem>
@@ -43,8 +52,13 @@ export default function ProfileCollectionFilters  ({ filters })  {
 
                 <FormControl variant="outlined" className={styles.form}>
                     <InputLabel>Price Range</InputLabel>
-                    <Select>
-                        {price.map((option) => (
+                    <Select   
+                        value={filterPrice}
+                        onChange={handleChangeFilter}
+                        label="Price range"                   
+                    >
+                    
+                        {filters?.price.map((option) => (
                             <MenuItem value={option.value} >
                                 {option.label}
                             </MenuItem>

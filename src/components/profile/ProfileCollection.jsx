@@ -10,7 +10,12 @@ import ProfileCollectionFilters from './ProfileCollectionFilters';
 
 
 
-export default function ProfileCollection({ user, filters, items=[] }) {
+export default function ProfileCollection({ user, filters, 
+   
+    sortMethod,
+    filterPrice,
+    handleChangeSort,
+    handleChangeFilter,items=[] }) {
 
 
 
@@ -23,7 +28,12 @@ export default function ProfileCollection({ user, filters, items=[] }) {
                         <Typography variant='h3'>Collection</Typography>
                     </Grid>
                     <Grid item xs={9}>
-                        <ProfileCollectionFilters filters={filters} />
+                        <ProfileCollectionFilters 
+                        filters={filters}
+                        filterPrice={filterPrice}
+                        sortMethod={sortMethod}
+                        handleChangeFilter={handleChangeFilter}
+                        handleChangeSort={handleChangeSort} />
                     </Grid>
                 </Grid>
 

@@ -12,20 +12,51 @@ import user from '../../../data/profile.json';
 export default function Profile() {
   const router = useRouter();
   const { id } = router.query;
+
   const [profile, setProfile] = useState(null);
   const [profileFilters, setProfileFilters] = useState(null);
+
+  const [sortMethod, setSortMethod] = useState("");
+  const [filterPrice, setFilterPrice] = useState("");
+
+  const handleChangeSort = (event) => { setSortMethod(event.target.value); };
+  const handleChangeFilter = (event) => { setFilterPrice(event.target.value); };
+
+  const sortMethods = {
+    "": (a, b) => null,
+    1: (a, b) => new Date(a.created_at) - new Date(b.created_at),
+    2: (a, b) => new Date(b.created_at) - new Date(a.created_at),
+    3: (a, b) => a.name.localeCompare(b.name),
+    4: (a, b) => b.name.localeCompare(a.name),
+    5: (a, b) => a.price - b.price,
+    6: (a, b) => b.price - a.price,
+  };
+
+  const filterMethods = {
+    "": (nft) => nft.price,
+    7: (nft) => nft.price <= 1,
+    8: (nft) => nft.price >= 1 && nft.price <= 4,
+    9: (nft) => nft.price >= 4 && nft.price <= 10,
+  };
+
 
   useEffect(async () => {
     try {
       if (!id) return; 
-      console.log(`/users/${id}`);
-      const result = await fetch(process.env.apiUrl + `/users/${id}`);
+
+      const url = `${process.env.apiUrl}/users/${id}?sort=${sortMethod}&price=${filterPrice}`;
+      console.log(url)
+      const result = await fetch(url);
+      
+      // const result = await fetch(process.env.apiUrl + `/users/${id}`);
+
+
       if (!result.ok) {
         throw new Error(`HTTP error! status: ${result.status}`);
       }
       const profileData = await result.json();
       setProfile(profileData.user);
-      setProfileFilters(profileData.fiters);
+      setProfileFilters(profileData.filters);
     } catch (error) {
       console.error('Error fetching profile data:', error);
       console.error('Server response:', await result.text());
@@ -48,7 +79,14 @@ export default function Profile() {
         verified={profile?.verified}
       />
 
-      <ProfileCollection user={profile} filters={filtersData} items={profile?.nfts}/>
+      <ProfileCollection user={profile} filters={profileFilters} 
+      
+      
+      filterPrice={filterPrice}
+      sortMethod={sortMethod}
+      handleChangeFilter={handleChangeFilter}
+      handleChangeSort={handleChangeSort}
+      items={profile?.nfts}/>
 
       <Footer />
     </div>
