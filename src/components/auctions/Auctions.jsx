@@ -20,6 +20,7 @@ export default function Auctions({ cards = [], filters, filterValue, handleChang
                     <Typography variant='h2'>Live Auctions</Typography>
 
                     <Select className={classNames(styles.select)}
+                        
                         value={filterValue}
                         onChange={handleChangeFilter}
                     >

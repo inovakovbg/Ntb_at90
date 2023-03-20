@@ -114,17 +114,19 @@ export default function Index() {
    //LIVE AUCTIONS
    useEffect(async () => {
 
-      const urlAuc = `${process.env.apiUrl}/live-auctions?sort=${filterValue}`
-      const result = await fetch(urlAuc);
+      // const urlAuc = `${process.env.apiUrl}/live-auctions?sort=${filterValue}`
+      // const result = await fetch(urlAuc);
 
-      // const result = await fetch(process.env.apiUrl + "/live-auctions");
+      const result = await fetch(process.env.apiUrl + "/live-auctions");
       const auctionsData = await result.json();
+      
       const dataAuct = auctionsData.nfts.filter(filterMethods[filterValue]);
 
 
       setAuctions(dataAuct);
-      setAuctionFilters(auctionsData.filters);
-   }, []);
+      setAuctionFilters(auctionsData.nfts.filters);
+      console.log(auctionFilters)
+   }, [filterValue]);
 
 
 
@@ -169,9 +171,8 @@ export default function Index() {
 
          <Auctions cards={auctions}
            filters={auctionFilters} 
-           filterTime={filterValue}
+           filterValue={filterValue}
            handleChangeFilter={handleChangeFilter} />
-
          <Footer />
       </div>
    );
