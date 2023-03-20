@@ -22,6 +22,9 @@ export default function Profile() {
   const handleChangeSort = (event) => { setSortMethod(event.target.value); };
   const handleChangeFilter = (event) => { setFilterPrice(event.target.value); };
 
+  const [nfts, setNfts] = useState([]);
+
+
   const sortMethods = {
     "": (a, b) => null,
     1: (a, b) => new Date(a.created_at) - new Date(b.created_at),
@@ -55,13 +58,23 @@ export default function Profile() {
         throw new Error(`HTTP error! status: ${result.status}`);
       }
       const profileData = await result.json();
+
+      
+
+      const nftsData = profileData.user.nfts.filter(filterMethods[filterPrice]);
+      nftsData.sort(sortMethods[sortMethod]);
+      console.log(nftsData);
+      setNfts(nftsData);
+
       setProfile(profileData.user);
+
+
       setProfileFilters(profileData.filters);
     } catch (error) {
       console.error('Error fetching profile data:', error);
       console.error('Server response:', await result.text());
     }
-  }, [id]);
+  }, [id,filterPrice,sortMethod]);
 
 
 

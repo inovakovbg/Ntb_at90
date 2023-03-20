@@ -15,7 +15,8 @@ export default function ProfileCollection({ user, filters,
     sortMethod,
     filterPrice,
     handleChangeSort,
-    handleChangeFilter,items=[] }) {
+    handleChangeFilter,
+    items =[]}) {
 
 
 
@@ -42,6 +43,8 @@ export default function ProfileCollection({ user, filters,
                     container spacing={1}
                 
                     alignItems='center'>
+
+                        
 
                     {items.map((card) => {
 
